@@ -1,0 +1,480 @@
+{
+  "label": "EXPLORATORY (after the confirmatory result was seen); not confirmatory",
+  "test_visits": 6570,
+  "test_events": 212,
+  "model_D_converged": true,
+  "bootstrap": {
+    "reps": 1000,
+    "seed": 20261005
+  },
+  "families": {
+    "A_physiology": {
+      "value_columns": 72,
+      "process_block": false,
+      "model_columns": 72,
+      "C_selected": 0.01,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1174,
+      "delta_L_nats": 0.0085,
+      "delta_bits": 0.0123,
+      "relative_gain": 0.0678,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8276,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0054,
+          "hi": 0.0118,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0078,
+          "hi": 0.017,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.0432,
+          "hi": 0.0942,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0232,
+          "hi": 0.0574,
+          "reps": 1000
+        }
+      }
+    },
+    "A1_triage_vitals": {
+      "value_columns": 6,
+      "process_block": false,
+      "model_columns": 6,
+      "C_selected": 0.1,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1245,
+      "delta_L_nats": 0.0014,
+      "delta_bits": 0.0021,
+      "relative_gain": 0.0114,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.7862,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": -0.0006,
+          "hi": 0.0035,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": -0.0009,
+          "hi": 0.005,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": -0.0052,
+          "hi": 0.0276,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": -0.0157,
+          "hi": 0.0131,
+          "reps": 1000
+        }
+      }
+    },
+    "A2_numerics_values": {
+      "value_columns": 66,
+      "process_block": false,
+      "model_columns": 66,
+      "C_selected": 0.01,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1179,
+      "delta_L_nats": 0.0081,
+      "delta_bits": 0.0116,
+      "relative_gain": 0.0639,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8248,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.005,
+          "hi": 0.0113,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0073,
+          "hi": 0.0162,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.0401,
+          "hi": 0.0891,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0207,
+          "hi": 0.0546,
+          "reps": 1000
+        }
+      }
+    },
+    "B_labs": {
+      "value_columns": 87,
+      "process_block": false,
+      "model_columns": 87,
+      "C_selected": 0.01,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1159,
+      "delta_L_nats": 0.0101,
+      "delta_bits": 0.0146,
+      "relative_gain": 0.0801,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8291,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0064,
+          "hi": 0.014,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0092,
+          "hi": 0.0202,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.0504,
+          "hi": 0.1104,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0227,
+          "hi": 0.0617,
+          "reps": 1000
+        }
+      }
+    },
+    "C_history": {
+      "value_columns": 176,
+      "process_block": false,
+      "model_columns": 176,
+      "C_selected": 0.001,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1245,
+      "delta_L_nats": 0.0014,
+      "delta_bits": 0.002,
+      "relative_gain": 0.0112,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.7934,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0,
+          "hi": 0.0027,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0,
+          "hi": 0.0039,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.0,
+          "hi": 0.0216,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": -0.0056,
+          "hi": 0.0162,
+          "reps": 1000
+        }
+      }
+    },
+    "D_presenting": {
+      "value_columns": 99,
+      "process_block": false,
+      "model_columns": 99,
+      "C_selected": 0.03,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1159,
+      "delta_L_nats": 0.01,
+      "delta_bits": 0.0145,
+      "relative_gain": 0.0795,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8267,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0068,
+          "hi": 0.0135,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0099,
+          "hi": 0.0194,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.0556,
+          "hi": 0.1062,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.021,
+          "hi": 0.0572,
+          "reps": 1000
+        }
+      }
+    },
+    "E_measurement_process": {
+      "value_columns": 0,
+      "process_block": true,
+      "model_columns": 171,
+      "C_selected": 0.1,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1068,
+      "delta_L_nats": 0.0192,
+      "delta_bits": 0.0277,
+      "relative_gain": 0.1523,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.855,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0141,
+          "hi": 0.0242,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0203,
+          "hi": 0.0349,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.116,
+          "hi": 0.1887,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0431,
+          "hi": 0.0931,
+          "reps": 1000
+        }
+      }
+    },
+    "F_state_without_process": {
+      "value_columns": 434,
+      "process_block": false,
+      "model_columns": 434,
+      "C_selected": 0.003,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1084,
+      "delta_L_nats": 0.0175,
+      "delta_bits": 0.0253,
+      "relative_gain": 0.1392,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8532,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0129,
+          "hi": 0.0224,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0186,
+          "hi": 0.0324,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.1051,
+          "hi": 0.1757,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.044,
+          "hi": 0.0864,
+          "reps": 1000
+        }
+      }
+    },
+    "ALL_minus_A": {
+      "value_columns": 373,
+      "process_block": true,
+      "model_columns": 533,
+      "C_selected": 0.003,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1037,
+      "delta_L_nats": 0.0223,
+      "delta_bits": 0.0321,
+      "relative_gain": 0.1769,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8695,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0174,
+          "hi": 0.0274,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.025,
+          "hi": 0.0395,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.1412,
+          "hi": 0.2127,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0578,
+          "hi": 0.1044,
+          "reps": 1000
+        }
+      }
+    },
+    "ALL_minus_B": {
+      "value_columns": 358,
+      "process_block": true,
+      "model_columns": 518,
+      "C_selected": 0.003,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1063,
+      "delta_L_nats": 0.0196,
+      "delta_bits": 0.0283,
+      "relative_gain": 0.156,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8623,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0151,
+          "hi": 0.0243,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0217,
+          "hi": 0.035,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.1219,
+          "hi": 0.1899,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0528,
+          "hi": 0.0979,
+          "reps": 1000
+        }
+      }
+    },
+    "ALL_minus_C": {
+      "value_columns": 269,
+      "process_block": true,
+      "model_columns": 429,
+      "C_selected": 0.01,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1034,
+      "delta_L_nats": 0.0226,
+      "delta_bits": 0.0326,
+      "relative_gain": 0.1794,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8723,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0172,
+          "hi": 0.0284,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0249,
+          "hi": 0.041,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.1406,
+          "hi": 0.2213,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0608,
+          "hi": 0.1083,
+          "reps": 1000
+        }
+      }
+    },
+    "ALL_minus_D": {
+      "value_columns": 346,
+      "process_block": true,
+      "model_columns": 506,
+      "C_selected": 0.003,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1056,
+      "delta_L_nats": 0.0204,
+      "delta_bits": 0.0294,
+      "relative_gain": 0.1617,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8628,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0153,
+          "hi": 0.0254,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0221,
+          "hi": 0.0366,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.1244,
+          "hi": 0.1994,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0506,
+          "hi": 0.0989,
+          "reps": 1000
+        }
+      }
+    },
+    "ALL": {
+      "value_columns": 445,
+      "process_block": true,
+      "model_columns": 605,
+      "C_selected": 0.003,
+      "all_fits_converged": true,
+      "L_D": 0.126,
+      "L_DF": 0.1038,
+      "delta_L_nats": 0.0221,
+      "delta_bits": 0.0319,
+      "relative_gain": 0.1758,
+      "auroc_D": 0.7873,
+      "auroc_DF": 0.8699,
+      "ci95": {
+        "delta_L_nats": {
+          "lo": 0.0171,
+          "hi": 0.0276,
+          "reps": 1000
+        },
+        "delta_bits": {
+          "lo": 0.0247,
+          "hi": 0.0399,
+          "reps": 1000
+        },
+        "relative_gain": {
+          "lo": 0.1383,
+          "hi": 0.2138,
+          "reps": 1000
+        },
+        "auroc_diff": {
+          "lo": 0.0584,
+          "hi": 0.1057,
+          "reps": 1000
+        }
+      }
+    }
+  }
+}

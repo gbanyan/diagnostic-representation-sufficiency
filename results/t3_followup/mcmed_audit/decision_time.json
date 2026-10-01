@@ -1,0 +1,48 @@
+{
+  "eligible_dispo_time_rule": {
+    "n": 35127,
+    "icu": {
+      "n": 1467,
+      "of": 35127,
+      "pct": 4.2
+    }
+  },
+  "eligible_decision_time_rule": {
+    "n": 34269,
+    "patients": 23480,
+    "icu": {
+      "n": 1408,
+      "of": 34269,
+      "pct": 4.1
+    }
+  },
+  "excluded_by_adt_order_at_or_before_T": {
+    "n": 858,
+    "icu": {
+      "n": 59,
+      "of": 858,
+      "pct": 6.9
+    }
+  },
+  "adt_order_before_dispo_time_all_admitted": {
+    "n": 7421,
+    "of": 48138,
+    "pct": 15.4
+  },
+  "eligible_new_with_icu_or_critical_care_consult_by_T": {
+    "n": 230,
+    "icu": {
+      "n": 141,
+      "of": 230,
+      "pct": 61.3
+    }
+  },
+  "eligible_new_without_such_consult": {
+    "n": 34039,
+    "icu": {
+      "n": 1267,
+      "of": 34039,
+      "pct": 3.7
+    }
+  }
+}

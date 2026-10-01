@@ -1,0 +1,90 @@
+{
+  "EXPLORATORY": "not confirmatory; one outer repeat; descriptive intervals; no p-values",
+  "config": "subtype",
+  "spec": {
+    "interactions": false,
+    "context": "full",
+    "penalty": "partial",
+    "subtype": true
+  },
+  "t1_timing": "green_only",
+  "table": "mimic_iv_expanded_dxproc_landmark_table",
+  "features": "X1",
+  "n_features": 32,
+  "n": 4990,
+  "events": 1833,
+  "logloss_D": 0.6903,
+  "logloss_DX": 0.6663,
+  "delta": 0.024,
+  "delta_ci95_descriptive": [
+    0.0163,
+    0.0309
+  ],
+  "rel_delta_vs_LL_D": 0.0347,
+  "H_Y_given_D_empirical": 0.7416,
+  "rel_delta_vs_H_Y_given_D": 0.0323,
+  "auroc_D": 0.8319,
+  "auroc_DX": 0.8476,
+  "by_diagnosis": {
+    "appendicitis": {
+      "n": 1207,
+      "events": 812,
+      "delta": 0.0127,
+      "auroc_DX": 0.7715
+    },
+    "cholecystitis": {
+      "n": 931,
+      "events": 595,
+      "delta": 0.0403,
+      "auroc_DX": 0.6503
+    },
+    "diverticulitis": {
+      "n": 1065,
+      "events": 199,
+      "delta": -0.0177,
+      "auroc_DX": 0.6772
+    },
+    "pancreatitis": {
+      "n": 1787,
+      "events": 227,
+      "delta": 0.0479,
+      "auroc_DX": 0.7315
+    }
+  },
+  "by_era": {
+    "2008 - 2010": {
+      "n": 1153,
+      "events": 281,
+      "delta": 0.0183,
+      "auroc_DX": 0.896
+    },
+    "2011 - 2013": {
+      "n": 1375,
+      "events": 533,
+      "delta": 0.0291,
+      "auroc_DX": 0.8633
+    },
+    "2014 - 2016": {
+      "n": 1365,
+      "events": 588,
+      "delta": 0.04,
+      "auroc_DX": 0.8191
+    },
+    "2017 - 2019": {
+      "n": 1097,
+      "events": 431,
+      "delta": 0.0036,
+      "auroc_DX": 0.7629
+    }
+  },
+  "subtype_counts": {
+    "appendicitis|complicated": 412,
+    "appendicitis|uncomplicated": 795,
+    "cholecystitis|complicated": 341,
+    "cholecystitis|uncomplicated": 590,
+    "diverticulitis|complicated": 313,
+    "diverticulitis|uncomplicated": 752,
+    "pancreatitis|complicated": 99,
+    "pancreatitis|uncomplicated": 1688
+  }
+}

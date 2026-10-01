@@ -1,0 +1,79 @@
+{
+  "EXPLORATORY": "not confirmatory; one outer repeat; descriptive intervals; no p-values",
+  "config": "conf",
+  "spec": {
+    "interactions": false,
+    "context": "full",
+    "penalty": "partial"
+  },
+  "t1_timing": "exclude_red",
+  "table": "mimic_iv_expanded_dxproc_landmark_table",
+  "features": "X1",
+  "n_features": 32,
+  "n": 5332,
+  "events": 2175,
+  "logloss_D": 0.7294,
+  "logloss_DX": 0.7009,
+  "delta": 0.0285,
+  "delta_ci95_descriptive": [
+    0.0208,
+    0.0357
+  ],
+  "rel_delta_vs_LL_D": 0.039,
+  "H_Y_given_D_empirical": 0.7464,
+  "rel_delta_vs_H_Y_given_D": 0.0381,
+  "auroc_D": 0.8157,
+  "auroc_DX": 0.8382,
+  "by_diagnosis": {
+    "appendicitis": {
+      "n": 1416,
+      "events": 1021,
+      "delta": 0.0375,
+      "auroc_DX": 0.6911
+    },
+    "cholecystitis": {
+      "n": 1019,
+      "events": 683,
+      "delta": 0.0383,
+      "auroc_DX": 0.6518
+    },
+    "diverticulitis": {
+      "n": 1090,
+      "events": 224,
+      "delta": -0.028,
+      "auroc_DX": 0.5608
+    },
+    "pancreatitis": {
+      "n": 1807,
+      "events": 247,
+      "delta": 0.0499,
+      "auroc_DX": 0.7335
+    }
+  },
+  "by_era": {
+    "2008 - 2010": {
+      "n": 1204,
+      "events": 332,
+      "delta": 0.0243,
+      "auroc_DX": 0.8814
+    },
+    "2011 - 2013": {
+      "n": 1506,
+      "events": 664,
+      "delta": 0.0367,
+      "auroc_DX": 0.858
+    },
+    "2014 - 2016": {
+      "n": 1482,
+      "events": 705,
+      "delta": 0.041,
+      "auroc_DX": 0.801
+    },
+    "2017 - 2019": {
+      "n": 1140,
+      "events": 474,
+      "delta": 0.0057,
+      "auroc_DX": 0.7539
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "endpoint": "T1",
+  "label": "Pathology-specific definitive procedure after T",
+  "column": "Y_T1_procedure_L6",
+  "landmark_h": 6,
+  "t1_timing": {
+    "filter": "exclude_red",
+    "before": 5453,
+    "after": 5332,
+    "classes_before_filter": {
+      "GREEN": 4990,
+      "RED": 121,
+      "YELLOW": 342
+    }
+  },
+  "context": "full",
+  "features": "X1",
+  "n_features": 32,
+  "excluded_missing_context": 0,
+  "preregistration": "docs/main_experiment_preregistration.md @ 600f368",
+  "data_reuse_disclosure": "cohort previously analyzed in the preflight; no blind holdout exists",
+  "diagnosis_object": "D_icd / D_final-type (not D_t)",
+  "model_D_columns": [
+    "intercept",
+    "D=cholecystitis",
+    "D=diverticulitis",
+    "D=pancreatitis",
+    "era=2011 - 2013",
+    "era=2014 - 2016",
+    "era=2017 - 2019",
+    "D=cholecystitis*era=2011 - 2013",
+    "D=cholecystitis*era=2014 - 2016",
+    "D=cholecystitis*era=2017 - 2019",
+    "D=diverticulitis*era=2011 - 2013",
+    "D=diverticulitis*era=2014 - 2016",
+    "D=diverticulitis*era=2017 - 2019",
+    "D=pancreatitis*era=2011 - 2013",
+    "D=pancreatitis*era=2014 - 2016",
+    "D=pancreatitis*era=2017 - 2019",
+    "tod=night",
+    "tod=evening",
+    "weekend"
+  ],
+  "repeats": [
+    {
+      "seed": 20260929,
+      "selected_C_DX": [
+        0.003,
+        0.003,
+        0.003,
+        0.003,
+        0.01
+      ],
+      "converged": true,
+      "metrics": {
+        "n": 5332,
+        "logloss_D": 0.7294,
+        "logloss_DX": 0.7009,
+        "delta": 0.0285,
+        "rel_delta": 0.039,
+        "auroc_D": 0.8157,
+        "auroc_DX": 0.8382,
+        "delta_auroc": 0.0225,
+        "events": 2175,
+        "brier_D": 0.1651,
+        "brier_DX": 0.1576,
+        "calibration_D": {
+          "intercept": -0.0025,
+          "slope": 0.988,
+          "ece": 0.0113
+        },
+        "calibration_DX": {
+          "intercept": 0.0017,
+          "slope": 1.0,
+          "ece": 0.0124
+        },
+        "within_diagnosis": {
+          "appendicitis": {
+            "n": 1416,
+            "delta": 0.0375,
+            "events": 1021,
+            "auroc_DX": 0.6911
+          },
+          "cholecystitis": {
+            "n": 1019,
+            "delta": 0.0383,
+            "events": 683,
+            "auroc_DX": 0.6518
+          },
+          "diverticulitis": {
+            "n": 1090,
+            "delta": -0.028,
+            "events": 224,
+            "auroc_DX": 0.5608
+          },
+          "pancreatitis": {
+            "n": 1807,
+            "delta": 0.0499,
+            "events": 247,
+            "auroc_DX": 0.7335
+          }
+        }
+      },
+      "bootstrap_ci": {
+        "delta": [
+          0.0206,
+          0.036
+        ],
+        "rel_delta": [
+          0.0283,
+          0.0491
+        ],
+        "delta_auroc": [
+          0.0171,
+          0.0276
+        ],
+        "resamples": 2000
+      }
+    },
+    {
+      "seed": 20260930,
+      "selected_C_DX": [
+        0.01,
+        0.01,
+        0.003,
+        0.003,
+        0.01
+      ],
+      "converged": true,
+      "metrics": {
+        "n": 5332,
+        "logloss_D": 0.7305,
+        "logloss_DX": 0.705,
+        "delta": 0.0255,
+        "rel_delta": 0.0348,
+        "auroc_D": 0.8148,
+        "auroc_DX": 0.8358,
+        "delta_auroc": 0.021,
+        "events": 2175,
+        "brier_D": 0.1653,
+        "brier_DX": 0.1584,
+        "calibration_D": {
+          "intercept": -0.0027,
+          "slope": 0.9851,
+          "ece": 0.014
+        },
+        "calibration_DX": {
+          "intercept": -0.0037,
+          "slope": 0.9737,
+          "ece": 0.0153
+        },
+        "within_diagnosis": {
+          "appendicitis": {
+            "n": 1416,
+            "delta": 0.0369,
+            "events": 1021,
+            "auroc_DX": 0.6908
+          },
+          "cholecystitis": {
+            "n": 1019,
+            "delta": 0.0326,
+            "events": 683,
+            "auroc_DX": 0.6405
+          },
+          "diverticulitis": {
+            "n": 1090,
+            "delta": -0.037,
+            "events": 224,
+            "auroc_DX": 0.5416
+          },
+          "pancreatitis": {
+            "n": 1807,
+            "delta": 0.0502,
+            "events": 247,
+            "auroc_DX": 0.733
+          }
+        }
+      }
+    },
+    {
+      "seed": 20260931,
+      "selected_C_DX": [
+        0.003,
+        0.003,
+        0.003,
+        0.01,
+        0.003
+      ],
+      "converged": true,
+      "metrics": {
+        "n": 5332,
+        "logloss_D": 0.7294,
+        "logloss_DX": 0.7004,
+        "delta": 0.029,
+        "rel_delta": 0.0397,
+        "auroc_D": 0.8157,
+        "auroc_DX": 0.839,
+        "delta_auroc": 0.0233,
+        "events": 2175,
+        "brier_D": 0.1651,
+        "brier_DX": 0.1574,
+        "calibration_D": {
+          "intercept": -0.0029,
+          "slope": 0.9891,
+          "ece": 0.0109
+        },
+        "calibration_DX": {
+          "intercept": 0.0004,
+          "slope": 1.0053,
+          "ece": 0.0143
+        },
+        "within_diagnosis": {
+          "appendicitis": {
+            "n": 1416,
+            "delta": 0.0346,
+            "events": 1021,
+            "auroc_DX": 0.6899
+          },
+          "cholecystitis": {
+            "n": 1019,
+            "delta": 0.0441,
+            "events": 683,
+            "auroc_DX": 0.6577
+          },
+          "diverticulitis": {
+            "n": 1090,
+            "delta": -0.0273,
+            "events": 224,
+            "auroc_DX": 0.5652
+          },
+          "pancreatitis": {
+            "n": 1807,
+            "delta": 0.05,
+            "events": 247,
+            "auroc_DX": 0.7383
+          }
+        }
+      }
+    }
+  ],
+  "across_repeats": {
+    "delta": {
+      "mean": 0.0276,
+      "sd": 0.0019
+    },
+    "rel_delta": {
+      "mean": 0.0379,
+      "sd": 0.0026
+    },
+    "logloss_D": {
+      "mean": 0.7297,
+      "sd": 0.0006
+    },
+    "logloss_DX": {
+      "mean": 0.7021,
+      "sd": 0.0025
+    },
+    "auroc_D": {
+      "mean": 0.8154,
+      "sd": 0.0005
+    },
+    "auroc_DX": {
+      "mean": 0.8377,
+      "sd": 0.0017
+    }
+  },
+  "registered_success_criteria": {
+    "ci_lower_gt_0": true,
+    "rel_delta_ge_0.10": false,
+    "success": false,
+    "note": "evaluated as preregistered; T3 is confirmatory only if T1 succeeds; controls are descriptive"
+  },
+  "flags": {
+    "model_D_calibration_slope_outside_0.8_1.25": false
+  },
+  "table": "mimic_iv_expanded_dxproc_landmark_table"
+}

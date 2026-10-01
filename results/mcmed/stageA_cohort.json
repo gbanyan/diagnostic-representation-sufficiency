@@ -1,0 +1,290 @@
+{
+  "config_sha256": "27e5d078d669e99f5e099795d9c9d891031af6df9edd11a1896f6defce7fc279",
+  "ccsr": {
+    "file": "DXCCSR_v2024-1.csv",
+    "version": "AHRQ DXCCSR v2024.1",
+    "column": "Default CCSR CATEGORY OP",
+    "sha256": "04b25ceb6d557b999a92edc647ca9c61d54720a769dd951430135168ecacf863",
+    "rule": "body system = first 3 letters of the default OP CCSR category of Dx_ICD10 (dots removed)"
+  },
+  "attrition": [
+    {
+      "step": "all_visits",
+      "visits": 118385,
+      "patients": 70545,
+      "icu": {
+        "n": 2766,
+        "of": 118385,
+        "pct": 2.3
+      }
+    },
+    {
+      "step": "admitted (Inpatient/Observation/ICU)",
+      "visits": 48139,
+      "patients": 30815,
+      "icu": {
+        "n": 2766,
+        "of": 48139,
+        "pct": 5.7
+      }
+    },
+    {
+      "step": "valid Arrival_time and Dispo_time",
+      "visits": 48138,
+      "patients": 30815,
+      "icu": {
+        "n": 2766,
+        "of": 48138,
+        "pct": 5.7
+      },
+      "excluded": {
+        "visits": "<10",
+        "icu": {
+          "n": "<10",
+          "of": "<10",
+          "pct": 0.0
+        }
+      }
+    },
+    {
+      "step": "age >= 18",
+      "visits": 48138,
+      "patients": 30815,
+      "icu": {
+        "n": 2766,
+        "of": 48138,
+        "pct": 5.7
+      },
+      "excluded": {
+        "visits": "<10",
+        "icu": {
+          "n": "<10",
+          "of": "<10",
+          "pct": null
+        }
+      }
+    },
+    {
+      "step": "Dispo_time > T",
+      "visits": 35127,
+      "patients": 23964,
+      "icu": {
+        "n": 1467,
+        "of": 35127,
+        "pct": 4.2
+      },
+      "excluded": {
+        "visits": 13011,
+        "icu": {
+          "n": 1299,
+          "of": 13011,
+          "pct": 10.0
+        }
+      }
+    },
+    {
+      "step": "decision_time = min(Dispo_time, first ADT order) > T",
+      "visits": 34269,
+      "patients": 23480,
+      "icu": {
+        "n": 1408,
+        "of": 34269,
+        "pct": 4.1
+      },
+      "excluded": {
+        "visits": 858,
+        "icu": {
+          "n": 59,
+          "of": 858,
+          "pct": 6.9
+        }
+      }
+    },
+    {
+      "step": "no ICU / critical-care consult at or before T",
+      "visits": 34039,
+      "patients": 23350,
+      "icu": {
+        "n": 1267,
+        "of": 34039,
+        "pct": 3.7
+      },
+      "excluded": {
+        "visits": 230,
+        "icu": {
+          "n": 141,
+          "of": 230,
+          "pct": 61.3
+        }
+      }
+    },
+    {
+      "step": "primary CCSR mapping available (unmapped excluded)",
+      "visits": 32404,
+      "patients": 22558,
+      "icu": {
+        "n": 1109,
+        "of": 32404,
+        "pct": 3.4
+      },
+      "excluded": {
+        "visits": 1635,
+        "icu": {
+          "n": 158,
+          "of": 1635,
+          "pct": 9.7
+        }
+      }
+    }
+  ],
+  "unmapped_breakdown": {
+    "code not in CCSR": 1455,
+    "missing Dx_ICD10": 180
+  },
+  "final": {
+    "visits": 32404,
+    "patients": 22558,
+    "icu": {
+      "n": 1109,
+      "of": 32404,
+      "pct": 3.4
+    }
+  },
+  "primary_taxonomy_ccsr_body_system": {
+    "rare_rule": "< 50 visits in the final cohort -> OTHER",
+    "classes_before_rule": 21,
+    "merged_into_other": [
+      "MAL",
+      "PNL"
+    ],
+    "n_classes_final": 20,
+    "class_counts": {
+      "SYM": {
+        "n": 8042,
+        "pct": 24.82
+      },
+      "CIR": {
+        "n": 4627,
+        "pct": 14.28
+      },
+      "DIG": {
+        "n": 4342,
+        "pct": 13.4
+      },
+      "INJ": {
+        "n": 2488,
+        "pct": 7.68
+      },
+      "GEN": {
+        "n": 1941,
+        "pct": 5.99
+      },
+      "RSP": {
+        "n": 1316,
+        "pct": 4.06
+      },
+      "MUS": {
+        "n": 1295,
+        "pct": 4.0
+      },
+      "NEO": {
+        "n": 1239,
+        "pct": 3.82
+      },
+      "END": {
+        "n": 1195,
+        "pct": 3.69
+      },
+      "INF": {
+        "n": 1082,
+        "pct": 3.34
+      },
+      "MBD": {
+        "n": 990,
+        "pct": 3.06
+      },
+      "NVS": {
+        "n": 978,
+        "pct": 3.02
+      },
+      "SKN": {
+        "n": 762,
+        "pct": 2.35
+      },
+      "XXX": {
+        "n": 606,
+        "pct": 1.87
+      },
+      "BLD": {
+        "n": 586,
+        "pct": 1.81
+      },
+      "FAC": {
+        "n": 474,
+        "pct": 1.46
+      },
+      "EYE": {
+        "n": 274,
+        "pct": 0.85
+      },
+      "PRG": {
+        "n": 69,
+        "pct": 0.21
+      },
+      "EAR": {
+        "n": 63,
+        "pct": 0.19
+      },
+      "OTHER": {
+        "n": 35,
+        "pct": 0.11
+      }
+    },
+    "note": "counts only; no ICU information by class"
+  },
+  "sensitivity_taxonomy_icd10_chapter": {
+    "n_classes_final": 23,
+    "merged_into_other": [
+      "P",
+      "Q",
+      "Y"
+    ],
+    "class_counts": {
+      "R": 10105,
+      "K": 4313,
+      "I": 3178,
+      "S": 1991,
+      "N": 1835,
+      "J": 1332,
+      "M": 1305,
+      "E": 1205,
+      "C": 1078,
+      "F": 861,
+      "L": 759,
+      "D": 696,
+      "G": 605,
+      "U": 532,
+      "A": 522,
+      "T": 509,
+      "Z": 501,
+      "W": 418,
+      "H": 335,
+      "V": 111,
+      "B": 100,
+      "O": 68,
+      "OTHER": 45
+    }
+  },
+  "chrono_split_membership": {
+    "train": 21724,
+    "val": 3155,
+    "none": 4066,
+    "test": 3459
+  },
+  "season": {
+    "MAM": 8027,
+    "JJA": 9420,
+    "DJF": 6932,
+    "SON": 8025
+  }
+}

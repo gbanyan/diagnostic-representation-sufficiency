@@ -1,0 +1,71 @@
+{
+  "rule": "sha256(salt + ':' + MRN) -> first 15 hex digits / 16**15 < test_fraction -> test",
+  "salt": "mcmed-confirmatory-v1:diagnosis-bottleneck:2026-09-30",
+  "test_fraction": 0.2,
+  "manifest_sha256": "90739be0ebaba21d5d568ce94b88d17af370e06b11375c0fdb7e1071fe47fd42",
+  "by_set": {
+    "dev": {
+      "visits": 25834,
+      "patients": 18023,
+      "icu": {
+        "n": 897,
+        "of": 25834,
+        "pct": 3.5
+      },
+      "dx_body_counts": {
+        "SYM": 6393,
+        "CIR": 3701,
+        "DIG": 3440,
+        "INJ": 1988,
+        "GEN": 1545,
+        "RSP": 1057,
+        "MUS": 1025,
+        "NEO": 998,
+        "END": 959,
+        "INF": 870,
+        "MBD": 792,
+        "NVS": 761,
+        "SKN": 607,
+        "BLD": 488,
+        "XXX": 482,
+        "FAC": 373,
+        "EYE": 210,
+        "PRG": 58,
+        "EAR": 57,
+        "OTHER": 30
+      }
+    },
+    "test": {
+      "visits": 6570,
+      "patients": 4535,
+      "icu": {
+        "n": 212,
+        "of": 6570,
+        "pct": 3.2
+      },
+      "dx_body_counts": {
+        "SYM": 1649,
+        "CIR": 926,
+        "DIG": 902,
+        "INJ": 500,
+        "GEN": 396,
+        "MUS": 270,
+        "RSP": 259,
+        "NEO": 241,
+        "END": 236,
+        "NVS": 217,
+        "INF": 212,
+        "MBD": 198,
+        "SKN": 155,
+        "XXX": 124,
+        "FAC": 101,
+        "BLD": 98,
+        "EYE": 64,
+        "PRG": 11,
+        "EAR": "<10",
+        "OTHER": "<10"
+      }
+    }
+  },
+  "patient_overlap": 0
+}

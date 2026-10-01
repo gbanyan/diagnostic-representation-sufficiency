@@ -1,0 +1,83 @@
+{
+  "analysis": "S4",
+  "encoder": "body_chrono",
+  "representation": "soft",
+  "reference_class": "SYM",
+  "dev_visits": 24879,
+  "dev_patients": 18517,
+  "dev_events": 889,
+  "D_block_columns": 19,
+  "context_columns": [
+    "season=JJA",
+    "season=MAM",
+    "season=SON"
+  ],
+  "X_raw_columns": 445,
+  "X_model_columns_after_indicators": 605,
+  "inner_cv_mean_logloss_DX_by_C": {
+    "0.0001": 0.1286,
+    "0.001": 0.12,
+    "0.003": 0.1191,
+    "0.01": 0.1204,
+    "0.03": 0.1229,
+    "0.1": 0.126,
+    "0.3": 0.1285,
+    "1.0": 0.1309,
+    "3.0": 0.1329,
+    "10.0": 0.1348,
+    "100.0": 0.1382
+  },
+  "C_selected": 0.003,
+  "all_inner_fits_converged": true,
+  "final_D_converged": true,
+  "final_DX_converged": true,
+  "solver": "exact Newton (amendment 1)",
+  "final_max_abs_gradient": {
+    "D": 0.0,
+    "DX": 0.0
+  },
+  "final_newton_iterations": {
+    "D": 9,
+    "DX": 9
+  },
+  "penalty_zero_check": {
+    "max_abs_X_coef_at_C_1e-8": 0.0,
+    "max_abs_pred_diff_vs_Model_D": 0.0001,
+    "abs_logloss_diff_vs_Model_D": 0.0,
+    "passed": false
+  },
+  "coef_sha256": {
+    "D": "6230e8589b04a9d8caec5b1e2ee8b32fa0d72973f05ed55952a5747502b06f71",
+    "DX": "7d976f767c9a427db331d618967973704cd5412489feb4ff9768eb16e0739126"
+  },
+  "dev_inner_cv_at_selected_C": {
+    "n": 24879,
+    "events": 889,
+    "L_D_nats": 0.137,
+    "L_DX_nats": 0.1191,
+    "delta_L_nats": 0.018,
+    "delta_bits": 0.0259,
+    "L_D_bits": 0.1977,
+    "L_DX_bits": 0.1718,
+    "relative_gain": 0.1311,
+    "auroc_D": 0.7731,
+    "auprc_D": 0.121,
+    "brier_D": 0.033,
+    "calibration_D": {
+      "intercept_citl": 0.0012,
+      "slope": 0.9665,
+      "recal_intercept": -0.0944
+    },
+    "auroc_DX": 0.8479,
+    "auprc_DX": 0.2708,
+    "brier_DX": 0.0298,
+    "calibration_DX": {
+      "intercept_citl": 0.0082,
+      "slope": 0.9854,
+      "recal_intercept": -0.0288
+    },
+    "auroc_diff": 0.0748,
+    "auprc_diff": 0.1498,
+    "brier_diff": 0.0032
+  }
+}

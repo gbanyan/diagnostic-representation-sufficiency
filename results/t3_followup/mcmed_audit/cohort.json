@@ -1,0 +1,37 @@
+{
+  "admitted_visits": 48139,
+  "admitted_missing_times": "<10",
+  "eligible_visits_dispo_after_3h": 35127,
+  "eligible_patients": 23964,
+  "excluded_dispo_at_or_before_3h": 13011,
+  "icu_prevalence": {
+    "eligible": {
+      "n": 1467,
+      "of": 35127,
+      "pct": 4.2
+    },
+    "excluded_dispo_before_3h": {
+      "n": 1299,
+      "of": 13011,
+      "pct": 10.0
+    },
+    "all_admitted": {
+      "n": 2766,
+      "of": 48139,
+      "pct": 5.7
+    }
+  },
+  "eligible_hours_arrival_to_dispo": {
+    "p5": 3.2,
+    "p25": 3.9333,
+    "median": 5.0,
+    "p75": 6.4833,
+    "p95": 9.7,
+    "n": 35127
+  },
+  "eligible_admit_time_relative": {
+    "admit_time_at_or_after_dispo": 35052,
+    "admit_time_missing": 75
+  },
+  "eligible_by_chrono_split_note": "see counts.json from mcmed_counts"
+}

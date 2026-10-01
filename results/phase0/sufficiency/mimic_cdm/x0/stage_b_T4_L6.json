@@ -1,0 +1,120 @@
+{
+  "target": "T4",
+  "label": "Remaining length of stay after T (log1p days)",
+  "column": "Y_T4_log_los_days_L6",
+  "landmark_h": 6,
+  "sensitivity_cohort": false,
+  "diagnosis_object": "D_final (post-diagnostic)",
+  "stage_a": {
+    "n": 2365,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 932,
+        "mean": 0.9811,
+        "var": 0.2896,
+        "q1": 0.6058,
+        "median": 0.7955,
+        "q3": 1.2263
+      },
+      "cholecystitis": {
+        "n": 644,
+        "mean": 1.4772,
+        "var": 0.3172,
+        "q1": 1.0618,
+        "median": 1.3886,
+        "q3": 1.8009
+      },
+      "diverticulitis": {
+        "n": 253,
+        "mean": 1.6583,
+        "var": 0.4174,
+        "q1": 1.2821,
+        "median": 1.5693,
+        "q3": 2.0174
+      },
+      "pancreatitis": {
+        "n": 536,
+        "mean": 1.6619,
+        "var": 0.366,
+        "q1": 1.2743,
+        "median": 1.5573,
+        "q3": 1.9818
+      }
+    },
+    "var_total": 0.4183,
+    "var_within_D": 0.3281,
+    "share_variance_explained_by_D": 0.2156
+  },
+  "feature_sets": {
+    "X0": {
+      "n_features": 12,
+      "overall": {
+        "n": 2365,
+        "loss_D": 0.3291,
+        "loss_DX": 0.2798,
+        "delta_loss": 0.0492,
+        "r2_D": 0.2134,
+        "r2_DX": 0.331,
+        "delta_r2": 0.1177
+      },
+      "D=appendicitis": {
+        "n": 932,
+        "loss_D": 0.29,
+        "loss_DX": 0.241,
+        "delta_loss": 0.049,
+        "r2_D": -0.0015,
+        "r2_DX": 0.1679,
+        "delta_r2": 0.1694
+      },
+      "D=cholecystitis": {
+        "n": 644,
+        "loss_D": 0.3178,
+        "loss_DX": 0.2432,
+        "delta_loss": 0.0746,
+        "r2_D": -0.0018,
+        "r2_DX": 0.2332,
+        "delta_r2": 0.235
+      },
+      "D=diverticulitis": {
+        "n": 253,
+        "loss_D": 0.4187,
+        "loss_DX": 0.3655,
+        "delta_loss": 0.0532,
+        "r2_D": -0.0031,
+        "r2_DX": 0.1244,
+        "delta_r2": 0.1275
+      },
+      "D=pancreatitis": {
+        "n": 536,
+        "loss_D": 0.3682,
+        "loss_DX": 0.351,
+        "delta_loss": 0.0172,
+        "r2_D": -0.0059,
+        "r2_DX": 0.041,
+        "delta_r2": 0.047
+      },
+      "ci95": {
+        "overall.delta_loss": [
+          0.0365,
+          0.0635
+        ],
+        "D=appendicitis.delta_loss": [
+          0.0278,
+          0.0755
+        ],
+        "D=cholecystitis.delta_loss": [
+          0.05,
+          0.1008
+        ],
+        "D=diverticulitis.delta_loss": [
+          0.0055,
+          0.101
+        ],
+        "D=pancreatitis.delta_loss": [
+          -0.0064,
+          0.0413
+        ]
+      }
+    }
+  }
+}

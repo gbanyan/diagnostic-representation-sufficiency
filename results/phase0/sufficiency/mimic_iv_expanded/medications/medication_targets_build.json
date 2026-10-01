@@ -1,0 +1,18 @@
+{
+  "L3": {
+    "cohort": 5543,
+    "with_any_prescription": {
+      "n": 5312,
+      "of": 5543,
+      "pct": 95.8
+    }
+  },
+  "L6": {
+    "cohort": 5492,
+    "with_any_prescription": {
+      "n": 5265,
+      "of": 5492,
+      "pct": 95.9
+    }
+  }
+}

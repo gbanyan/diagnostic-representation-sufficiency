@@ -1,0 +1,80 @@
+{
+  "EXPLORATORY": "not confirmatory; one outer repeat; descriptive intervals; no p-values",
+  "config": "only_labs_hematologic_other",
+  "spec": {
+    "interactions": false,
+    "context": "full",
+    "penalty": "partial",
+    "only_group": "labs_hematologic_other"
+  },
+  "t1_timing": "green_only",
+  "table": "mimic_iv_expanded_dxproc_landmark_table",
+  "features": "X1",
+  "n_features": 4,
+  "n": 4990,
+  "events": 1833,
+  "logloss_D": 0.728,
+  "logloss_DX": 0.7213,
+  "delta": 0.0067,
+  "delta_ci95_descriptive": [
+    0.002,
+    0.0111
+  ],
+  "rel_delta_vs_LL_D": 0.0093,
+  "H_Y_given_D_empirical": 0.7416,
+  "rel_delta_vs_H_Y_given_D": 0.0091,
+  "auroc_D": 0.8047,
+  "auroc_DX": 0.814,
+  "by_diagnosis": {
+    "appendicitis": {
+      "n": 1207,
+      "events": 812,
+      "delta": 0.0194,
+      "auroc_DX": 0.6427
+    },
+    "cholecystitis": {
+      "n": 931,
+      "events": 595,
+      "delta": 0.0533,
+      "auroc_DX": 0.6941
+    },
+    "diverticulitis": {
+      "n": 1065,
+      "events": 199,
+      "delta": -0.0177,
+      "auroc_DX": 0.5593
+    },
+    "pancreatitis": {
+      "n": 1787,
+      "events": 227,
+      "delta": -0.0115,
+      "auroc_DX": 0.5968
+    }
+  },
+  "by_era": {
+    "2008 - 2010": {
+      "n": 1153,
+      "events": 281,
+      "delta": 0.0076,
+      "auroc_DX": 0.8538
+    },
+    "2011 - 2013": {
+      "n": 1375,
+      "events": 533,
+      "delta": 0.0089,
+      "auroc_DX": 0.8142
+    },
+    "2014 - 2016": {
+      "n": 1365,
+      "events": 588,
+      "delta": 0.005,
+      "auroc_DX": 0.749
+    },
+    "2017 - 2019": {
+      "n": 1097,
+      "events": 431,
+      "delta": 0.0053,
+      "auroc_DX": 0.7442
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "General Xray": 2633,
+  "CT Scan": 2308,
+  "Ultrasound": 1397,
+  "MRI": 474,
+  "Interventional Radiology": 274,
+  "Nuclear Med": 195,
+  "Cross-Sectional Interventional Radiology": 123,
+  "Angio": 123,
+  "Noninvasive Vascular": 76,
+  "": "<10",
+  "Interventional Neuro": "<10"
+}

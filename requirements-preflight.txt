@@ -1,0 +1,4 @@
+# Lightweight target-sufficiency preflight only (no deep learning, no LLMs).
+numpy>=2.1
+scikit-learn>=1.6
+pyyaml>=6

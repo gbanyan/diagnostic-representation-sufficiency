@@ -1,0 +1,118 @@
+{
+  "cohort_admissions": 2400,
+  "admissions_with_prescriptions": {
+    "n": 2381,
+    "of": 2400,
+    "pct": 99.2
+  },
+  "prescription_rows": 79448,
+  "rows_per_admission_median": 21,
+  "rows_linked_to_poe_ordertime": {
+    "n": 79068,
+    "of": 79448,
+    "pct": 99.5
+  },
+  "starttime_minus_ordertime_min": {
+    "p5": -2432.235,
+    "p25": 14.8167,
+    "median": 40.7,
+    "p75": 66.2667,
+    "p95": 585.0658
+  },
+  "rows_with_decision_before_anchor": {
+    "n": 171,
+    "of": 79448,
+    "pct": 0.2
+  },
+  "drug_type": {
+    "MAIN": 60905,
+    "BASE": 18472,
+    "ADDITIVE": 71
+  },
+  "routes_top": {
+    "IV": 42709,
+    "PO/NG": 15964,
+    "PO": 9508,
+    "SC": 4602,
+    "IM": 1692,
+    "IV DRIP": 1208,
+    "IH": 823,
+    "PR": 521,
+    "TP": 412,
+    "IVPCA": 379,
+    "ORAL": 190,
+    "TD": 181,
+    "BOTH EYES": 171,
+    "NG": 132,
+    "DIALYS": 121,
+    "NU": 117,
+    "IV BOLUS": 112,
+    "ED": 101,
+    "REPLACE": 98,
+    "DWELL": 95,
+    "NEB": 82,
+    "SL": 62,
+    "ID": 26,
+    "SUBCUT": 23,
+    "PB": 22,
+    "LEFT EYE": 22,
+    "RIGHT EYE": 17,
+    "VG": 12,
+    "OU": 12,
+    "IRR": "<10"
+  },
+  "emar_rows": 120190,
+  "admissions_with_emar": {
+    "n": 1117,
+    "of": 2400,
+    "pct": 46.5
+  },
+  "emar_event_txt_top": {
+    "Administered": 73735,
+    "Flushed": 8719,
+    "Confirmed": 8230,
+    "Not Given": 6950,
+    "Not Flushed": 6717,
+    "Started": 3936,
+    "Stopped": 2777,
+    "Assessed": 2111,
+    "Not Given per Sliding Scale": 1954,
+    "": 1393,
+    "Stopped - Unscheduled": 577,
+    "Delayed Administered": 449,
+    "Applied": 314,
+    "Hold Dose": 297,
+    "Removed": 262,
+    "Administered in Other Location": 228,
+    "Stopped in Other Location": 214,
+    "Not Confirmed": 166,
+    "Infusion Reconciliation": 163,
+    " in Other Location": 151,
+    "Administered Bolus from IV Drip": 121,
+    "Not Stopped": 117,
+    "Not Started": 111,
+    "Restarted": 107,
+    "Not Applied": 53
+  },
+  "administered_minus_ordertime_min": {
+    "p5": 16.1333,
+    "p25": 328.3667,
+    "median": 1469.8333,
+    "p75": 4245.6833,
+    "p95": 15616.6133
+  },
+  "administered_before_ordertime": {
+    "n": 412,
+    "of": 73863,
+    "pct": 0.6
+  },
+  "category_rows": {
+    "antibiotic": 6194,
+    "broad": 1224,
+    "anaerobic": 3045,
+    "opioid": 7736,
+    "insulin": 1723,
+    "enoxaparin": 69,
+    "heparin_sc": 2641
+  }
+}

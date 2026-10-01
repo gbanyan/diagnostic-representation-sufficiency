@@ -1,0 +1,375 @@
+{
+  "lexicon": {
+    "course_hindsight": [
+      "\\bs/p\\b",
+      "\\bstatus post\\b",
+      "\\bpost[- ]?op(?:erative(?:ly)?)?\\b",
+      "\\bPOD\\s*#?\\s*\\d",
+      "\\bwas taken to the (?:OR|operating room)\\b",
+      "\\bunderwent\\b",
+      "\\bwas found to have\\b",
+      "\\bsubsequently\\b",
+      "\\bhospital course\\b",
+      "\\bdischarged?\\b",
+      "\\btolerated (?:the )?procedure\\b"
+    ],
+    "ed_results_in_history": [
+      "\\bin the (?:ED|emergency (?:department|room))\\b",
+      "\\b(?:CT|CTA|ultrasound|US|RUQUS|MRI|MRCP|HIDA|imaging)\\b[^.]{0,60}\\b(?:show(?:ed|s|ing)?|reveal(?:ed|s)?|demonstrat(?:ed|es)|notable|significant for|c/w|consistent with)\\b",
+      "\\blabs? (?:were |was )?(?:notable|significant|remarkable)\\b",
+      "\\b(?:WBC|white count|lipase|amylase|lactate|bilirubin|t\\.? ?bili|ALT|AST|alk ?phos)\\b\\s*(?:of|was|=|:)?\\s*\\d"
+    ],
+    "diagnosis_shorthand": [
+      "\\bappy\\b",
+      "\\bappendic(?:olith|eal)\\b",
+      "\\blap(?:aroscopic)? ?(?:chole|appy)\\b",
+      "\\bcholecystectomy\\b",
+      "\\bcholecystostomy\\b",
+      "\\bERCP\\b",
+      "\\bsphincterotomy\\b",
+      "\\b(?:IR|percutaneous) drain(?:age)?\\b",
+      "\\bpigtail\\b",
+      "\\bcolectomy\\b",
+      "\\bHartmann",
+      "\\bpancreatic necrosis\\b",
+      "\\bphlegmon\\b",
+      "\\bgallstone pancreatitis\\b",
+      "\\bdiverticul",
+      "\\bpericholecystic\\b"
+    ]
+  },
+  "by_pathology": {
+    "appendicitis": {
+      "hpi": {
+        "course_hindsight": {
+          "n": 189,
+          "of": 957,
+          "pct": 19.7
+        },
+        "diagnosis_shorthand": {
+          "n": 68,
+          "of": 957,
+          "pct": 7.1
+        },
+        "ed_results_in_history": {
+          "n": 87,
+          "of": 957,
+          "pct": 9.1
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 957,
+          "pct": 0.0
+        },
+        "any": {
+          "n": 279,
+          "of": 957,
+          "pct": 29.2
+        }
+      },
+      "pe": {
+        "course_hindsight": {
+          "n": "<10",
+          "of": 957,
+          "pct": null
+        },
+        "diagnosis_shorthand": {
+          "n": "<10",
+          "of": 957,
+          "pct": null
+        },
+        "ed_results_in_history": {
+          "n": "<10",
+          "of": 957,
+          "pct": null
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 957,
+          "pct": null
+        },
+        "any": {
+          "n": "<10",
+          "of": 957,
+          "pct": null
+        }
+      },
+      "radiology": {
+        "course_hindsight": {
+          "n": 67,
+          "of": 957,
+          "pct": 7.0
+        },
+        "diagnosis_shorthand": {
+          "n": 437,
+          "of": 957,
+          "pct": 45.7
+        },
+        "ed_results_in_history": {
+          "n": 47,
+          "of": 957,
+          "pct": 4.9
+        },
+        "redaction_marker": {
+          "n": 403,
+          "of": 957,
+          "pct": 42.1
+        },
+        "any": {
+          "n": 669,
+          "of": 957,
+          "pct": 69.9
+        }
+      }
+    },
+    "cholecystitis": {
+      "hpi": {
+        "course_hindsight": {
+          "n": 296,
+          "of": 648,
+          "pct": 45.7
+        },
+        "diagnosis_shorthand": {
+          "n": 180,
+          "of": 648,
+          "pct": 27.8
+        },
+        "ed_results_in_history": {
+          "n": 201,
+          "of": 648,
+          "pct": 31.0
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 648,
+          "pct": 0.0
+        },
+        "any": {
+          "n": 418,
+          "of": 648,
+          "pct": 64.5
+        }
+      },
+      "pe": {
+        "course_hindsight": {
+          "n": "<10",
+          "of": 648,
+          "pct": null
+        },
+        "diagnosis_shorthand": {
+          "n": "<10",
+          "of": 648,
+          "pct": null
+        },
+        "ed_results_in_history": {
+          "n": "<10",
+          "of": 648,
+          "pct": null
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 648,
+          "pct": null
+        },
+        "any": {
+          "n": 19,
+          "of": 648,
+          "pct": 2.9
+        }
+      },
+      "radiology": {
+        "course_hindsight": {
+          "n": 68,
+          "of": 648,
+          "pct": 10.5
+        },
+        "diagnosis_shorthand": {
+          "n": 498,
+          "of": 648,
+          "pct": 76.9
+        },
+        "ed_results_in_history": {
+          "n": 41,
+          "of": 648,
+          "pct": 6.3
+        },
+        "redaction_marker": {
+          "n": 174,
+          "of": 648,
+          "pct": 26.9
+        },
+        "any": {
+          "n": 544,
+          "of": 648,
+          "pct": 84.0
+        }
+      }
+    },
+    "diverticulitis": {
+      "hpi": {
+        "course_hindsight": {
+          "n": 132,
+          "of": 257,
+          "pct": 51.4
+        },
+        "diagnosis_shorthand": {
+          "n": 102,
+          "of": 257,
+          "pct": 39.7
+        },
+        "ed_results_in_history": {
+          "n": 99,
+          "of": 257,
+          "pct": 38.5
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 257,
+          "pct": 0.0
+        },
+        "any": {
+          "n": 189,
+          "of": 257,
+          "pct": 73.5
+        }
+      },
+      "pe": {
+        "course_hindsight": {
+          "n": "<10",
+          "of": 257,
+          "pct": 0.0
+        },
+        "diagnosis_shorthand": {
+          "n": "<10",
+          "of": 257,
+          "pct": null
+        },
+        "ed_results_in_history": {
+          "n": "<10",
+          "of": 257,
+          "pct": null
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 257,
+          "pct": null
+        },
+        "any": {
+          "n": "<10",
+          "of": 257,
+          "pct": null
+        }
+      },
+      "radiology": {
+        "course_hindsight": {
+          "n": 52,
+          "of": 257,
+          "pct": 20.2
+        },
+        "diagnosis_shorthand": {
+          "n": 220,
+          "of": 257,
+          "pct": 85.6
+        },
+        "ed_results_in_history": {
+          "n": 15,
+          "of": 257,
+          "pct": 5.8
+        },
+        "redaction_marker": {
+          "n": 131,
+          "of": 257,
+          "pct": 51.0
+        },
+        "any": {
+          "n": 234,
+          "of": 257,
+          "pct": 91.1
+        }
+      }
+    },
+    "pancreatitis": {
+      "hpi": {
+        "course_hindsight": {
+          "n": 317,
+          "of": 538,
+          "pct": 58.9
+        },
+        "diagnosis_shorthand": {
+          "n": 190,
+          "of": 538,
+          "pct": 35.3
+        },
+        "ed_results_in_history": {
+          "n": 341,
+          "of": 538,
+          "pct": 63.4
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 538,
+          "pct": 0.0
+        },
+        "any": {
+          "n": 459,
+          "of": 538,
+          "pct": 85.3
+        }
+      },
+      "pe": {
+        "course_hindsight": {
+          "n": "<10",
+          "of": 538,
+          "pct": null
+        },
+        "diagnosis_shorthand": {
+          "n": "<10",
+          "of": 538,
+          "pct": null
+        },
+        "ed_results_in_history": {
+          "n": "<10",
+          "of": 538,
+          "pct": null
+        },
+        "redaction_marker": {
+          "n": "<10",
+          "of": 538,
+          "pct": null
+        },
+        "any": {
+          "n": 19,
+          "of": 538,
+          "pct": 3.5
+        }
+      },
+      "radiology": {
+        "course_hindsight": {
+          "n": 101,
+          "of": 538,
+          "pct": 18.8
+        },
+        "diagnosis_shorthand": {
+          "n": 339,
+          "of": 538,
+          "pct": 63.0
+        },
+        "ed_results_in_history": {
+          "n": 46,
+          "of": 538,
+          "pct": 8.6
+        },
+        "redaction_marker": {
+          "n": 180,
+          "of": 538,
+          "pct": 33.5
+        },
+        "any": {
+          "n": 416,
+          "of": 538,
+          "pct": 77.3
+        }
+      }
+    }
+  }
+}

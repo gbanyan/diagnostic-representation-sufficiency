@@ -1,0 +1,140 @@
+{
+  "careunits_seen": {
+    "Vascular": 85,
+    "Emergency Department": 2316,
+    "UNKNOWN": 2400,
+    "Medicine": 823,
+    "Discharge Lounge": 89,
+    "Transplant": 167,
+    "Medical Intensive Care Unit (MICU)": 35,
+    "Observation": 46,
+    "Med/Surg/Trauma": 1052,
+    "Med/Surg/GYN": 134,
+    "Surgery/Pancreatic/Biliary/Bariatric": 231,
+    "Medical/Surgical (Gynecology)": 74,
+    "PACU": 297,
+    "Med/Surg": 528,
+    "Surgery/Trauma": 294,
+    "Neurology": 53,
+    "Hematology/Oncology": 85,
+    "Surgical Intensive Care Unit (SICU)": 70,
+    "Medicine/Cardiology": 32,
+    "Cardiac Surgery": 20,
+    "Medical/Surgical Intensive Care Unit (MICU/SICU)": 79,
+    "Surgery": 33,
+    "Trauma SICU (TSICU)": 74,
+    "Emergency Department Observation": 88,
+    "Neuro Surgical Intensive Care Unit (Neuro SICU)": "<10",
+    "Cardiology Surgery Intermediate": "<10",
+    "Obstetrics (Postpartum & Antepartum)": 15,
+    "Thoracic Surgery": "<10",
+    "Coronary Care Unit (CCU)": 12,
+    "Cardiac Vascular Intensive Care Unit (CVICU)": 11,
+    "Labor & Delivery": 11,
+    "Medicine/Cardiology Intermediate": "<10",
+    "Hematology/Oncology Intermediate": 19,
+    "Obstetrics Antepartum": "<10"
+  },
+  "landmarks_h": [
+    3,
+    6
+  ],
+  "attrition": {
+    "L3": {
+      "cdm_admissions": 2400,
+      "with_admission_record": 2400,
+      "alive_in_hospital_at_T_and_no_pacu_before_T": 2392,
+      "T1_excluded_procedure_before_T_date": 11,
+      "T1_same_day_ambiguous": 536,
+      "T1_text_only_evidence": 328,
+      "icu_before_T": 24
+    },
+    "L6": {
+      "cdm_admissions": 2400,
+      "with_admission_record": 2400,
+      "alive_in_hospital_at_T_and_no_pacu_before_T": 2365,
+      "T1_excluded_procedure_before_T_date": 36,
+      "T1_same_day_ambiguous": 622,
+      "T1_text_only_evidence": 325,
+      "icu_before_T": 56
+    }
+  },
+  "triage_recorded": {
+    "temperature": 1617,
+    "heartrate": 1623,
+    "resprate": 1618,
+    "o2sat": 1615,
+    "sbp": 1623,
+    "dbp": 1622,
+    "pain": 1622,
+    "acuity": 1632
+  },
+  "triage_bounds": {
+    "temperature": [
+      90,
+      110
+    ],
+    "heartrate": [
+      20,
+      250
+    ],
+    "resprate": [
+      4,
+      60
+    ],
+    "o2sat": [
+      50,
+      100
+    ],
+    "sbp": [
+      40,
+      300
+    ],
+    "dbp": [
+      20,
+      200
+    ],
+    "pain": [
+      0,
+      10
+    ],
+    "acuity": [
+      1,
+      5
+    ]
+  },
+  "triage_out_of_bounds": {
+    "pain": 46,
+    "sbp": "<10",
+    "dbp": "<10",
+    "temperature": "<10"
+  },
+  "labs": "labevents",
+  "anchor_source": {
+    "edregtime": 667,
+    "ed_intime": 1638,
+    "admittime": 95
+  },
+  "lab_itemids_matched": {
+    "glucose": 3,
+    "hgb": 3,
+    "lactate": 3,
+    "alt": 1,
+    "albumin": 2,
+    "alp": 2,
+    "ast": 1,
+    "bicarb": 1,
+    "tbili": 2,
+    "crp": 1,
+    "calcium": 1,
+    "creat": 2,
+    "lipase": 1,
+    "potassium": 2,
+    "sodium": 2,
+    "bun": 2,
+    "inr": 2,
+    "neut_pct": 2,
+    "plt": 2,
+    "wbc": 3
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "SAMPLE": "first 100 MB of numerics.csv; eligible visits fully contained in the sample",
+  "eligible_visits_in_sample": 1159,
+  "any_measure_by_T": {
+    "n": 1157,
+    "of": 1159,
+    "pct": 99.8
+  },
+  "by_measure_by_T": {
+    "HR": {
+      "n": 1153,
+      "of": 1159,
+      "pct": 99.5
+    },
+    "RR": {
+      "n": 1152,
+      "of": 1159,
+      "pct": 99.4
+    },
+    "SpO2": {
+      "n": 1156,
+      "of": 1159,
+      "pct": 99.7
+    },
+    "SBP": {
+      "n": 1156,
+      "of": 1159,
+      "pct": 99.7
+    },
+    "DBP": {
+      "n": 1156,
+      "of": 1159,
+      "pct": 99.7
+    },
+    "MAP": {
+      "n": 1156,
+      "of": 1159,
+      "pct": 99.7
+    },
+    "Temp": {
+      "n": 1116,
+      "of": 1159,
+      "pct": 96.3
+    },
+    "Pain": {
+      "n": 975,
+      "of": 1159,
+      "pct": 84.1
+    },
+    "LPM_O2": {
+      "n": 123,
+      "of": 1159,
+      "pct": 10.6
+    },
+    "Perf": {
+      "n": 946,
+      "of": 1159,
+      "pct": 81.6
+    },
+    "1min_HRV": {
+      "n": 815,
+      "of": 1159,
+      "pct": 70.3
+    },
+    "5min_HRV": {
+      "n": 814,
+      "of": 1159,
+      "pct": 70.2
+    }
+  },
+  "source_rows": {
+    "Chart": 48028,
+    "Monitor": 709397
+  },
+  "measures_rows": {
+    "HR": 134208,
+    "RR": 115813,
+    "SpO2": 157772,
+    "SBP": 15309,
+    "DBP": 15309,
+    "MAP": 15309,
+    "Pain": 3623,
+    "Temp": 2156,
+    "LPM_O2": 851,
+    "Perf": 144169,
+    "1min_HRV": 126471,
+    "5min_HRV": 26435
+  }
+}

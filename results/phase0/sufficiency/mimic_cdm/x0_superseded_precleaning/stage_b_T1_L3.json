@@ -1,0 +1,192 @@
+{
+  "target": "T1",
+  "label": "Pathology-specific definitive procedure after T",
+  "column": "Y_T1_procedure_L3",
+  "landmark_h": 3,
+  "sensitivity_cohort": false,
+  "diagnosis_object": "D_final (post-diagnostic)",
+  "stage_a": {
+    "n": 2381,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 949,
+        "H_bits": 0.6271,
+        "majority_share": 0.843,
+        "distribution": {
+          "0.0": {
+            "n": 149,
+            "of": 949,
+            "pct": 15.7
+          },
+          "1.0": {
+            "n": 800,
+            "of": 949,
+            "pct": 84.3
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 646,
+        "H_bits": 0.8599,
+        "majority_share": 0.717,
+        "distribution": {
+          "0.0": {
+            "n": 183,
+            "of": 646,
+            "pct": 28.3
+          },
+          "1.0": {
+            "n": 463,
+            "of": 646,
+            "pct": 71.7
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 255,
+        "H_bits": 0.7666,
+        "majority_share": 0.776,
+        "distribution": {
+          "0.0": {
+            "n": 198,
+            "of": 255,
+            "pct": 77.6
+          },
+          "1.0": {
+            "n": 57,
+            "of": 255,
+            "pct": 22.4
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 531,
+        "H_bits": 0.9409,
+        "majority_share": 0.642,
+        "distribution": {
+          "0.0": {
+            "n": 341,
+            "of": 531,
+            "pct": 64.2
+          },
+          "1.0": {
+            "n": 190,
+            "of": 531,
+            "pct": 35.8
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.9474,
+    "H_Y_given_D_bits": 0.7752,
+    "I_Y_D_bits": 0.1722,
+    "near_deterministic_given_D": false
+  },
+  "feature_sets": {
+    "X0": {
+      "n_features": 12,
+      "overall": {
+        "n": 2381,
+        "loss_D": 0.777,
+        "loss_DX": 0.746,
+        "delta_loss": 0.031,
+        "events": 1510,
+        "auroc_D": 0.7557,
+        "auroc_DX": 0.8204,
+        "brier_D": 0.1782,
+        "brier_DX": 0.1627,
+        "delta_auroc": 0.0646
+      },
+      "D=appendicitis": {
+        "n": 949,
+        "loss_D": 0.6278,
+        "loss_DX": 0.6414,
+        "delta_loss": -0.0135,
+        "events": 800,
+        "auroc_D": 0.4673,
+        "auroc_DX": 0.6804,
+        "brier_D": 0.1325,
+        "brier_DX": 0.1294,
+        "delta_auroc": 0.2131
+      },
+      "D=cholecystitis": {
+        "n": 646,
+        "loss_D": 0.8625,
+        "loss_DX": 0.7586,
+        "delta_loss": 0.1038,
+        "events": 463,
+        "auroc_D": 0.4565,
+        "auroc_DX": 0.7679,
+        "brier_D": 0.2037,
+        "brier_DX": 0.1664,
+        "delta_auroc": 0.3114
+      },
+      "D=diverticulitis": {
+        "n": 255,
+        "loss_D": 0.7696,
+        "loss_DX": 0.7306,
+        "delta_loss": 0.039,
+        "events": 57,
+        "auroc_D": 0.441,
+        "auroc_DX": 0.6357,
+        "brier_D": 0.1743,
+        "brier_DX": 0.1618,
+        "delta_auroc": 0.1948
+      },
+      "D=pancreatitis": {
+        "n": 531,
+        "loss_D": 0.9431,
+        "loss_DX": 0.9251,
+        "delta_loss": 0.0179,
+        "events": 190,
+        "auroc_D": 0.4604,
+        "auroc_DX": 0.6438,
+        "brier_D": 0.2305,
+        "brier_DX": 0.2183,
+        "delta_auroc": 0.1834
+      },
+      "ci95": {
+        "overall.delta_loss": [
+          -0.0159,
+          0.0681
+        ],
+        "overall.delta_auroc": [
+          0.0497,
+          0.0803
+        ],
+        "D=appendicitis.delta_loss": [
+          -0.1153,
+          0.0462
+        ],
+        "D=appendicitis.delta_auroc": [
+          0.1537,
+          0.2789
+        ],
+        "D=cholecystitis.delta_loss": [
+          0.0252,
+          0.1747
+        ],
+        "D=cholecystitis.delta_auroc": [
+          0.2478,
+          0.3785
+        ],
+        "D=diverticulitis.delta_loss": [
+          -0.0329,
+          0.1161
+        ],
+        "D=diverticulitis.delta_auroc": [
+          0.0775,
+          0.3107
+        ],
+        "D=pancreatitis.delta_loss": [
+          -0.0458,
+          0.0707
+        ],
+        "D=pancreatitis.delta_auroc": [
+          0.1117,
+          0.2491
+        ]
+      }
+    }
+  }
+}

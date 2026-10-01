@@ -1,0 +1,84 @@
+{
+  "by_pathology": {
+    "appendicitis": {
+      "cases": 957,
+      "any_conditional_item": {
+        "n": 808,
+        "of": 957,
+        "pct": 84.4
+      },
+      "per_item": {
+        "appendectomy": {
+          "n": 808,
+          "of": 957,
+          "pct": 84.4
+        }
+      }
+    },
+    "cholecystitis": {
+      "cases": 648,
+      "any_conditional_item": {
+        "n": 465,
+        "of": 648,
+        "pct": 71.8
+      },
+      "per_item": {
+        "cholecystectomy": {
+          "n": 465,
+          "of": 648,
+          "pct": 71.8
+        }
+      }
+    },
+    "diverticulitis": {
+      "cases": 257,
+      "any_conditional_item": {
+        "n": 61,
+        "of": 257,
+        "pct": 23.7
+      },
+      "per_item": {
+        "colectomy": {
+          "n": 39,
+          "of": 257,
+          "pct": 15.2
+        },
+        "drainage": {
+          "n": 33,
+          "of": 257,
+          "pct": 12.8
+        }
+      }
+    },
+    "pancreatitis": {
+      "cases": 538,
+      "any_conditional_item": {
+        "n": 241,
+        "of": 538,
+        "pct": 44.8
+      },
+      "per_item": {
+        "cholecystectomy_biliary": {
+          "n": 104,
+          "of": 538,
+          "pct": 19.3
+        },
+        "drainage": {
+          "n": 17,
+          "of": 538,
+          "pct": 3.2
+        },
+        "ercp": {
+          "n": 196,
+          "of": 538,
+          "pct": 36.4
+        }
+      }
+    }
+  },
+  "overall_any_conditional_item": {
+    "n": 1575,
+    "of": 2400,
+    "pct": 65.6
+  }
+}

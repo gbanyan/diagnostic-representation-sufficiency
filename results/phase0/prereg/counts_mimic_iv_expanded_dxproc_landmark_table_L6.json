@@ -1,0 +1,190 @@
+{
+  "table": "mimic_iv_expanded_dxproc_landmark_table",
+  "landmark_h": 6,
+  "landmark_cohort": 5492,
+  "T1_all": {
+    "n": 5453,
+    "events": 2296,
+    "by_diagnosis": {
+      "appendicitis": {
+        "events": 1094,
+        "non_events": 395
+      },
+      "cholecystitis": {
+        "events": 691,
+        "non_events": 336
+      },
+      "diverticulitis": {
+        "non_events": 866,
+        "events": 234
+      },
+      "pancreatitis": {
+        "non_events": 1560,
+        "events": 277
+      }
+    },
+    "era": {
+      "2008 - 2010": 1211,
+      "2011 - 2013": 1549,
+      "2014 - 2016": 1537,
+      "2017 - 2019": 1156
+    }
+  },
+  "T1_primary_green_only": {
+    "n": 4990,
+    "events": 1833,
+    "by_diagnosis": {
+      "appendicitis": {
+        "non_events": 395,
+        "events": 812
+      },
+      "cholecystitis": {
+        "events": 595,
+        "non_events": 336
+      },
+      "diverticulitis": {
+        "non_events": 866,
+        "events": 199
+      },
+      "pancreatitis": {
+        "non_events": 1560,
+        "events": 227
+      }
+    },
+    "era": {
+      "2008 - 2010": 1153,
+      "2011 - 2013": 1375,
+      "2014 - 2016": 1365,
+      "2017 - 2019": 1097
+    }
+  },
+  "T1_sensitivity_exclude_red": {
+    "n": 5332,
+    "events": 2175,
+    "by_diagnosis": {
+      "appendicitis": {
+        "events": 1021,
+        "non_events": 395
+      },
+      "cholecystitis": {
+        "events": 683,
+        "non_events": 336
+      },
+      "diverticulitis": {
+        "non_events": 866,
+        "events": 224
+      },
+      "pancreatitis": {
+        "non_events": 1560,
+        "events": 247
+      }
+    },
+    "era": {
+      "2008 - 2010": 1204,
+      "2011 - 2013": 1506,
+      "2014 - 2016": 1482,
+      "2017 - 2019": 1140
+    }
+  },
+  "T1_timing_classes_positives": {
+    "YELLOW": 342,
+    "GREEN": 1833,
+    "RED": 121
+  },
+  "T3": {
+    "n": 5412,
+    "events": 276,
+    "by_diagnosis": {
+      "appendicitis": {
+        "non_events": 1495,
+        "events": 15
+      },
+      "cholecystitis": {
+        "non_events": 955,
+        "events": 60
+      },
+      "diverticulitis": {
+        "non_events": 1028,
+        "events": 57
+      },
+      "pancreatitis": {
+        "non_events": 1658,
+        "events": 144
+      }
+    },
+    "era": {
+      "2008 - 2010": 1199,
+      "2011 - 2013": 1537,
+      "2014 - 2016": 1526,
+      "2017 - 2019": 1150
+    }
+  },
+  "T5_operated_organ": {
+    "n": 1323,
+    "by_diagnosis_x_organ": {
+      "appendicitis|appendix": 732,
+      "appendicitis|colon": 12,
+      "cholecystitis|colon": "<10",
+      "cholecystitis|gallbladder": 385,
+      "diverticulitis|colon": 133,
+      "pancreatitis|colon": "<10",
+      "pancreatitis|gallbladder": 55
+    }
+  },
+  "M3_enoxaparin": {
+    "n": 3881,
+    "events": 58,
+    "by_diagnosis": {
+      "appendicitis": {
+        "non_events": 1240,
+        "events": "<10"
+      },
+      "cholecystitis": {
+        "non_events": 754,
+        "events": "<10"
+      },
+      "diverticulitis": {
+        "non_events": 786,
+        "events": 15
+      },
+      "pancreatitis": {
+        "non_events": 1043,
+        "events": 29
+      }
+    },
+    "era": {
+      "2008 - 2010": 852,
+      "2011 - 2013": 1090,
+      "2014 - 2016": 1115,
+      "2017 - 2019": 824
+    }
+  },
+  "M5_anaerobic": {
+    "n": 2638,
+    "events": 2425,
+    "by_diagnosis": {
+      "appendicitis": {
+        "events": 732,
+        "non_events": 42
+      },
+      "cholecystitis": {
+        "events": 635,
+        "non_events": 41
+      },
+      "diverticulitis": {
+        "events": 868,
+        "non_events": 37
+      },
+      "pancreatitis": {
+        "non_events": 93,
+        "events": 190
+      }
+    },
+    "era": {
+      "2008 - 2010": 536,
+      "2011 - 2013": 743,
+      "2014 - 2016": 767,
+      "2017 - 2019": 592
+    }
+  }
+}

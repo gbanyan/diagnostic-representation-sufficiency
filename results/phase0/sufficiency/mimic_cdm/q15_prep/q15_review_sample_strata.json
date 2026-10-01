@@ -1,0 +1,17 @@
+{
+  "status": "DEFERRED - AUTHOR DECISION PENDING; list prepared only, not reviewed or interpreted",
+  "landmark_h": 6,
+  "seed": 20260929,
+  "per_stratum": 15,
+  "stratum_sizes": {
+    "appendicitis|procedure=0": 149,
+    "appendicitis|procedure=1": 742,
+    "cholecystitis|procedure=0": 183,
+    "cholecystitis|procedure=1": 452,
+    "diverticulitis|procedure=0": 198,
+    "diverticulitis|procedure=1": 51,
+    "pancreatitis|procedure=0": 341,
+    "pancreatitis|procedure=1": 154
+  },
+  "sampled": 120
+}

@@ -1,0 +1,232 @@
+{
+  "analysis": "S1",
+  "C_selected": 0.003,
+  "test_visits": 6570,
+  "test_patients": 4535,
+  "predictions_sha256": "384efdfa99669b4a49de2f1f212513273426f12c8d9d222916e12590b50ba8a7",
+  "coef_sha256": {
+    "D": "64a3fff02b0b90c90c0e6479b53c82c6eb77266292092423dff959fc8287e5ee",
+    "DX": "5f4d05fb7a8e8b6990bb331e7d0c20ef526fa50ced2b751e25f1209e737e90f5"
+  },
+  "summary": {
+    "n": 6570,
+    "events": 212,
+    "L_D_nats": 0.1325,
+    "L_DX_nats": 0.1035,
+    "delta_L_nats": 0.029,
+    "delta_bits": 0.0418,
+    "L_D_bits": 0.1912,
+    "L_DX_bits": 0.1494,
+    "relative_gain": 0.2186,
+    "auroc_D": 0.7034,
+    "auprc_D": 0.073,
+    "brier_D": 0.0305,
+    "calibration_D": {
+      "intercept_citl": -0.0772,
+      "slope": 1.0815,
+      "recal_intercept": 0.1712
+    },
+    "deciles_D": [
+      {
+        "bin": 0,
+        "n": 629,
+        "mean_pred": 0.0082,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 1,
+        "n": 447,
+        "mean_pred": 0.012,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 2,
+        "n": 718,
+        "mean_pred": 0.016,
+        "observed": 0.0139,
+        "events": 10
+      },
+      {
+        "bin": 3,
+        "n": 493,
+        "mean_pred": 0.0251,
+        "observed": 0.0284,
+        "events": 14
+      },
+      {
+        "bin": 4,
+        "n": 954,
+        "mean_pred": 0.0267,
+        "observed": 0.0273,
+        "events": 26
+      },
+      {
+        "bin": 5,
+        "n": 538,
+        "mean_pred": 0.028,
+        "observed": 0.0279,
+        "events": 15
+      },
+      {
+        "bin": 6,
+        "n": 253,
+        "mean_pred": 0.0291,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 7,
+        "n": 647,
+        "mean_pred": 0.0301,
+        "observed": 0.0247,
+        "events": 16
+      },
+      {
+        "bin": 8,
+        "n": 1203,
+        "mean_pred": 0.0467,
+        "observed": 0.0466,
+        "events": 56
+      },
+      {
+        "bin": 9,
+        "n": 688,
+        "mean_pred": 0.1017,
+        "observed": 0.0959,
+        "events": 66
+      }
+    ],
+    "auroc_DX": 0.873,
+    "auprc_DX": 0.3376,
+    "brier_DX": 0.0257,
+    "calibration_DX": {
+      "intercept_citl": -0.0501,
+      "slope": 1.1648,
+      "recal_intercept": 0.3639
+    },
+    "deciles_DX": [
+      {
+        "bin": 0,
+        "n": 657,
+        "mean_pred": 0.0021,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 1,
+        "n": 657,
+        "mean_pred": 0.0041,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 2,
+        "n": 657,
+        "mean_pred": 0.0061,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 3,
+        "n": 657,
+        "mean_pred": 0.0085,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 4,
+        "n": 657,
+        "mean_pred": 0.0116,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 5,
+        "n": 657,
+        "mean_pred": 0.0155,
+        "observed": null,
+        "events": "<10"
+      },
+      {
+        "bin": 6,
+        "n": 657,
+        "mean_pred": 0.0218,
+        "observed": 0.0228,
+        "events": 15
+      },
+      {
+        "bin": 7,
+        "n": 657,
+        "mean_pred": 0.0319,
+        "observed": 0.0152,
+        "events": 10
+      },
+      {
+        "bin": 8,
+        "n": 657,
+        "mean_pred": 0.0548,
+        "observed": 0.0487,
+        "events": 32
+      },
+      {
+        "bin": 9,
+        "n": 657,
+        "mean_pred": 0.1802,
+        "observed": 0.204,
+        "events": 134
+      }
+    ],
+    "auroc_diff": 0.1696,
+    "auprc_diff": 0.2646,
+    "brier_diff": 0.0048
+  },
+  "bootstrap_95ci": {
+    "delta_L_nats": {
+      "lo": 0.0226,
+      "hi": 0.0358,
+      "reps": 2000
+    },
+    "delta_bits": {
+      "lo": 0.0325,
+      "hi": 0.0517,
+      "reps": 2000
+    },
+    "relative_gain": {
+      "lo": 0.1783,
+      "hi": 0.2576,
+      "reps": 2000
+    },
+    "auroc_diff": {
+      "lo": 0.1354,
+      "hi": 0.2056,
+      "reps": 2000
+    },
+    "auprc_diff": {
+      "lo": 0.2008,
+      "hi": 0.329,
+      "reps": 2000
+    },
+    "brier_diff": {
+      "lo": 0.0033,
+      "hi": 0.0064,
+      "reps": 2000
+    },
+    "auroc_D": {
+      "lo": 0.6686,
+      "hi": 0.7393,
+      "reps": 2000
+    },
+    "auroc_DX": {
+      "lo": 0.8482,
+      "hi": 0.8975,
+      "reps": 2000
+    }
+  },
+  "criterion": {
+    "delta_ci_lower_gt_0": true,
+    "relative_gain_ge_10pct": true,
+    "result": "sensitivity (no confirmatory role)"
+  }
+}

@@ -1,0 +1,609 @@
+{
+  "stays": 200859,
+  "hospitals": 208,
+  "diagnosis_saves_per_stay": {
+    "median": 2,
+    "p90": 6.0
+  },
+  "first_diagnosis_offset_min": {
+    "median": 53,
+    "share_after_landmark": 0.6
+  },
+  "treatment_rows_sharing_offset_with_diagnosis": {
+    "n": 3683942,
+    "of": 3688745,
+    "pct": 99.9
+  },
+  "landmark_min": 1440,
+  "stays_alive_in_unit_at_T": 132783,
+  "with_primary_diagnosis_entered_by_T": {
+    "n": 95789,
+    "of": 132783,
+    "pct": 72.1
+  },
+  "hospitals_with_any_vasopressor_infusion_rows": 146,
+  "hospitals_with_any_medication_rows": 174,
+  "top_primary_groups": {
+    "cardiovascular|shock / hypotension|sepsis": 6747,
+    "pulmonary|respiratory failure|acute respiratory failure": 5324,
+    "cardiovascular|chest pain / ASHD|acute coronary syndrome": 4961,
+    "neurologic|disorders of vasculature|stroke": 4740,
+    "pulmonary|pulmonary infections|pneumonia": 3171,
+    "cardiovascular|ventricular disorders|congestive heart failure": 2838,
+    "cardiovascular|cardiac arrest|cardiac arrest": 2592,
+    "cardiovascular|shock / hypotension|septic shock": 2157,
+    "cardiovascular|cardiac surgery|s/p CABG < 7 days": 2145,
+    "endocrine|glucose metabolism|DKA": 2132,
+    "infectious diseases|systemic/other infections|sepsis": 1896,
+    "cardiovascular|arrhythmias|atrial fibrillation": 1887,
+    "gastrointestinal|GI bleeding / PUD|upper GI bleeding": 1876,
+    "cardiovascular|cardiac surgery|valve replacement < 7days": 1666,
+    "pulmonary|respiratory failure|acute respiratory distress": 1520
+  },
+  "stage_a": {
+    "E1_vasopressor_start_next_24h": {
+      "n": 81616,
+      "by_diagnosis": {
+        "cardiovascular|arrhythmias|atrial fibrillation": {
+          "n": 1787,
+          "H_bits": 0.0886,
+          "majority_share": 0.989,
+          "distribution": {
+            "0": {
+              "n": 1767,
+              "of": 1787,
+              "pct": 98.9
+            },
+            "1": {
+              "n": 20,
+              "of": 1787,
+              "pct": 1.1
+            }
+          }
+        },
+        "cardiovascular|cardiac arrest|cardiac arrest": {
+          "n": 1591,
+          "H_bits": 0.2198,
+          "majority_share": 0.965,
+          "distribution": {
+            "0": {
+              "n": 1535,
+              "of": 1591,
+              "pct": 96.5
+            },
+            "1": {
+              "n": 56,
+              "of": 1591,
+              "pct": 3.5
+            }
+          }
+        },
+        "cardiovascular|cardiac surgery|s/p CABG < 7 days": {
+          "n": 1267,
+          "H_bits": 0.0877,
+          "majority_share": 0.989,
+          "distribution": {
+            "0": {
+              "n": 1253,
+              "of": 1267,
+              "pct": 98.9
+            },
+            "1": {
+              "n": 14,
+              "of": 1267,
+              "pct": 1.1
+            }
+          }
+        },
+        "cardiovascular|cardiac surgery|valve replacement < 7days": {
+          "n": 1069,
+          "H_bits": 0.0701,
+          "majority_share": 0.992,
+          "distribution": {
+            "0": {
+              "n": 1060,
+              "of": 1069,
+              "pct": 99.2
+            },
+            "1": {
+              "n": "<10",
+              "of": 1069,
+              "pct": null
+            }
+          }
+        },
+        "cardiovascular|chest pain / ASHD|acute coronary syndrome": {
+          "n": 4526,
+          "H_bits": 0.147,
+          "majority_share": 0.979,
+          "distribution": {
+            "0": {
+              "n": 4431,
+              "of": 4526,
+              "pct": 97.9
+            },
+            "1": {
+              "n": 95,
+              "of": 4526,
+              "pct": 2.1
+            }
+          }
+        },
+        "cardiovascular|shock / hypotension|sepsis": {
+          "n": 5123,
+          "H_bits": 0.1581,
+          "majority_share": 0.977,
+          "distribution": {
+            "0": {
+              "n": 5005,
+              "of": 5123,
+              "pct": 97.7
+            },
+            "1": {
+              "n": 118,
+              "of": 5123,
+              "pct": 2.3
+            }
+          }
+        },
+        "cardiovascular|shock / hypotension|septic shock": {
+          "n": 818,
+          "H_bits": 0.1722,
+          "majority_share": 0.974,
+          "distribution": {
+            "0": {
+              "n": 797,
+              "of": 818,
+              "pct": 97.4
+            },
+            "1": {
+              "n": 21,
+              "of": 818,
+              "pct": 2.6
+            }
+          }
+        },
+        "cardiovascular|ventricular disorders|congestive heart failure": {
+          "n": 2579,
+          "H_bits": 0.0864,
+          "majority_share": 0.989,
+          "distribution": {
+            "0": {
+              "n": 2551,
+              "of": 2579,
+              "pct": 98.9
+            },
+            "1": {
+              "n": 28,
+              "of": 2579,
+              "pct": 1.1
+            }
+          }
+        },
+        "endocrine|glucose metabolism|DKA": {
+          "n": 2087,
+          "H_bits": 0.0243,
+          "majority_share": 0.998,
+          "distribution": {
+            "0": {
+              "n": 2082,
+              "of": 2087,
+              "pct": 99.8
+            },
+            "1": {
+              "n": "<10",
+              "of": 2087,
+              "pct": null
+            }
+          }
+        },
+        "gastrointestinal|GI bleeding / PUD|upper GI bleeding": {
+          "n": 1709,
+          "H_bits": 0.0561,
+          "majority_share": 0.994,
+          "distribution": {
+            "0": {
+              "n": 1698,
+              "of": 1709,
+              "pct": 99.4
+            },
+            "1": {
+              "n": 11,
+              "of": 1709,
+              "pct": 0.6
+            }
+          }
+        },
+        "infectious diseases|systemic/other infections|sepsis": {
+          "n": 1516,
+          "H_bits": 0.1328,
+          "majority_share": 0.982,
+          "distribution": {
+            "0": {
+              "n": 1488,
+              "of": 1516,
+              "pct": 98.2
+            },
+            "1": {
+              "n": 28,
+              "of": 1516,
+              "pct": 1.8
+            }
+          }
+        },
+        "neurologic|disorders of vasculature|stroke": {
+          "n": 4475,
+          "H_bits": 0.0942,
+          "majority_share": 0.988,
+          "distribution": {
+            "0": {
+              "n": 4421,
+              "of": 4475,
+              "pct": 98.8
+            },
+            "1": {
+              "n": 54,
+              "of": 4475,
+              "pct": 1.2
+            }
+          }
+        },
+        "other": {
+          "n": 44420,
+          "H_bits": 0.0905,
+          "majority_share": 0.989,
+          "distribution": {
+            "0": {
+              "n": 43910,
+              "of": 44420,
+              "pct": 98.9
+            },
+            "1": {
+              "n": 510,
+              "of": 44420,
+              "pct": 1.1
+            }
+          }
+        },
+        "pulmonary|pulmonary infections|pneumonia": {
+          "n": 2742,
+          "H_bits": 0.1272,
+          "majority_share": 0.982,
+          "distribution": {
+            "0": {
+              "n": 2694,
+              "of": 2742,
+              "pct": 98.2
+            },
+            "1": {
+              "n": 48,
+              "of": 2742,
+              "pct": 1.8
+            }
+          }
+        },
+        "pulmonary|respiratory failure|acute respiratory distress": {
+          "n": 1419,
+          "H_bits": 0.1237,
+          "majority_share": 0.983,
+          "distribution": {
+            "0": {
+              "n": 1395,
+              "of": 1419,
+              "pct": 98.3
+            },
+            "1": {
+              "n": 24,
+              "of": 1419,
+              "pct": 1.7
+            }
+          }
+        },
+        "pulmonary|respiratory failure|acute respiratory failure": {
+          "n": 4488,
+          "H_bits": 0.1226,
+          "majority_share": 0.983,
+          "distribution": {
+            "0": {
+              "n": 4413,
+              "of": 4488,
+              "pct": 98.3
+            },
+            "1": {
+              "n": 75,
+              "of": 4488,
+              "pct": 1.7
+            }
+          }
+        }
+      },
+      "H_Y_bits": 0.1043,
+      "H_Y_given_D_bits": 0.1029,
+      "I_Y_D_bits": 0.0014,
+      "near_deterministic_given_D": false
+    },
+    "E2_new_antibiotic_next_24h": {
+      "n": 70558,
+      "by_diagnosis": {
+        "cardiovascular|arrhythmias|atrial fibrillation": {
+          "n": 1579,
+          "H_bits": 0.177,
+          "majority_share": 0.973,
+          "distribution": {
+            "0": {
+              "n": 1537,
+              "of": 1579,
+              "pct": 97.3
+            },
+            "1": {
+              "n": 42,
+              "of": 1579,
+              "pct": 2.7
+            }
+          }
+        },
+        "cardiovascular|cardiac arrest|cardiac arrest": {
+          "n": 1843,
+          "H_bits": 0.2997,
+          "majority_share": 0.947,
+          "distribution": {
+            "0": {
+              "n": 1745,
+              "of": 1843,
+              "pct": 94.7
+            },
+            "1": {
+              "n": 98,
+              "of": 1843,
+              "pct": 5.3
+            }
+          }
+        },
+        "cardiovascular|cardiac surgery|s/p CABG < 7 days": {
+          "n": 1402,
+          "H_bits": 0.0661,
+          "majority_share": 0.992,
+          "distribution": {
+            "0": {
+              "n": 1391,
+              "of": 1402,
+              "pct": 99.2
+            },
+            "1": {
+              "n": 11,
+              "of": 1402,
+              "pct": 0.8
+            }
+          }
+        },
+        "cardiovascular|cardiac surgery|valve replacement < 7days": {
+          "n": 995,
+          "H_bits": 0.1128,
+          "majority_share": 0.985,
+          "distribution": {
+            "0": {
+              "n": 980,
+              "of": 995,
+              "pct": 98.5
+            },
+            "1": {
+              "n": 15,
+              "of": 995,
+              "pct": 1.5
+            }
+          }
+        },
+        "cardiovascular|chest pain / ASHD|acute coronary syndrome": {
+          "n": 4490,
+          "H_bits": 0.1588,
+          "majority_share": 0.977,
+          "distribution": {
+            "0": {
+              "n": 4386,
+              "of": 4490,
+              "pct": 97.7
+            },
+            "1": {
+              "n": 104,
+              "of": 4490,
+              "pct": 2.3
+            }
+          }
+        },
+        "cardiovascular|shock / hypotension|sepsis": {
+          "n": 3605,
+          "H_bits": 0.197,
+          "majority_share": 0.969,
+          "distribution": {
+            "0": {
+              "n": 3495,
+              "of": 3605,
+              "pct": 96.9
+            },
+            "1": {
+              "n": 110,
+              "of": 3605,
+              "pct": 3.1
+            }
+          }
+        },
+        "cardiovascular|shock / hypotension|septic shock": {
+          "n": 979,
+          "H_bits": 0.2779,
+          "majority_share": 0.952,
+          "distribution": {
+            "0": {
+              "n": 932,
+              "of": 979,
+              "pct": 95.2
+            },
+            "1": {
+              "n": 47,
+              "of": 979,
+              "pct": 4.8
+            }
+          }
+        },
+        "cardiovascular|ventricular disorders|congestive heart failure": {
+          "n": 2254,
+          "H_bits": 0.1702,
+          "majority_share": 0.975,
+          "distribution": {
+            "0": {
+              "n": 2197,
+              "of": 2254,
+              "pct": 97.5
+            },
+            "1": {
+              "n": 57,
+              "of": 2254,
+              "pct": 2.5
+            }
+          }
+        },
+        "endocrine|glucose metabolism|DKA": {
+          "n": 1808,
+          "H_bits": 0.144,
+          "majority_share": 0.98,
+          "distribution": {
+            "0": {
+              "n": 1771,
+              "of": 1808,
+              "pct": 98.0
+            },
+            "1": {
+              "n": 37,
+              "of": 1808,
+              "pct": 2.0
+            }
+          }
+        },
+        "gastrointestinal|GI bleeding / PUD|upper GI bleeding": {
+          "n": 1565,
+          "H_bits": 0.151,
+          "majority_share": 0.978,
+          "distribution": {
+            "0": {
+              "n": 1531,
+              "of": 1565,
+              "pct": 97.8
+            },
+            "1": {
+              "n": 34,
+              "of": 1565,
+              "pct": 2.2
+            }
+          }
+        },
+        "infectious diseases|systemic/other infections|sepsis": {
+          "n": 1420,
+          "H_bits": 0.1068,
+          "majority_share": 0.986,
+          "distribution": {
+            "0": {
+              "n": 1400,
+              "of": 1420,
+              "pct": 98.6
+            },
+            "1": {
+              "n": 20,
+              "of": 1420,
+              "pct": 1.4
+            }
+          }
+        },
+        "neurologic|disorders of vasculature|stroke": {
+          "n": 4379,
+          "H_bits": 0.1741,
+          "majority_share": 0.974,
+          "distribution": {
+            "0": {
+              "n": 4265,
+              "of": 4379,
+              "pct": 97.4
+            },
+            "1": {
+              "n": 114,
+              "of": 4379,
+              "pct": 2.6
+            }
+          }
+        },
+        "other": {
+          "n": 38069,
+          "H_bits": 0.1933,
+          "majority_share": 0.97,
+          "distribution": {
+            "0": {
+              "n": 36935,
+              "of": 38069,
+              "pct": 97.0
+            },
+            "1": {
+              "n": 1134,
+              "of": 38069,
+              "pct": 3.0
+            }
+          }
+        },
+        "pulmonary|pulmonary infections|pneumonia": {
+          "n": 1800,
+          "H_bits": 0.2499,
+          "majority_share": 0.958,
+          "distribution": {
+            "0": {
+              "n": 1725,
+              "of": 1800,
+              "pct": 95.8
+            },
+            "1": {
+              "n": 75,
+              "of": 1800,
+              "pct": 4.2
+            }
+          }
+        },
+        "pulmonary|respiratory failure|acute respiratory distress": {
+          "n": 1080,
+          "H_bits": 0.2198,
+          "majority_share": 0.965,
+          "distribution": {
+            "0": {
+              "n": 1042,
+              "of": 1080,
+              "pct": 96.5
+            },
+            "1": {
+              "n": 38,
+              "of": 1080,
+              "pct": 3.5
+            }
+          }
+        },
+        "pulmonary|respiratory failure|acute respiratory failure": {
+          "n": 3290,
+          "H_bits": 0.27,
+          "majority_share": 0.954,
+          "distribution": {
+            "0": {
+              "n": 3138,
+              "of": 3290,
+              "pct": 95.4
+            },
+            "1": {
+              "n": 152,
+              "of": 3290,
+              "pct": 4.6
+            }
+          }
+        }
+      },
+      "H_Y_bits": 0.1923,
+      "H_Y_given_D_bits": 0.1908,
+      "I_Y_D_bits": 0.0016,
+      "near_deterministic_given_D": false
+    }
+  },
+  "stage_b": "Cannot evaluate: contemporaneous X (lab, vitalPeriodic) not downloaded.",
+  "diagnosis_object": "D_t-like: latest primary problem-list entry saved by T (entry-time semantics, not formation time)"
+}

@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the associated article once published."
+title: "Diagnostic representation sufficiency: analysis code and aggregate results"
+authors:
+  - family-names: Huang
+    given-names: Jing-Rung
+    affiliation: "Department of Computer Science and Information Engineering, National Cheng Kung University"
+    orcid: "https://orcid.org/0000-0003-4776-3550"
+  - family-names: Lu
+    given-names: Wen-Hsiang
+    affiliation: "Department of Computer Science and Information Engineering, National Cheng Kung University"
+    orcid: "https://orcid.org/0009-0002-5149-6790"
+license: MIT

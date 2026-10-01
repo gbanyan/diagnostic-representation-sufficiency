@@ -1,0 +1,186 @@
+{
+  "taxonomy": "chapter",
+  "split": "primary",
+  "classes": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "OTHER",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "Z"
+  ],
+  "n_classes": 23,
+  "n_features_raw": 445,
+  "dev_visits": 25834,
+  "test_visits": 6570,
+  "C_per_fold": [
+    0.003,
+    0.003,
+    0.003,
+    0.003,
+    0.003
+  ],
+  "C_star_final": 0.003,
+  "nonconverged_fits": [],
+  "final_converged": true,
+  "dev_oof": {
+    "logloss_nats": 1.7583,
+    "logloss_bits": 2.5367,
+    "prior_logloss_nats": 2.4585,
+    "relative_reduction_vs_prior": 0.2848,
+    "top1_accuracy": 0.4482,
+    "majority_class_share": 0.3116,
+    "macro_f1": 0.2451,
+    "top_label_ece": 0.0223,
+    "per_fold": [
+      {
+        "fold": 0,
+        "C": 0.003,
+        "logloss": 1.7375,
+        "prior_logloss": 2.4587
+      },
+      {
+        "fold": 1,
+        "C": 0.003,
+        "logloss": 1.7731,
+        "prior_logloss": 2.4582
+      },
+      {
+        "fold": 2,
+        "C": 0.003,
+        "logloss": 1.7637,
+        "prior_logloss": 2.4582
+      },
+      {
+        "fold": 3,
+        "C": 0.003,
+        "logloss": 1.7625,
+        "prior_logloss": 2.4592
+      },
+      {
+        "fold": 4,
+        "C": 0.003,
+        "logloss": 1.7547,
+        "prior_logloss": 2.4583
+      }
+    ],
+    "classwise_recall": {
+      "A": {
+        "n_dev": 420,
+        "recall": 0.1381
+      },
+      "B": {
+        "n_dev": 79,
+        "recall": 0.0
+      },
+      "C": {
+        "n_dev": 862,
+        "recall": 0.1079
+      },
+      "D": {
+        "n_dev": 580,
+        "recall": 0.2379
+      },
+      "E": {
+        "n_dev": 969,
+        "recall": 0.1723
+      },
+      "F": {
+        "n_dev": 690,
+        "recall": 0.5
+      },
+      "G": {
+        "n_dev": 466,
+        "recall": 0.0021
+      },
+      "H": {
+        "n_dev": 265,
+        "recall": 0.2415
+      },
+      "I": {
+        "n_dev": 2535,
+        "recall": 0.2619
+      },
+      "J": {
+        "n_dev": 1067,
+        "recall": 0.2156
+      },
+      "K": {
+        "n_dev": 3420,
+        "recall": 0.5918
+      },
+      "L": {
+        "n_dev": 605,
+        "recall": 0.2116
+      },
+      "M": {
+        "n_dev": 1033,
+        "recall": 0.3359
+      },
+      "N": {
+        "n_dev": 1465,
+        "recall": 0.2778
+      },
+      "O": {
+        "n_dev": 57,
+        "recall": 0.0
+      },
+      "OTHER": {
+        "n_dev": 38,
+        "recall": 0.0
+      },
+      "R": {
+        "n_dev": 8050,
+        "recall": 0.7137
+      },
+      "S": {
+        "n_dev": 1595,
+        "recall": 0.6088
+      },
+      "T": {
+        "n_dev": 397,
+        "recall": 0.0277
+      },
+      "U": {
+        "n_dev": 425,
+        "recall": 0.3906
+      },
+      "V": {
+        "n_dev": 86,
+        "recall": 0.0
+      },
+      "W": {
+        "n_dev": 334,
+        "recall": 0.0539
+      },
+      "Z": {
+        "n_dev": 396,
+        "recall": 0.0076
+      }
+    }
+  },
+  "adequacy_rule": {
+    "min_relative_logloss_reduction_vs_prior": 0.1,
+    "require_every_fold_better_than_prior": true,
+    "require_top1_above_majority_share": true
+  },
+  "adequate": true,
+  "test_dhat": "produced once from the encoder fit on all development patients (no test labels used)"
+}

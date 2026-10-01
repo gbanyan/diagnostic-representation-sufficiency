@@ -1,0 +1,230 @@
+{
+  "cohort": 1200,
+  "class_counts": {
+    "CT": 671,
+    "US": 468,
+    "MRI": 61
+  },
+  "H_Y_bits": 1.2172,
+  "decision_point": "S0 (ED arrival)",
+  "dhat_note": "D_hat_0 = cross-fitted model-generated diagnosis (experimental bottleneck)",
+  "conditions": {
+    "a_bottleneck_Dhat": {
+      "logloss_bits_mean": 1.1652,
+      "macro_auroc_mean": 0.6268,
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 1.1652,
+          "selected_C": [
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "macro_auroc": 0.6241
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 1.1636,
+          "selected_C": [
+            0.3,
+            0.1,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "macro_auroc": 0.6343
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 1.1667,
+          "selected_C": [
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "macro_auroc": 0.6221
+        }
+      ]
+    },
+    "b_Dhat_plus_S0": {
+      "logloss_bits_mean": 1.088,
+      "macro_auroc_mean": 0.7317,
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 1.0929,
+          "selected_C": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "macro_auroc": 0.7318
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 1.081,
+          "selected_C": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "macro_auroc": 0.7331
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 1.09,
+          "selected_C": [
+            0.03,
+            0.03,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "macro_auroc": 0.7302
+        }
+      ]
+    },
+    "c_direct_S0": {
+      "logloss_bits_mean": 1.0818,
+      "macro_auroc_mean": 0.7366,
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 1.0852,
+          "selected_C": [
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "macro_auroc": 0.7378
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 1.0728,
+          "selected_C": [
+            0.3,
+            0.3,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "macro_auroc": 0.74
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 1.0873,
+          "selected_C": [
+            0.1,
+            0.3,
+            0.3,
+            0.3,
+            0.1
+          ],
+          "macro_auroc": 0.732
+        }
+      ]
+    },
+    "d_oracle_Dfinal": {
+      "logloss_bits_mean": 0.9912,
+      "macro_auroc_mean": 0.7601,
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 0.9942,
+          "selected_C": [
+            1.0,
+            3.0,
+            100.0,
+            1.0,
+            1.0
+          ],
+          "macro_auroc": 0.7608
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 0.9905,
+          "selected_C": [
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "macro_auroc": 0.7575
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 0.9888,
+          "selected_C": [
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            1.0
+          ],
+          "macro_auroc": 0.762
+        }
+      ]
+    },
+    "e_soft_Dhat_probs": {
+      "logloss_bits_mean": 1.1271,
+      "macro_auroc_mean": 0.6974,
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 1.1271,
+          "selected_C": [
+            1.0,
+            1.0,
+            1.0,
+            3.0,
+            3.0
+          ],
+          "macro_auroc": 0.6977
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 1.1289,
+          "selected_C": [
+            3.0,
+            1.0,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "macro_auroc": 0.6955
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 1.1253,
+          "selected_C": [
+            1.0,
+            3.0,
+            3.0,
+            3.0,
+            1.0
+          ],
+          "macro_auroc": 0.699
+        }
+      ]
+    }
+  },
+  "H_Y_given_Dhat0_bits": 1.1583,
+  "G_hat_0_bits": 0.0772,
+  "G_hat_0_share_of_H_Y_given_Dhat0": 0.0666,
+  "G_hat_0_ci95_repeat1": [
+    0.04,
+    0.1022
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "label": "EXPLORATORY ontology audit; counts only; no outcome used",
+  "cohort_visits": 32404,
+  "ontologies": {
+    "R1_icd10_chapter": {
+      "n_classes": 23,
+      "median_class": 696,
+      "min_class": 45,
+      "max_class": 10105,
+      "share_pooled_other": 0.001,
+      "n_pooled_classes": 1,
+      "entropy_bits": 3.545,
+      "normalized_entropy": 0.784,
+      "classes_lt_30_dev": 0,
+      "min_dev_class": 38,
+      "encoder_parameters_approx": 13938
+    },
+    "R2_ccsr_body_system": {
+      "n_classes": 20,
+      "median_class": 1082,
+      "min_class": 35,
+      "max_class": 8042,
+      "share_pooled_other": 0.001,
+      "n_pooled_classes": 1,
+      "entropy_bits": 3.549,
+      "normalized_entropy": 0.821,
+      "classes_lt_30_dev": 0,
+      "min_dev_class": 30,
+      "encoder_parameters_approx": 12120
+    },
+    "R3_ccsr_category_min300": {
+      "n_classes": 52,
+      "median_class": 531,
+      "min_class": 35,
+      "max_class": 1821,
+      "share_pooled_other": 0.392,
+      "n_pooled_classes": 19,
+      "entropy_bits": 5.407,
+      "normalized_entropy": 0.948,
+      "classes_lt_30_dev": 0,
+      "min_dev_class": 30,
+      "encoder_parameters_approx": 31512
+    },
+    "R4_ccsr_category_min100": {
+      "n_classes": 94,
+      "median_class": 216,
+      "min_class": 35,
+      "max_class": 1520,
+      "share_pooled_other": 0.183,
+      "n_pooled_classes": 19,
+      "entropy_bits": 6.136,
+      "normalized_entropy": 0.936,
+      "classes_lt_30_dev": 0,
+      "min_dev_class": 30,
+      "encoder_parameters_approx": 56964
+    },
+    "R5_ccsr_category_min50": {
+      "n_classes": 127,
+      "median_class": 156,
+      "min_class": 50,
+      "max_class": 1520,
+      "share_pooled_other": 0.109,
+      "n_pooled_classes": 18,
+      "entropy_bits": 6.409,
+      "normalized_entropy": 0.917,
+      "classes_lt_30_dev": 0,
+      "min_dev_class": 36,
+      "encoder_parameters_approx": 76962
+    },
+    "R6_icd10_3char_min100": {
+      "n_classes": 92,
+      "median_class": 234,
+      "min_class": 45,
+      "max_class": 1471,
+      "share_pooled_other": 0.321,
+      "n_pooled_classes": 22,
+      "entropy_bits": 6.1,
+      "normalized_entropy": 0.935,
+      "classes_lt_30_dev": 0,
+      "min_dev_class": 38,
+      "encoder_parameters_approx": 55752
+    },
+    "R7_icd10_3char_min50": {
+      "n_classes": 154,
+      "median_class": 118,
+      "min_class": 45,
+      "max_class": 1450,
+      "share_pooled_other": 0.183,
+      "n_pooled_classes": 22,
+      "entropy_bits": 6.718,
+      "normalized_entropy": 0.924,
+      "classes_lt_30_dev": 0,
+      "min_dev_class": 35,
+      "encoder_parameters_approx": 93324
+    }
+  }
+}

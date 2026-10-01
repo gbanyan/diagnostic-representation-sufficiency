@@ -1,0 +1,494 @@
+{
+  "M1": {
+    "label": "Any systemic antibiotic order placed in (T, T+24h]",
+    "column": "Y_M1_antibiotic_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "H_bits": 0.9893,
+        "majority_share": 0.561,
+        "distribution": {
+          "0.0": {
+            "n": 418,
+            "of": 952,
+            "pct": 43.9
+          },
+          "1.0": {
+            "n": 534,
+            "of": 952,
+            "pct": 56.1
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 648,
+        "H_bits": 0.8969,
+        "majority_share": 0.687,
+        "distribution": {
+          "0.0": {
+            "n": 203,
+            "of": 648,
+            "pct": 31.3
+          },
+          "1.0": {
+            "n": 445,
+            "of": 648,
+            "pct": 68.7
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 256,
+        "H_bits": 0.5097,
+        "majority_share": 0.887,
+        "distribution": {
+          "0.0": {
+            "n": 29,
+            "of": 256,
+            "pct": 11.3
+          },
+          "1.0": {
+            "n": 227,
+            "of": 256,
+            "pct": 88.7
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 536,
+        "H_bits": 0.9074,
+        "majority_share": 0.677,
+        "distribution": {
+          "0.0": {
+            "n": 363,
+            "of": 536,
+            "pct": 67.7
+          },
+          "1.0": {
+            "n": 173,
+            "of": 536,
+            "pct": 32.3
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.983,
+    "H_Y_given_D_bits": 0.8946,
+    "I_Y_D_bits": 0.0885,
+    "near_deterministic_given_D": false
+  },
+  "M2": {
+    "label": "Broad-spectrum antibiotic order placed in (T, T+48h]",
+    "column": "Y_M2_broad_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "H_bits": 0.297,
+        "majority_share": 0.947,
+        "distribution": {
+          "0.0": {
+            "n": 902,
+            "of": 952,
+            "pct": 94.7
+          },
+          "1.0": {
+            "n": 50,
+            "of": 952,
+            "pct": 5.3
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 648,
+        "H_bits": 0.5392,
+        "majority_share": 0.877,
+        "distribution": {
+          "0.0": {
+            "n": 568,
+            "of": 648,
+            "pct": 87.7
+          },
+          "1.0": {
+            "n": 80,
+            "of": 648,
+            "pct": 12.3
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 256,
+        "H_bits": 0.7044,
+        "majority_share": 0.809,
+        "distribution": {
+          "0.0": {
+            "n": 207,
+            "of": 256,
+            "pct": 80.9
+          },
+          "1.0": {
+            "n": 49,
+            "of": 256,
+            "pct": 19.1
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 536,
+        "H_bits": 0.4595,
+        "majority_share": 0.903,
+        "distribution": {
+          "0.0": {
+            "n": 484,
+            "of": 536,
+            "pct": 90.3
+          },
+          "1.0": {
+            "n": 52,
+            "of": 536,
+            "pct": 9.7
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.458,
+    "H_Y_given_D_bits": 0.4426,
+    "I_Y_D_bits": 0.0154,
+    "near_deterministic_given_D": false
+  },
+  "M3": {
+    "label": "Enoxaparin (vs SC heparin) among VTE prophylaxis orders in (T, T+48h]",
+    "column": "Y_M3_enoxaparin_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 1881,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 850,
+        "H_bits": 0.0131,
+        "majority_share": 0.999,
+        "distribution": {
+          "0.0": {
+            "n": 849,
+            "of": 850,
+            "pct": 99.9
+          },
+          "1.0": {
+            "n": "<10",
+            "of": 850,
+            "pct": null
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 483,
+        "H_bits": 0.0387,
+        "majority_share": 0.996,
+        "distribution": {
+          "0.0": {
+            "n": 481,
+            "of": 483,
+            "pct": 99.6
+          },
+          "1.0": {
+            "n": "<10",
+            "of": 483,
+            "pct": null
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 200,
+        "H_bits": 0.1944,
+        "majority_share": 0.97,
+        "distribution": {
+          "0.0": {
+            "n": 194,
+            "of": 200,
+            "pct": 97.0
+          },
+          "1.0": {
+            "n": "<10",
+            "of": 200,
+            "pct": null
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 348,
+        "H_bits": 0.1085,
+        "majority_share": 0.986,
+        "distribution": {
+          "0.0": {
+            "n": 343,
+            "of": 348,
+            "pct": 98.6
+          },
+          "1.0": {
+            "n": "<10",
+            "of": 348,
+            "pct": null
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.0633,
+    "H_Y_given_D_bits": 0.0566,
+    "I_Y_D_bits": 0.0067,
+    "near_deterministic_given_D": true
+  },
+  "M4": {
+    "label": "Any opioid order placed in (T, T+24h]",
+    "column": "Y_M4_opioid_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "H_bits": 0.4198,
+        "majority_share": 0.915,
+        "distribution": {
+          "0.0": {
+            "n": 81,
+            "of": 952,
+            "pct": 8.5
+          },
+          "1.0": {
+            "n": 871,
+            "of": 952,
+            "pct": 91.5
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 648,
+        "H_bits": 0.8185,
+        "majority_share": 0.745,
+        "distribution": {
+          "0.0": {
+            "n": 165,
+            "of": 648,
+            "pct": 25.5
+          },
+          "1.0": {
+            "n": 483,
+            "of": 648,
+            "pct": 74.5
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 256,
+        "H_bits": 0.9089,
+        "majority_share": 0.676,
+        "distribution": {
+          "0.0": {
+            "n": 83,
+            "of": 256,
+            "pct": 32.4
+          },
+          "1.0": {
+            "n": 173,
+            "of": 256,
+            "pct": 67.6
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 536,
+        "H_bits": 0.8725,
+        "majority_share": 0.707,
+        "distribution": {
+          "0.0": {
+            "n": 157,
+            "of": 536,
+            "pct": 29.3
+          },
+          "1.0": {
+            "n": 379,
+            "of": 536,
+            "pct": 70.7
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.7282,
+    "H_Y_given_D_bits": 0.6816,
+    "I_Y_D_bits": 0.0466,
+    "near_deterministic_given_D": false
+  },
+  "M5": {
+    "label": "Anaerobic coverage among antibiotic orders in (T, T+24h]",
+    "column": "Y_M5_anaerobic_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 1379,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 534,
+        "H_bits": 0.2645,
+        "majority_share": 0.955,
+        "distribution": {
+          "0.0": {
+            "n": 24,
+            "of": 534,
+            "pct": 4.5
+          },
+          "1.0": {
+            "n": 510,
+            "of": 534,
+            "pct": 95.5
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 445,
+        "H_bits": 0.3562,
+        "majority_share": 0.933,
+        "distribution": {
+          "0.0": {
+            "n": 30,
+            "of": 445,
+            "pct": 6.7
+          },
+          "1.0": {
+            "n": 415,
+            "of": 445,
+            "pct": 93.3
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 227,
+        "H_bits": 0.4591,
+        "majority_share": 0.903,
+        "distribution": {
+          "0.0": {
+            "n": 22,
+            "of": 227,
+            "pct": 9.7
+          },
+          "1.0": {
+            "n": 205,
+            "of": 227,
+            "pct": 90.3
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 173,
+        "H_bits": 0.8748,
+        "majority_share": 0.705,
+        "distribution": {
+          "0.0": {
+            "n": 51,
+            "of": 173,
+            "pct": 29.5
+          },
+          "1.0": {
+            "n": 122,
+            "of": 173,
+            "pct": 70.5
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.4434,
+    "H_Y_given_D_bits": 0.4027,
+    "I_Y_D_bits": 0.0407,
+    "near_deterministic_given_D": false
+  },
+  "M6": {
+    "label": "Any insulin order placed in (T, T+24h]",
+    "column": "Y_M6_insulin_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "H_bits": 0.3352,
+        "majority_share": 0.938,
+        "distribution": {
+          "0.0": {
+            "n": 893,
+            "of": 952,
+            "pct": 93.8
+          },
+          "1.0": {
+            "n": 59,
+            "of": 952,
+            "pct": 6.2
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 648,
+        "H_bits": 0.4601,
+        "majority_share": 0.903,
+        "distribution": {
+          "0.0": {
+            "n": 585,
+            "of": 648,
+            "pct": 90.3
+          },
+          "1.0": {
+            "n": 63,
+            "of": 648,
+            "pct": 9.7
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 256,
+        "H_bits": 0.6059,
+        "majority_share": 0.852,
+        "distribution": {
+          "0.0": {
+            "n": 218,
+            "of": 256,
+            "pct": 85.2
+          },
+          "1.0": {
+            "n": 38,
+            "of": 256,
+            "pct": 14.8
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 536,
+        "H_bits": 0.7136,
+        "majority_share": 0.804,
+        "distribution": {
+          "0.0": {
+            "n": 431,
+            "of": 536,
+            "pct": 80.4
+          },
+          "1.0": {
+            "n": 105,
+            "of": 536,
+            "pct": 19.6
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.5023,
+    "H_Y_given_D_bits": 0.4828,
+    "I_Y_D_bits": 0.0195,
+    "near_deterministic_given_D": false
+  }
+}

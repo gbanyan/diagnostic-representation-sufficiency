@@ -1,0 +1,311 @@
+{
+  "fig1_design": {
+    "all": [
+      {
+        "path": "article Methods (not in this repository)",
+        "keys": [
+          "Sections 3.1, 3.4, 3.8, 3.10 (schematic labels only; no data values)"
+        ]
+      }
+    ]
+  },
+  "fig2_evidence": {
+    "row T1": [
+      {
+        "path": "results/main/target_sufficiency/primary_T1.json",
+        "keys": [
+          "across_repeats.rel_delta.mean",
+          "across_repeats.delta.mean (bits)",
+          "repeats[0].bootstrap_ci.rel_delta",
+          "repeats[0].bootstrap_ci.delta",
+          "repeats[0].metrics.n",
+          "repeats[0].metrics.events"
+        ]
+      }
+    ],
+    "row T3": [
+      {
+        "path": "results/main/target_sufficiency/secondary_T3.json",
+        "keys": [
+          "across_repeats.rel_delta.mean",
+          "across_repeats.delta.mean (bits)",
+          "repeats[0].bootstrap_ci.rel_delta",
+          "repeats[0].bootstrap_ci.delta",
+          "repeats[0].metrics.n",
+          "repeats[0].metrics.events"
+        ]
+      }
+    ],
+    "row M5": [
+      {
+        "path": "results/main/target_sufficiency/control_M5.json",
+        "keys": [
+          "across_repeats.rel_delta.mean",
+          "across_repeats.delta.mean (bits)",
+          "repeats[0].bootstrap_ci.rel_delta",
+          "repeats[0].bootstrap_ci.delta",
+          "repeats[0].metrics.n",
+          "repeats[0].metrics.events"
+        ]
+      }
+    ],
+    "row T5": [
+      {
+        "path": "results/main/target_sufficiency/control_T5.json",
+        "keys": [
+          "across_repeats.rel_delta.mean",
+          "across_repeats.delta.mean (bits)",
+          "repeats[0].bootstrap_ci.rel_delta",
+          "repeats[0].bootstrap_ci.delta",
+          "repeats[0].metrics.n",
+          "repeats[0].metrics.events"
+        ]
+      }
+    ],
+    "row M3": [
+      {
+        "path": "results/main/target_sufficiency/control_M3.json",
+        "keys": [
+          "across_repeats.rel_delta.mean",
+          "across_repeats.delta.mean (bits)",
+          "repeats[0].bootstrap_ci.rel_delta",
+          "repeats[0].bootstrap_ci.delta",
+          "repeats[0].metrics.n",
+          "repeats[0].metrics.events"
+        ]
+      }
+    ],
+    "row MC-MED": [
+      {
+        "path": "results/mcmed/stageG_test_primary.json",
+        "keys": [
+          "summary.relative_gain",
+          "summary.delta_bits",
+          "bootstrap_95ci.relative_gain",
+          "bootstrap_95ci.delta_bits",
+          "summary.n",
+          "summary.events"
+        ]
+      }
+    ]
+  },
+  "fig3_mcmed_pipeline": {
+    "box 1 cohort": [
+      {
+        "path": "results/mcmed/stageA_cohort.json",
+        "keys": [
+          "attrition[*].visits",
+          "attrition[*].excluded.visits",
+          "final.visits",
+          "final.patients",
+          "final.icu"
+        ]
+      }
+    ],
+    "box 2 X_3h": [
+      {
+        "path": "results/mcmed/stageF_develop_primary.json",
+        "keys": [
+          "X_raw_columns",
+          "X_model_columns_after_indicators"
+        ]
+      }
+    ],
+    "box 3 split": [
+      {
+        "path": "results/mcmed/stageC_split.json",
+        "keys": [
+          "by_set.dev",
+          "by_set.test",
+          "patient_overlap",
+          "test_fraction"
+        ]
+      }
+    ],
+    "box 4 encoder + gate": [
+      {
+        "path": "results/mcmed/stageE_encoder_body_primary.json",
+        "keys": [
+          "n_classes",
+          "dev_oof.relative_reduction_vs_prior",
+          "dev_oof.per_fold",
+          "dev_oof.top1_accuracy",
+          "dev_oof.majority_class_share",
+          "adequacy_rule",
+          "adequate"
+        ]
+      },
+      {
+        "path": "results/mcmed/stageF_develop_primary.json",
+        "keys": [
+          "D_block_columns"
+        ]
+      }
+    ],
+    "box 5 dev tuning": [
+      {
+        "path": "results/mcmed/stageF_develop_primary.json",
+        "keys": [
+          "inner_cv_mean_logloss_DX_by_C (grid size)",
+          "C_selected",
+          "solver"
+        ]
+      }
+    ],
+    "box 6 test": [
+      {
+        "path": "results/mcmed/stageG_test_primary.json",
+        "keys": [
+          "summary.n",
+          "summary.events",
+          "summary.relative_gain",
+          "bootstrap_95ci.relative_gain",
+          "bootstrap_95ci.delta_bits.reps"
+        ]
+      }
+    ],
+    "timeline": [
+      {
+        "path": "docs/confirmatory_audit_trail.md",
+        "keys": [
+          "Timeline rows 15, 19, 22, 23 (Time, Event, Commit / tag)"
+        ]
+      }
+    ]
+  },
+  "fig4_granularity": {
+    "A (upper): fractional reduction, CCSR": [
+      {
+        "path": "exploratory/diagnostic_capacity/results/capacity.json",
+        "keys": [
+          "ontologies.R3_ccsr_category_min300.n_classes / soft_dhat.relative_gain / soft_dhat.ci95.relative_gain",
+          "ontologies.R4_ccsr_category_min100.n_classes / soft_dhat.relative_gain / soft_dhat.ci95.relative_gain",
+          "ontologies.R5_ccsr_category_min50.n_classes / soft_dhat.relative_gain / soft_dhat.ci95.relative_gain",
+          "ontologies.R2_ccsr_body_system.hindsight_label_reference.relative_gain/ci95",
+          "ontologies.R5_ccsr_category_min50.hindsight_label_reference.relative_gain/ci95"
+        ]
+      },
+      {
+        "path": "results/mcmed/stageG_test_primary.json",
+        "keys": [
+          "20-class confirmatory point: summary.relative_gain, bootstrap_95ci.relative_gain (2,000 reps)"
+        ]
+      }
+    ],
+    "A (lower): paired difference vs 20 classes": [
+      {
+        "path": "exploratory/diagnostic_capacity/results/capacity_paired_diff.json",
+        "keys": [
+          "differences.R3_ccsr_category_min300_minus_R2_ccsr_body_system.rel",
+          "differences.R4_ccsr_category_min100_minus_R2_ccsr_body_system.rel",
+          "differences.R5_ccsr_category_min50_minus_R2_ccsr_body_system.rel"
+        ]
+      }
+    ],
+    "B: log loss": [
+      {
+        "path": "exploratory/diagnostic_capacity/results/capacity_paired_diff.json",
+        "keys": [
+          "points.R2_ccsr_body_system.LD / LDX",
+          "points.R3_ccsr_category_min300.LD / LDX",
+          "points.R4_ccsr_category_min100.LD / LDX",
+          "points.R5_ccsr_category_min50.LD / LDX"
+        ]
+      }
+    ],
+    "C: ICD-10 points": [
+      {
+        "path": "exploratory/diagnostic_capacity/results/capacity.json",
+        "keys": [
+          "ontologies.R1_icd10_chapter.soft_dhat.relative_gain/ci95",
+          "ontologies.R6_icd10_3char_min100.soft_dhat.relative_gain/ci95",
+          "ontologies.R7_icd10_3char_min50.soft_dhat.relative_gain/ci95",
+          "ontologies.R7_icd10_3char_min50.hindsight_label_reference.relative_gain/ci95"
+        ]
+      }
+    ]
+  },
+  "figS1_calibration": {
+    "Primary": [
+      {
+        "path": "results/mcmed/stageG_test_primary.json",
+        "keys": [
+          "summary.deciles_D",
+          "summary.deciles_DX",
+          "summary.n",
+          "summary.events"
+        ]
+      }
+    ],
+    "SA1 hard top-1": [
+      {
+        "path": "results/mcmed/stageG_test_S1.json",
+        "keys": [
+          "summary.deciles_D",
+          "summary.deciles_DX",
+          "summary.n",
+          "summary.events"
+        ]
+      }
+    ],
+    "SA2 ICD-10 chapter": [
+      {
+        "path": "results/mcmed/stageG_test_S2.json",
+        "keys": [
+          "summary.deciles_D",
+          "summary.deciles_DX",
+          "summary.n",
+          "summary.events"
+        ]
+      }
+    ],
+    "SA3 race and\nethnicity added": [
+      {
+        "path": "results/mcmed/stageG_test_S3.json",
+        "keys": [
+          "summary.deciles_D",
+          "summary.deciles_DX",
+          "summary.n",
+          "summary.events"
+        ]
+      }
+    ],
+    "SA4 chronological split": [
+      {
+        "path": "results/mcmed/stageG_test_S4.json",
+        "keys": [
+          "summary.deciles_D",
+          "summary.deciles_DX",
+          "summary.n",
+          "summary.events"
+        ]
+      }
+    ]
+  },
+  "figS2_attrition": {
+    "flow": [
+      {
+        "path": "results/mcmed/stageA_cohort.json",
+        "keys": [
+          "attrition[*] (visits, patients, icu, excluded)",
+          "unmapped_breakdown"
+        ]
+      }
+    ],
+    "split": [
+      {
+        "path": "results/mcmed/stageC_split.json",
+        "keys": [
+          "by_set.dev",
+          "by_set.test",
+          "patient_overlap"
+        ]
+      }
+    ]
+  },
+  "_meta": {
+    "generated_by": "figures/make_figures.py",
+    "disclosure_rule": "counts < 10 (including 0) shown as '<10' or not displayed",
+    "figS1_suppressed_decile_points": 56
+  }
+}

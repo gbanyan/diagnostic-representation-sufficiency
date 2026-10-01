@@ -1,0 +1,254 @@
+{
+  "cohort": 1595,
+  "classes": [
+    "appendicitis",
+    "cholecystitis",
+    "diverticulitis",
+    "pancreatitis"
+  ],
+  "H_D_bits": 1.7998,
+  "closed_world_note": "4-class problem among confirmed cases; optimistic relative to a real ED differential",
+  "stages": {
+    "S0": {
+      "features": "X0 + chief complaint",
+      "mean": {
+        "logloss_bits": 1.4014,
+        "info_recovered_bits": 0.3984,
+        "accuracy": 0.5956,
+        "macro_auroc": 0.7884,
+        "mean_top_prob": 0.61,
+        "mean_entropy_bits": 1.3526,
+        "sd_accuracy": 0.006
+      },
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 1.4003,
+          "info_recovered_bits": 0.3995,
+          "accuracy": 0.5994,
+          "macro_auroc": 0.7893,
+          "mean_top_prob": 0.6146,
+          "mean_entropy_bits": 1.3384,
+          "recall": {
+            "appendicitis": 0.8571,
+            "cholecystitis": 0.5366,
+            "diverticulitis": 0.1156,
+            "pancreatitis": 0.3138
+          },
+          "selected_C": [
+            0.3,
+            0.3,
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 1.3926,
+          "info_recovered_bits": 0.4072,
+          "accuracy": 0.5987,
+          "macro_auroc": 0.79,
+          "mean_top_prob": 0.6057,
+          "mean_entropy_bits": 1.3655,
+          "recall": {
+            "appendicitis": 0.8586,
+            "cholecystitis": 0.5455,
+            "diverticulitis": 0.1088,
+            "pancreatitis": 0.2966
+          },
+          "selected_C": [
+            0.3,
+            1.0,
+            0.3,
+            0.3,
+            0.3
+          ]
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 1.4113,
+          "info_recovered_bits": 0.3885,
+          "accuracy": 0.5887,
+          "macro_auroc": 0.7858,
+          "mean_top_prob": 0.6096,
+          "mean_entropy_bits": 1.3538,
+          "recall": {
+            "appendicitis": 0.8529,
+            "cholecystitis": 0.5255,
+            "diverticulitis": 0.102,
+            "pancreatitis": 0.2897
+          },
+          "selected_C": [
+            1.0,
+            0.3,
+            1.0,
+            0.3,
+            0.3
+          ]
+        }
+      ]
+    },
+    "S3h": {
+      "features": "X2 + chief complaint",
+      "mean": {
+        "logloss_bits": 0.9391,
+        "info_recovered_bits": 0.8606,
+        "accuracy": 0.7507,
+        "macro_auroc": 0.904,
+        "mean_top_prob": 0.7552,
+        "mean_entropy_bits": 0.9126,
+        "sd_accuracy": 0.0018
+      },
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 0.9413,
+          "info_recovered_bits": 0.8585,
+          "accuracy": 0.7517,
+          "macro_auroc": 0.9033,
+          "mean_top_prob": 0.7552,
+          "mean_entropy_bits": 0.9099,
+          "recall": {
+            "appendicitis": 0.8812,
+            "cholecystitis": 0.7206,
+            "diverticulitis": 0.2041,
+            "pancreatitis": 0.7621
+          },
+          "selected_C": [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 0.9365,
+          "info_recovered_bits": 0.8632,
+          "accuracy": 0.7517,
+          "macro_auroc": 0.9041,
+          "mean_top_prob": 0.7562,
+          "mean_entropy_bits": 0.9122,
+          "recall": {
+            "appendicitis": 0.884,
+            "cholecystitis": 0.7162,
+            "diverticulitis": 0.2245,
+            "pancreatitis": 0.7517
+          },
+          "selected_C": [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 0.9395,
+          "info_recovered_bits": 0.8602,
+          "accuracy": 0.7486,
+          "macro_auroc": 0.9046,
+          "mean_top_prob": 0.7541,
+          "mean_entropy_bits": 0.9156,
+          "recall": {
+            "appendicitis": 0.8798,
+            "cholecystitis": 0.7184,
+            "diverticulitis": 0.2109,
+            "pancreatitis": 0.7483
+          },
+          "selected_C": [
+            0.1,
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        }
+      ]
+    },
+    "S6h": {
+      "features": "X2 + chief complaint",
+      "mean": {
+        "logloss_bits": 0.8307,
+        "info_recovered_bits": 0.969,
+        "accuracy": 0.7856,
+        "macro_auroc": 0.9222,
+        "mean_top_prob": 0.7853,
+        "mean_entropy_bits": 0.8289,
+        "sd_accuracy": 0.0035
+      },
+      "repeats": [
+        {
+          "seed": 20260929,
+          "logloss_bits": 0.833,
+          "info_recovered_bits": 0.9668,
+          "accuracy": 0.7824,
+          "macro_auroc": 0.9221,
+          "mean_top_prob": 0.7902,
+          "mean_entropy_bits": 0.8064,
+          "recall": {
+            "appendicitis": 0.9038,
+            "cholecystitis": 0.7827,
+            "diverticulitis": 0.2517,
+            "pancreatitis": 0.7552
+          },
+          "selected_C": [
+            0.1,
+            0.03,
+            0.1,
+            0.1,
+            0.1
+          ]
+        },
+        {
+          "seed": 20260930,
+          "logloss_bits": 0.8283,
+          "info_recovered_bits": 0.9715,
+          "accuracy": 0.785,
+          "macro_auroc": 0.9217,
+          "mean_top_prob": 0.7818,
+          "mean_entropy_bits": 0.8426,
+          "recall": {
+            "appendicitis": 0.9081,
+            "cholecystitis": 0.7916,
+            "diverticulitis": 0.2177,
+            "pancreatitis": 0.7621
+          },
+          "selected_C": [
+            0.1,
+            0.1,
+            0.03,
+            0.03,
+            0.1
+          ]
+        },
+        {
+          "seed": 20260931,
+          "logloss_bits": 0.831,
+          "info_recovered_bits": 0.9688,
+          "accuracy": 0.7893,
+          "macro_auroc": 0.9226,
+          "mean_top_prob": 0.784,
+          "mean_entropy_bits": 0.8376,
+          "recall": {
+            "appendicitis": 0.9024,
+            "cholecystitis": 0.8004,
+            "diverticulitis": 0.2585,
+            "pancreatitis": 0.7655
+          },
+          "selected_C": [
+            0.1,
+            0.03,
+            0.03,
+            0.1,
+            0.1
+          ]
+        }
+      ]
+    }
+  },
+  "t_star": "not reached by 6 h"
+}

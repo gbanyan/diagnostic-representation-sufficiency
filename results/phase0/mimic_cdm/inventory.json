@@ -1,0 +1,370 @@
+{
+  "columns_seen": {
+    "history_of_present_illness.csv": [
+      "hadm_id",
+      "hpi"
+    ],
+    "physical_examination.csv": [
+      "hadm_id",
+      "pe"
+    ],
+    "discharge_diagnosis.csv": [
+      "hadm_id",
+      "discharge_diagnosis"
+    ],
+    "laboratory_tests.csv": [
+      "hadm_id",
+      "itemid",
+      "valuestr",
+      "ref_range_lower",
+      "ref_range_upper"
+    ],
+    "microbiology.csv": [
+      "hadm_id",
+      "test_itemid",
+      "valuestr",
+      "spec_itemid"
+    ],
+    "radiology_reports.csv": [
+      "hadm_id",
+      "note_id",
+      "modality",
+      "region",
+      "exam_name",
+      "text"
+    ],
+    "icd_diagnosis.csv": [
+      "hadm_id",
+      "icd_diagnosis"
+    ],
+    "discharge_procedures.csv": [
+      "hadm_id",
+      "discharge_procedure"
+    ],
+    "icd_procedures.csv": [
+      "hadm_id",
+      "icd_code",
+      "icd_title",
+      "icd_version"
+    ]
+  },
+  "by_pathology": {
+    "appendicitis": {
+      "cases": 957,
+      "hpi_present": {
+        "n": 957,
+        "of": 957,
+        "pct": 100.0
+      },
+      "pe_present": {
+        "n": 957,
+        "of": 957,
+        "pct": 100.0
+      },
+      "hpi_chars": {
+        "n": 957,
+        "min": 138,
+        "p5": 321.4,
+        "p25": 460.0,
+        "median": 603.0,
+        "p75": 815.0,
+        "p95": 1260.2,
+        "max": 3909
+      },
+      "pe_chars": {
+        "n": 957,
+        "min": 37,
+        "p5": 141.6,
+        "p25": 232.0,
+        "median": 316.0,
+        "p75": 404.0,
+        "p95": 585.6,
+        "max": 1339
+      },
+      "labs_per_case": {
+        "n": 957,
+        "min": 15,
+        "p5": 33.0,
+        "p25": 45.0,
+        "median": 52.0,
+        "p75": 59.0,
+        "p95": 71.0,
+        "max": 151
+      },
+      "lab_charttime_present": {
+        "n": "<10",
+        "of": 50218,
+        "pct": 0.0
+      },
+      "micro_per_case": {
+        "n": 957,
+        "min": 0,
+        "p5": 0.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 2.0,
+        "p95": 4.0,
+        "max": 12
+      },
+      "radiology_per_case": {
+        "n": 957,
+        "min": 1,
+        "p5": 1.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 2.0,
+        "p95": 3.0,
+        "max": 89
+      },
+      "radiology_modalities": {
+        "CT": 995,
+        "Ultrasound": 257,
+        "Radiograph": 370,
+        "CTU": 10,
+        "MRI": 20,
+        "Drainage": 9,
+        "MRCP": 2
+      }
+    },
+    "cholecystitis": {
+      "cases": 648,
+      "hpi_present": {
+        "n": 648,
+        "of": 648,
+        "pct": 100.0
+      },
+      "pe_present": {
+        "n": 648,
+        "of": 648,
+        "pct": 100.0
+      },
+      "hpi_chars": {
+        "n": 648,
+        "min": 239,
+        "p5": 436.35,
+        "p25": 646.75,
+        "median": 884.0,
+        "p75": 1371.5,
+        "p95": 2649.75,
+        "max": 9476
+      },
+      "pe_chars": {
+        "n": 648,
+        "min": 41,
+        "p5": 141.35,
+        "p25": 245.0,
+        "median": 338.0,
+        "p75": 447.0,
+        "p95": 741.95,
+        "max": 2046
+      },
+      "labs_per_case": {
+        "n": 648,
+        "min": 29,
+        "p5": 36.0,
+        "p25": 49.75,
+        "median": 58.0,
+        "p75": 68.0,
+        "p95": 87.0,
+        "max": 128
+      },
+      "lab_charttime_present": {
+        "n": "<10",
+        "of": 38477,
+        "pct": 0.0
+      },
+      "micro_per_case": {
+        "n": 648,
+        "min": 0,
+        "p5": 0.0,
+        "p25": 1.0,
+        "median": 1.0,
+        "p75": 3.0,
+        "p95": 6.0,
+        "max": 18
+      },
+      "radiology_per_case": {
+        "n": 648,
+        "min": 1,
+        "p5": 1.0,
+        "p25": 1.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p95": 7.0,
+        "max": 18
+      },
+      "radiology_modalities": {
+        "CT": 345,
+        "Ultrasound": 619,
+        "Radiograph": 586,
+        "MRCP": 88,
+        "ERCP": 24,
+        "MRI": 13,
+        "Fluoroscopy": 1,
+        "CTU": 2,
+        "Carotid ultrasound": 1,
+        "MRE": 1,
+        "Upper GI Series": 1,
+        "Drainage": 2
+      }
+    },
+    "diverticulitis": {
+      "cases": 257,
+      "hpi_present": {
+        "n": 257,
+        "of": 257,
+        "pct": 100.0
+      },
+      "pe_present": {
+        "n": 257,
+        "of": 257,
+        "pct": 100.0
+      },
+      "hpi_chars": {
+        "n": 257,
+        "min": 181,
+        "p5": 411.4,
+        "p25": 741.0,
+        "median": 1060.0,
+        "p75": 1606.0,
+        "p95": 3177.0,
+        "max": 5298
+      },
+      "pe_chars": {
+        "n": 257,
+        "min": 72,
+        "p5": 167.6,
+        "p25": 274.0,
+        "median": 385.0,
+        "p75": 578.0,
+        "p95": 994.2,
+        "max": 2134
+      },
+      "labs_per_case": {
+        "n": 257,
+        "min": 21,
+        "p5": 35.8,
+        "p25": 51.0,
+        "median": 59.0,
+        "p75": 68.0,
+        "p95": 99.2,
+        "max": 121
+      },
+      "lab_charttime_present": {
+        "n": "<10",
+        "of": 15809,
+        "pct": 0.0
+      },
+      "micro_per_case": {
+        "n": 257,
+        "min": 0,
+        "p5": 0.0,
+        "p25": 1.0,
+        "median": 2.0,
+        "p75": 4.0,
+        "p95": 9.0,
+        "max": 18
+      },
+      "radiology_per_case": {
+        "n": 257,
+        "min": 1,
+        "p5": 1.0,
+        "p25": 1.0,
+        "median": 2.0,
+        "p75": 3.0,
+        "p95": 9.2,
+        "max": 22
+      },
+      "radiology_modalities": {
+        "CT": 337,
+        "Radiograph": 347,
+        "Drainage": 8,
+        "Ultrasound": 62,
+        "Upper GI Series": 1,
+        "MRI": 11,
+        "MRCP": 1,
+        "CTU": 7
+      }
+    },
+    "pancreatitis": {
+      "cases": 538,
+      "hpi_present": {
+        "n": 538,
+        "of": 538,
+        "pct": 100.0
+      },
+      "pe_present": {
+        "n": 538,
+        "of": 538,
+        "pct": 100.0
+      },
+      "hpi_chars": {
+        "n": 538,
+        "min": 88,
+        "p5": 568.0,
+        "p25": 995.0,
+        "median": 1540.0,
+        "p75": 2128.75,
+        "p95": 3093.0,
+        "max": 5421
+      },
+      "pe_chars": {
+        "n": 538,
+        "min": 46,
+        "p5": 180.0,
+        "p25": 324.25,
+        "median": 484.0,
+        "p75": 681.5,
+        "p95": 1060.9,
+        "max": 2365
+      },
+      "labs_per_case": {
+        "n": 538,
+        "min": 31,
+        "p5": 38.0,
+        "p25": 51.0,
+        "median": 60.0,
+        "p75": 72.0,
+        "p95": 99.0,
+        "max": 161
+      },
+      "lab_charttime_present": {
+        "n": "<10",
+        "of": 34284,
+        "pct": 0.0
+      },
+      "micro_per_case": {
+        "n": 538,
+        "min": 0,
+        "p5": 0.0,
+        "p25": 0.0,
+        "median": 1.0,
+        "p75": 2.0,
+        "p95": 6.0,
+        "max": 22
+      },
+      "radiology_per_case": {
+        "n": 538,
+        "min": 1,
+        "p5": 1.0,
+        "p25": 2.0,
+        "median": 2.0,
+        "p75": 4.0,
+        "p95": 9.0,
+        "max": 62
+      },
+      "radiology_modalities": {
+        "Ultrasound": 442,
+        "MRCP": 136,
+        "Radiograph": 773,
+        "MRI": 23,
+        "CT": 387,
+        "ERCP": 74,
+        "CTU": 2,
+        "MRA": 1,
+        "PTC": 1,
+        "Fluoroscopy": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "cohort_n": 35127,
+  "note": "counts only; no ICU information by class",
+  "candidates": {
+    "A_icd10_chapter": {
+      "n_classes": 26,
+      "min_class": "<10",
+      "median_class": 702.0,
+      "max_class": 10596,
+      "classes_lt_50": 3,
+      "classes_lt_100": 4,
+      "share_other_or_unmapped": {
+        "n": 187,
+        "of": 35127,
+        "pct": 0.5
+      },
+      "share_symptom_classes": {
+        "n": 10596,
+        "of": 35127,
+        "pct": 30.2
+      },
+      "top15": {
+        "R": 10596,
+        "K": 4470,
+        "I": 3383,
+        "S": 2118,
+        "N": 1997,
+        "M": 1473,
+        "J": 1436,
+        "E": 1350,
+        "C": 1203,
+        "F": 897,
+        "D": 852,
+        "L": 818,
+        "A": 733,
+        "U": 671,
+        "G": 647
+      }
+    },
+    "B_ccsr_body_system": {
+      "n_classes": 22,
+      "min_class": "<10",
+      "median_class": 1078.0,
+      "max_class": 8242,
+      "classes_lt_50": 2,
+      "classes_lt_100": 4,
+      "share_other_or_unmapped": {
+        "n": "<10",
+        "of": 35127,
+        "pct": 0.0
+      },
+      "share_symptom_classes": {
+        "n": 8242,
+        "of": 35127,
+        "pct": 23.5
+      },
+      "top15": {
+        "SYM": 8242,
+        "CIR": 4842,
+        "DIG": 4418,
+        "INJ": 2572,
+        "GEN": 1982,
+        "UNM": 1717,
+        "RSP": 1382,
+        "MUS": 1318,
+        "NEO": 1274,
+        "END": 1250,
+        "INF": 1150,
+        "MBD": 1006,
+        "NVS": 1002,
+        "SKN": 784,
+        "BLD": 623
+      }
+    },
+    "C_ccsr_category_min300": {
+      "n_classes": 54,
+      "min_class": "<10",
+      "median_class": 541.0,
+      "max_class": 1877,
+      "classes_lt_50": 2,
+      "classes_lt_100": 5,
+      "share_other_or_unmapped": {
+        "n": 14842,
+        "of": 35127,
+        "pct": 42.3
+      },
+      "share_symptom_classes": {
+        "n": 8715,
+        "of": 35127,
+        "pct": 24.8
+      },
+      "top15": {
+        "OTHER_INJ": 1877,
+        "OTHER_DIG": 1737,
+        "UNMAPPED": 1717,
+        "SYM006": 1532,
+        "OTHER_CIR": 1483,
+        "CIR012": 1473,
+        "OTHER_NEO": 1274,
+        "SYM013": 1270,
+        "OTHER_NVS": 1002,
+        "SYM010": 995,
+        "OTHER_MUS": 914,
+        "OTHER_RSP": 905,
+        "END011": 900,
+        "SYM001": 796,
+        "GEN004": 743
+      }
+    },
+    "D_icd10_3char_min200": {
+      "n_classes": 66,
+      "min_class": "<10",
+      "median_class": 424.0,
+      "max_class": 2506,
+      "classes_lt_50": 3,
+      "classes_lt_100": 5,
+      "share_other_or_unmapped": {
+        "n": 15860,
+        "of": 35127,
+        "pct": 45.2
+      },
+      "share_symptom_classes": {
+        "n": 2506,
+        "of": 35127,
+        "pct": 7.1
+      },
+      "top15": {
+        "OTHER_R": 2506,
+        "OTHER_K": 2057,
+        "R07": 1496,
+        "OTHER_I": 1420,
+        "OTHER_N": 1220,
+        "R10": 1211,
+        "OTHER_C": 1203,
+        "OTHER_J": 975,
+        "R06": 858,
+        "OTHER_D": 852,
+        "E87": 848,
+        "R55": 796,
+        "K56": 711,
+        "R41": 690,
+        "OTHER_S": 688
+      }
+    }
+  },
+  "ccsr_unmapped_codes": {
+    "n": 1717,
+    "of": 35127,
+    "pct": 4.9
+  }
+}

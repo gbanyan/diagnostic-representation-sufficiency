@@ -1,0 +1,126 @@
+{
+  "label": "EXPLORATORY paired bootstrap differences, CCSR curve (post-confirmatory; opened test set reused descriptively)",
+  "plan": "exploratory/diagnostic_capacity/plan_addendum_paired_diff.md",
+  "reps": 1000,
+  "seed": 20261006,
+  "reproduction_gate": {
+    "R2_ccsr_body_system": {
+      "max_abs_dev_bits": 0.0,
+      "passed": true
+    },
+    "R3_ccsr_category_min300": {
+      "max_abs_dev_bits": 0.0,
+      "passed": true
+    },
+    "R4_ccsr_category_min100": {
+      "max_abs_dev_bits": 0.0,
+      "passed": true
+    },
+    "R5_ccsr_category_min50": {
+      "max_abs_dev_bits": 0.0,
+      "passed": true
+    }
+  },
+  "status": "complete",
+  "units": {
+    "rel": "relative gain (fraction)",
+    "dbits": "bits/visit",
+    "LD": "bits/visit",
+    "LDX": "bits/visit"
+  },
+  "points": {
+    "R2_ccsr_body_system": {
+      "rel": 0.1758,
+      "dbits": 0.0319,
+      "LD": 0.1817,
+      "LDX": 0.1498
+    },
+    "R3_ccsr_category_min300": {
+      "rel": 0.1205,
+      "dbits": 0.0206,
+      "LD": 0.1706,
+      "LDX": 0.15
+    },
+    "R4_ccsr_category_min100": {
+      "rel": 0.0958,
+      "dbits": 0.0161,
+      "LD": 0.1684,
+      "LDX": 0.1523
+    },
+    "R5_ccsr_category_min50": {
+      "rel": 0.0812,
+      "dbits": 0.0134,
+      "LD": 0.1646,
+      "LDX": 0.1513
+    }
+  },
+  "differences": {
+    "R3_ccsr_category_min300_minus_R2_ccsr_body_system": {
+      "rel": {
+        "point": -0.0552,
+        "lo": -0.0731,
+        "hi": -0.0395
+      },
+      "dbits": {
+        "point": -0.0114,
+        "lo": -0.0153,
+        "hi": -0.0078
+      },
+      "LD": {
+        "point": -0.0112,
+        "lo": -0.0165,
+        "hi": -0.0059
+      },
+      "LDX": {
+        "point": 0.0002,
+        "lo": -0.0022,
+        "hi": 0.0026
+      }
+    },
+    "R4_ccsr_category_min100_minus_R2_ccsr_body_system": {
+      "rel": {
+        "point": -0.0799,
+        "lo": -0.1054,
+        "hi": -0.0551
+      },
+      "dbits": {
+        "point": -0.0158,
+        "lo": -0.0214,
+        "hi": -0.0107
+      },
+      "LD": {
+        "point": -0.0133,
+        "lo": -0.0209,
+        "hi": -0.0057
+      },
+      "LDX": {
+        "point": 0.0025,
+        "lo": -0.0018,
+        "hi": 0.0073
+      }
+    },
+    "R5_ccsr_category_min50_minus_R2_ccsr_body_system": {
+      "rel": {
+        "point": -0.0946,
+        "lo": -0.1258,
+        "hi": -0.0659
+      },
+      "dbits": {
+        "point": -0.0186,
+        "lo": -0.0251,
+        "hi": -0.0125
+      },
+      "LD": {
+        "point": -0.0171,
+        "lo": -0.0258,
+        "hi": -0.0084
+      },
+      "LDX": {
+        "point": 0.0015,
+        "lo": -0.0033,
+        "hi": 0.006
+      }
+    }
+  },
+  "not_done": "no trend test, no p-values, no cutoff search, no margin applied to finer levels"
+}

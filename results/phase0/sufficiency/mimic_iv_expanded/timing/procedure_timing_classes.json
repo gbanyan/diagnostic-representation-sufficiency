@@ -1,0 +1,142 @@
+{
+  "L3": {
+    "t1_positive_cases": 1658,
+    "prior_status": {
+      "same_day_ambiguous": 656,
+      "dated_or_pacu_resolved": 1002
+    },
+    "class_counts": {
+      "GREEN": 1604,
+      "YELLOW": 46,
+      "RED": "<10"
+    },
+    "evidence_counts": {
+      "in_ED_at_T": 597,
+      "date_after_T": 901,
+      "pacu_after_T": 106,
+      "postop_orders_only_after_T+nonspecific_prep_after_T": 32,
+      "nonspecific_prep_after_T": 11,
+      "no_evidence_beyond_date_or_text": "<10",
+      "postop_evidence_before_T": "<10",
+      "surgical_service_after_T+nonspecific_prep_after_T": "<10",
+      "postop_orders_only_after_T+surgical_service_after_T+nonspecific_prep_after_T": "<10"
+    },
+    "prior_status_x_class": {
+      "dated->GREEN": 999,
+      "dated->RED": "<10",
+      "dated->YELLOW": "<10",
+      "same_day->GREEN": 605,
+      "same_day->RED": "<10",
+      "same_day->YELLOW": 44
+    },
+    "by_diagnosis": {
+      "appendicitis": {
+        "GREEN": 736,
+        "YELLOW": 31,
+        "RED": "<10"
+      },
+      "cholecystitis": {
+        "GREEN": 395,
+        "YELLOW": "<10",
+        "RED": "<10"
+      },
+      "diverticulitis": {
+        "GREEN": 229,
+        "YELLOW": "<10"
+      },
+      "pancreatitis": {
+        "GREEN": 244,
+        "RED": "<10",
+        "YELLOW": "<10"
+      }
+    },
+    "cohort_after_exclude_red": 5522,
+    "cohort_green_only": 5476
+  },
+  "L6": {
+    "t1_positive_cases": 1609,
+    "prior_status": {
+      "same_day_ambiguous": 766,
+      "dated_or_pacu_resolved": 843
+    },
+    "class_counts": {
+      "YELLOW": 244,
+      "GREEN": 1276,
+      "RED": 89
+    },
+    "evidence_counts": {
+      "postop_orders_only_after_T+nonspecific_prep_after_T": 190,
+      "date_after_T": 728,
+      "in_ED_at_T": 433,
+      "nonspecific_prep_after_T": 41,
+      "pacu_after_T": 115,
+      "no_evidence_beyond_date_or_text": 33,
+      "postop_orders_only_after_T+surgical_service_after_T+nonspecific_prep_after_T": 11,
+      "postop_evidence_before_T": 56,
+      "surgical_service_after_T+nonspecific_prep_after_T": "<10"
+    },
+    "prior_status_x_class": {
+      "dated->GREEN": 832,
+      "dated->RED": 10,
+      "dated->YELLOW": "<10",
+      "same_day->GREEN": 444,
+      "same_day->RED": 79,
+      "same_day->YELLOW": 243
+    },
+    "by_diagnosis": {
+      "appendicitis": {
+        "YELLOW": 154,
+        "GREEN": 530,
+        "RED": 48
+      },
+      "cholecystitis": {
+        "GREEN": 335,
+        "YELLOW": 53,
+        "RED": "<10"
+      },
+      "diverticulitis": {
+        "GREEN": 195,
+        "YELLOW": 25,
+        "RED": 10
+      },
+      "pancreatitis": {
+        "GREEN": 216,
+        "RED": 26,
+        "YELLOW": 12
+      }
+    },
+    "cohort_after_exclude_red": 5364,
+    "cohort_green_only": 5120
+  },
+  "markers": {
+    "preop_specific": [],
+    "postop": [
+      "^ADT orders \\| Postop",
+      "Admit category=Place in PACU",
+      "PACU Boarder",
+      "Tubes & Drains type=Closed suction drain",
+      "Tubes & Drains type=Wound sump",
+      "Tubes & Drains type=Biliary Tube"
+    ],
+    "prep_nonspecific": [
+      "^Nutrition \\| NPO/Diet for Procedure",
+      "^Consults \\| Acute Care Surgery",
+      "^Consults \\| ERCP/Advanced Endoscopy",
+      "^Consults \\| Hepatopancreaticobiliary Surgery",
+      "Admit to=(General )?Surgery",
+      "Transfer to=Surgery"
+    ]
+  },
+  "surgical_services": [
+    "CSURG",
+    "ENT",
+    "GYN",
+    "NSURG",
+    "ORTHO",
+    "PSURG",
+    "SURG",
+    "TRAUM",
+    "TSURG",
+    "VSURG"
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "careunits_seen": {
+    "Med/Surg/Trauma": 1686,
+    "Emergency Department": 5569,
+    "UNKNOWN": 5548,
+    "Emergency Department Observation": 344,
+    "Medicine": 2703,
+    "Hematology/Oncology": 200,
+    "Surgery/Trauma": 605,
+    "Surgical Intensive Care Unit (SICU)": 90,
+    "Vascular": 185,
+    "Surgery": 152,
+    "Med/Surg/GYN": 627,
+    "PACU": 612,
+    "Med/Surg": 1357,
+    "Observation": 202,
+    "Neurology": 133,
+    "Trauma SICU (TSICU)": 119,
+    "Medical Intensive Care Unit (MICU)": 101,
+    "Transplant": 345,
+    "Discharge Lounge": 309,
+    "Cardiac Surgery": 27,
+    "Hematology/Oncology Intermediate": 79,
+    "Cardiac Vascular Intensive Care Unit (CVICU)": "<10",
+    "Medical/Surgical Intensive Care Unit (MICU/SICU)": 175,
+    "Cardiology Surgery Intermediate": 18,
+    "Medicine/Cardiology": 72,
+    "Coronary Care Unit (CCU)": 17,
+    "Neuro Surgical Intensive Care Unit (Neuro SICU)": "<10",
+    "Labor & Delivery": "<10",
+    "Medicine/Cardiology Intermediate": 12,
+    "Obstetrics (Postpartum & Antepartum)": "<10",
+    "Neuro Stepdown": "<10",
+    "Neuro Intermediate": "<10",
+    "Unknown": "<10"
+  },
+  "landmarks_h": [
+    3,
+    6
+  ],
+  "attrition": {
+    "L3": {
+      "cdm_admissions": 5548,
+      "with_admission_record": 5548,
+      "alive_in_hospital_at_T_and_no_pacu_before_T": 5543,
+      "T1_excluded_procedure_before_T_date": 13,
+      "T1_same_day_ambiguous": 656,
+      "T1_text_only_evidence": 0,
+      "icu_before_T": 18
+    },
+    "L6": {
+      "cdm_admissions": 5548,
+      "with_admission_record": 5548,
+      "alive_in_hospital_at_T_and_no_pacu_before_T": 5492,
+      "T1_excluded_procedure_before_T_date": 39,
+      "T1_same_day_ambiguous": 766,
+      "T1_text_only_evidence": 0,
+      "icu_before_T": 80
+    },
+    "primary_matches": 12331,
+    "multi_pathology_titles_excluded": 0,
+    "without_ed_stay_excluded": 6783,
+    "cohort": 5548
+  },
+  "triage_recorded": {
+    "temperature": 5452,
+    "heartrate": 5495,
+    "resprate": 5464,
+    "o2sat": 5454,
+    "sbp": 5494,
+    "dbp": 5489,
+    "pain": 5497,
+    "acuity": 5525
+  },
+  "triage_bounds": {
+    "temperature": [
+      90,
+      110
+    ],
+    "heartrate": [
+      20,
+      250
+    ],
+    "resprate": [
+      4,
+      60
+    ],
+    "o2sat": [
+      50,
+      100
+    ],
+    "sbp": [
+      40,
+      300
+    ],
+    "dbp": [
+      20,
+      200
+    ],
+    "pain": [
+      0,
+      10
+    ],
+    "acuity": [
+      1,
+      5
+    ]
+  },
+  "triage_out_of_bounds": {
+    "pain": 144,
+    "temperature": "<10",
+    "o2sat": "<10",
+    "sbp": "<10",
+    "dbp": 10,
+    "resprate": "<10"
+  },
+  "labs": "labevents",
+  "anchor_source": {
+    "ed_intime": 5548
+  },
+  "lab_itemids_matched": {
+    "glucose": 3,
+    "hgb": 3,
+    "lactate": 3,
+    "alt": 1,
+    "albumin": 2,
+    "alp": 2,
+    "ast": 1,
+    "bicarb": 1,
+    "tbili": 2,
+    "crp": 1,
+    "calcium": 1,
+    "creat": 2,
+    "lipase": 1,
+    "potassium": 2,
+    "sodium": 2,
+    "bun": 2,
+    "inr": 2,
+    "neut_pct": 2,
+    "plt": 2,
+    "wbc": 3
+  },
+  "cohort_definition": "diagnoses_icd seq_num=1 long_title substring match; linked ED stay",
+  "diagnosis_object": "D_icd (primary billing diagnosis; D_final-type, not D_t)",
+  "by_diagnosis": {
+    "cholecystitis": 1039,
+    "pancreatitis": 1849,
+    "diverticulitis": 1108,
+    "appendicitis": 1552
+  },
+  "overlap_with_cdm": {
+    "cdm_admissions": 2400,
+    "in_both": 1494,
+    "same_pathology_label": 1482,
+    "cdm_not_in_expanded": 906
+  },
+  "anchor_year_group": {
+    "2011 - 2013": 1578,
+    "2014 - 2016": 1569,
+    "2017 - 2019": 1181,
+    "2008 - 2010": 1220
+  },
+  "note": "X2 (imaging flags) not built; T1 from ICD procedures only (no discharge text)"
+}

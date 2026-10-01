@@ -1,0 +1,80 @@
+{
+  "EXPLORATORY": "not confirmatory; one outer repeat; descriptive intervals; no p-values",
+  "config": "minus_labs_hepatobiliary_pancreatic",
+  "spec": {
+    "interactions": false,
+    "context": "full",
+    "penalty": "partial",
+    "minus_group": "labs_hepatobiliary_pancreatic"
+  },
+  "t1_timing": "green_only",
+  "table": "mimic_iv_expanded_dxproc_landmark_table",
+  "features": "X1",
+  "n_features": 27,
+  "n": 4990,
+  "events": 1833,
+  "logloss_D": 0.728,
+  "logloss_DX": 0.7088,
+  "delta": 0.0193,
+  "delta_ci95_descriptive": [
+    0.0117,
+    0.0266
+  ],
+  "rel_delta_vs_LL_D": 0.0264,
+  "H_Y_given_D_empirical": 0.7416,
+  "rel_delta_vs_H_Y_given_D": 0.026,
+  "auroc_D": 0.8047,
+  "auroc_DX": 0.8238,
+  "by_diagnosis": {
+    "appendicitis": {
+      "n": 1207,
+      "events": 812,
+      "delta": 0.0449,
+      "auroc_DX": 0.6899
+    },
+    "cholecystitis": {
+      "n": 931,
+      "events": 595,
+      "delta": 0.0756,
+      "auroc_DX": 0.7094
+    },
+    "diverticulitis": {
+      "n": 1065,
+      "events": 199,
+      "delta": -0.0354,
+      "auroc_DX": 0.5393
+    },
+    "pancreatitis": {
+      "n": 1787,
+      "events": 227,
+      "delta": 0.0052,
+      "auroc_DX": 0.6504
+    }
+  },
+  "by_era": {
+    "2008 - 2010": {
+      "n": 1153,
+      "events": 281,
+      "delta": 0.0152,
+      "auroc_DX": 0.8655
+    },
+    "2011 - 2013": {
+      "n": 1375,
+      "events": 533,
+      "delta": 0.0235,
+      "auroc_DX": 0.8351
+    },
+    "2014 - 2016": {
+      "n": 1365,
+      "events": 588,
+      "delta": 0.0308,
+      "auroc_DX": 0.7763
+    },
+    "2017 - 2019": {
+      "n": 1097,
+      "events": 431,
+      "delta": 0.0039,
+      "auroc_DX": 0.7443
+    }
+  }
+}

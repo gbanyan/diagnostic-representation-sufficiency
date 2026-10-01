@@ -1,0 +1,83 @@
+{
+  "analysis": "S2",
+  "encoder": "chapter_primary",
+  "representation": "soft",
+  "reference_class": "R",
+  "dev_visits": 25834,
+  "dev_patients": 18023,
+  "dev_events": 897,
+  "D_block_columns": 22,
+  "context_columns": [
+    "season=JJA",
+    "season=MAM",
+    "season=SON"
+  ],
+  "X_raw_columns": 445,
+  "X_model_columns_after_indicators": 605,
+  "inner_cv_mean_logloss_DX_by_C": {
+    "0.0001": 0.1239,
+    "0.001": 0.1166,
+    "0.003": 0.116,
+    "0.01": 0.1176,
+    "0.03": 0.1201,
+    "0.1": 0.123,
+    "0.3": 0.1253,
+    "1.0": 0.1273,
+    "3.0": 0.1288,
+    "10.0": 0.1303,
+    "100.0": 0.1325
+  },
+  "C_selected": 0.003,
+  "all_inner_fits_converged": true,
+  "final_D_converged": true,
+  "final_DX_converged": true,
+  "solver": "exact Newton (amendment 1)",
+  "final_max_abs_gradient": {
+    "D": 0.0,
+    "DX": 0.0
+  },
+  "final_newton_iterations": {
+    "D": 9,
+    "DX": 9
+  },
+  "penalty_zero_check": {
+    "max_abs_X_coef_at_C_1e-8": 0.0,
+    "max_abs_pred_diff_vs_Model_D": 0.0001,
+    "abs_logloss_diff_vs_Model_D": 0.0,
+    "passed": false
+  },
+  "coef_sha256": {
+    "D": "ceee38da6e325548dee5f7f89cd679b48725849cf7ef3e437fd05b95dc3537d1",
+    "DX": "15e45408522b19b6b1640c1f5b191219c2a656e0e2cc48f087eabd0d14ea2693"
+  },
+  "dev_inner_cv_at_selected_C": {
+    "n": 25834,
+    "events": 897,
+    "L_D_nats": 0.1304,
+    "L_DX_nats": 0.116,
+    "delta_L_nats": 0.0144,
+    "delta_bits": 0.0208,
+    "L_D_bits": 0.1882,
+    "L_DX_bits": 0.1674,
+    "relative_gain": 0.1106,
+    "auroc_D": 0.7959,
+    "auprc_D": 0.1441,
+    "brier_D": 0.0317,
+    "calibration_D": {
+      "intercept_citl": -0.0012,
+      "slope": 0.9772,
+      "recal_intercept": -0.0655
+    },
+    "auroc_DX": 0.8516,
+    "auprc_DX": 0.2759,
+    "brier_DX": 0.0289,
+    "calibration_DX": {
+      "intercept_citl": 0.0082,
+      "slope": 0.9831,
+      "recal_intercept": -0.0352
+    },
+    "auroc_diff": 0.0557,
+    "auprc_diff": 0.1318,
+    "brier_diff": 0.0028
+  }
+}

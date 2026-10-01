@@ -1,0 +1,52 @@
+{
+  "cohort_n": 35127,
+  "escalation_related_orders_placed_by_T_rows": {
+    "consult :: Consult": 19032,
+    "admit :: Consult": 2350,
+    "admission :: Admission": 888,
+    "admit :: Admission": 648,
+    "consult :: Nursing Referral": 290,
+    "icu :: Lab": 183,
+    "icu :: Consult": 180,
+    "transfer :: Lab": 177,
+    "critical care :: Consult": 72,
+    "transfer :: Transfer": 15,
+    "consult :: Cath Angio": 11,
+    "icu :: Nursing": "<10",
+    "admit :: Medications": "<10",
+    "consult :: Pharmacy Consult": "<10"
+  },
+  "visits_with_such_orders_by_T": {
+    "consult": {
+      "n": 14079,
+      "of": 35127,
+      "pct": 40.1
+    },
+    "icu": {
+      "n": 356,
+      "of": 35127,
+      "pct": 1.0
+    },
+    "admit": {
+      "n": 2656,
+      "of": 35127,
+      "pct": 7.6
+    },
+    "transfer": {
+      "n": 177,
+      "of": 35127,
+      "pct": 0.5
+    },
+    "critical care": {
+      "n": 69,
+      "of": 35127,
+      "pct": 0.2
+    },
+    "admission": {
+      "n": 858,
+      "of": 35127,
+      "pct": 2.4
+    }
+  },
+  "note": "keyword screen only; order vocabulary reviewed before any exclusion rule is fixed"
+}

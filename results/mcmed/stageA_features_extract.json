@@ -1,0 +1,46 @@
+{
+  "triage_and_lab_counts": {
+    "triage_HR_out_of_bounds": 0,
+    "triage_RR_out_of_bounds": 5,
+    "triage_SpO2_out_of_bounds": 0,
+    "triage_SBP_out_of_bounds": 0,
+    "triage_DBP_out_of_bounds": 0,
+    "lab_rows_resulted_by_T_non_numeric": 36013,
+    "lab_rows_excluded_race_based": 18365
+  },
+  "numerics": {
+    "rows": 47821508,
+    "counts": {
+      "rows": 47821508,
+      "excluded_measure_rows": 22073,
+      "DBP_out_of_bounds_or_non_numeric_by_T": 3060,
+      "MAP_out_of_bounds_or_non_numeric_by_T": 3062,
+      "Temp_out_of_bounds_or_non_numeric_by_T": 205,
+      "1min_HRV_out_of_bounds_or_non_numeric_by_T": 1763,
+      "SpO2_out_of_bounds_or_non_numeric_by_T": 470,
+      "HR_out_of_bounds_or_non_numeric_by_T": 618,
+      "RR_out_of_bounds_or_non_numeric_by_T": 577,
+      "SBP_out_of_bounds_or_non_numeric_by_T": 317,
+      "Pain_out_of_bounds_or_non_numeric_by_T": 206,
+      "5min_HRV_out_of_bounds_or_non_numeric_by_T": 176,
+      "Perf_out_of_bounds_or_non_numeric_by_T": 145
+    },
+    "cohort_visits_with_any_numerics_row": {
+      "n": 28550,
+      "of": 32404,
+      "pct": 88.1
+    },
+    "cohort_visits_with_numerics_by_T": {
+      "n": 28514,
+      "of": 32404,
+      "pct": 88.0
+    },
+    "csns_in_file": 101893,
+    "csns_non_contiguous": 0
+  },
+  "cohort_visits_with_lab_result_by_T": {
+    "n": 31127,
+    "of": 32404,
+    "pct": 96.1
+  }
+}

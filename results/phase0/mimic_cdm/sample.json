@@ -1,0 +1,11 @@
+{
+  "seed": 20260929,
+  "per_pathology": 50,
+  "sizes": {
+    "appendicitis": 50,
+    "cholecystitis": 50,
+    "diverticulitis": 50,
+    "pancreatitis": 50
+  },
+  "written_to": "private dir (not recorded)"
+}

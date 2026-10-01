@@ -1,0 +1,18 @@
+{
+  "L3": {
+    "cohort_rows": 5543,
+    "rows_with_feature_after_T": 0,
+    "rows_with_pacu_before_T": 0,
+    "rows_with_T9_before_T": 0,
+    "rows_with_T2_positive_without_post_T_pacu": 0,
+    "pass": true
+  },
+  "L6": {
+    "cohort_rows": 5492,
+    "rows_with_feature_after_T": 0,
+    "rows_with_pacu_before_T": 0,
+    "rows_with_T9_before_T": 0,
+    "rows_with_T2_positive_without_post_T_pacu": 0,
+    "pass": true
+  }
+}

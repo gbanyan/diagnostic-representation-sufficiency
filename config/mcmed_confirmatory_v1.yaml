@@ -1,0 +1,91 @@
+# MC-MED external confirmatory study, frozen choices (docs/mcmed_confirmatory_preregistration.md).
+# Read by src/mcmed/*. Do not edit after the tag mcmed-confirmatory-prereg-v1; use docs/amendments/.
+version: 1
+
+data:
+  root: /mnt/SAM1TB/dev/data/mc-med/1.0.1          # PhysioNet MC-MED v1.0.1, SHA-256 verified
+  private_dir: /mnt/SAM1TB/dev/data/diagnosis-bottleneck-private/mcmed_v1   # outside git
+  ccsr_file: /mnt/SAM1TB/dev/data/reference/ccsr/DXCCSR_v2024-1.csv
+  ccsr_version: "AHRQ DXCCSR v2024.1"
+  ccsr_column: "Default CCSR CATEGORY OP"
+
+cohort:
+  admitted_dispositions: [Inpatient, Observation, ICU]
+  landmark_hours: 3                                # T = Arrival_time + 3 h
+  min_age: 18
+  # decision_time = min(Dispo_time, earliest orders.Order_time with Order_type in adt_order_types)
+  adt_order_types: [Admission, Transfer]
+  # landmark-validity exclusion: orders.Order_type == Consult and Procedure_name (upper) contains
+  # any of these substrings, with Order_time <= T
+  early_consult_order_type: Consult
+  early_consult_name_substrings: ["ICU", "CRITICAL CARE"]
+  outcome: {field: ED_dispo, positive: ICU}
+
+taxonomy:
+  primary: ccsr_body_system                        # first 3 letters of the default OP CCSR category
+  primary_exclude_unmapped: true                   # ICD-10 code absent from CCSR, or blank category
+  sensitivity: icd10_chapter                       # first character of Dx_ICD10 (S2)
+  rare_class_min_visits: 50                        # classes with < 50 visits in the final cohort -> OTHER
+  rare_class_label: OTHER
+
+split:
+  rule: "sha256(salt + ':' + MRN) -> first 15 hex digits / 16**15 < test_fraction -> test"
+  salt: "mcmed-confirmatory-v1:diagnosis-bottleneck:2026-09-30"
+  test_fraction: 0.20
+
+context:                                           # unpenalized, identical in both models
+  season: meteorological                           # DJF / MAM / JJA / SON of shifted Arrival_time (season preserved by de-identification)
+  # Not recoverable (see preregistration section 13): time of day, weekend, calendar year / era.
+
+features:
+  numerics_measures: [HR, RR, SpO2, SBP, DBP, MAP, Temp, Pain, Perf, 1min_HRV, 5min_HRV]
+  numerics_excluded: [LPM_O2]                      # oxygen flow = treatment intensity
+  numerics_summaries: [first, last, min, max, median, slope_per_hour, count]
+  numerics_min_dev_coverage: 0.25                  # measure observed by T in >= 25% of development visits
+  lab_min_dev_coverage: 0.05                       # component resulted by T in >= 5% of development visits
+  cc_min_dev_visits: 50                            # chief-complaint token in >= 50 development visits
+  pmh_min_dev_prevalence: 0.01                     # PMH CCS category present in >= 1% of development visits
+  log1p_rule: "non-negative continuous column with development skewness > 2"
+  clip_sd: 5
+  bounds:                                          # closed intervals; outside -> missing
+    HR: [20, 250]
+    RR: [4, 60]
+    SpO2: [50, 100]
+    SBP: [40, 300]
+    DBP: [20, 200]
+    MAP: [25, 250]
+    Temp_F: [90, 110]
+    Pain: [0, 10]
+    Perf: [0.01, 20]
+    HRV: [0.01, 2000]
+    ESI: [1, 5]
+  sensitivity_S3_add: [Race, Ethnicity]            # MC-MED has no marital-status field
+
+encoder:
+  model: "multinomial logistic regression, L2 on all non-intercept coefficients (scikit-learn lbfgs)"
+  max_iter: 10000
+  tol: 1.0e-4                                     # scikit-learn default; 1e-6 did not converge at large C (timing check)
+  nonconverged_C_ineligible: true                 # a C with any non-converged fit in the relevant CV is not selectable
+  crossfit_folds: 5
+  inner_folds: 4
+  crossfit_seed: 20261001
+  adequacy:
+    min_relative_logloss_reduction_vs_prior: 0.10  # pooled OOF, vs class-prior baseline
+    require_every_fold_better_than_prior: true
+    require_top1_above_majority_share: true
+
+downstream:
+  C_grid: [1.0e-4, 1.0e-3, 3.0e-3, 1.0e-2, 3.0e-2, 0.1, 0.3, 1.0, 3.0, 10.0, 100.0]
+  eps_unpenalized_ridge: 1.0e-4
+  inner_folds: 4
+  inner_seed: 20261003
+  tie_rule: smaller_C
+  soft_reference_class: "largest development class (by diagnosis count)"
+  class_weighting: none
+
+evaluation:
+  bootstrap_replicates: 2000
+  bootstrap_seed: 20261004
+  success:
+    delta_ci_lower_gt: 0.0
+    relative_gain_min: 0.10

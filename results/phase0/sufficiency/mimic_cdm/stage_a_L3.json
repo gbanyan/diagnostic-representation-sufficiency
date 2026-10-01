@@ -1,0 +1,709 @@
+{
+  "T1": {
+    "label": "Pathology-specific definitive procedure after T",
+    "column": "Y_T1_procedure_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2381,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 949,
+        "H_bits": 0.6271,
+        "majority_share": 0.843,
+        "distribution": {
+          "0.0": {
+            "n": 149,
+            "of": 949,
+            "pct": 15.7
+          },
+          "1.0": {
+            "n": 800,
+            "of": 949,
+            "pct": 84.3
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 646,
+        "H_bits": 0.8599,
+        "majority_share": 0.717,
+        "distribution": {
+          "0.0": {
+            "n": 183,
+            "of": 646,
+            "pct": 28.3
+          },
+          "1.0": {
+            "n": 463,
+            "of": 646,
+            "pct": 71.7
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 255,
+        "H_bits": 0.7666,
+        "majority_share": 0.776,
+        "distribution": {
+          "0.0": {
+            "n": 198,
+            "of": 255,
+            "pct": 77.6
+          },
+          "1.0": {
+            "n": 57,
+            "of": 255,
+            "pct": 22.4
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 531,
+        "H_bits": 0.9409,
+        "majority_share": 0.642,
+        "distribution": {
+          "0.0": {
+            "n": 341,
+            "of": 531,
+            "pct": 64.2
+          },
+          "1.0": {
+            "n": 190,
+            "of": 531,
+            "pct": 35.8
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.9474,
+    "H_Y_given_D_bits": 0.7752,
+    "I_Y_D_bits": 0.1722,
+    "near_deterministic_given_D": false
+  },
+  "T2": {
+    "label": "Any OR/PACU transfer after T",
+    "column": "Y_T2_pacu_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "H_bits": 0.6156,
+        "majority_share": 0.848,
+        "distribution": {
+          "0.0": {
+            "n": 807,
+            "of": 952,
+            "pct": 84.8
+          },
+          "1.0": {
+            "n": 145,
+            "of": 952,
+            "pct": 15.2
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 648,
+        "H_bits": 0.526,
+        "majority_share": 0.881,
+        "distribution": {
+          "0.0": {
+            "n": 571,
+            "of": 648,
+            "pct": 88.1
+          },
+          "1.0": {
+            "n": 77,
+            "of": 648,
+            "pct": 11.9
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 256,
+        "H_bits": 0.2897,
+        "majority_share": 0.949,
+        "distribution": {
+          "0.0": {
+            "n": 243,
+            "of": 256,
+            "pct": 94.9
+          },
+          "1.0": {
+            "n": 13,
+            "of": 256,
+            "pct": 5.1
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 536,
+        "H_bits": 0.3761,
+        "majority_share": 0.927,
+        "distribution": {
+          "0.0": {
+            "n": 497,
+            "of": 536,
+            "pct": 92.7
+          },
+          "1.0": {
+            "n": 39,
+            "of": 536,
+            "pct": 7.3
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.5135,
+    "H_Y_given_D_bits": 0.5028,
+    "I_Y_D_bits": 0.0107,
+    "near_deterministic_given_D": false
+  },
+  "T3": {
+    "label": "ICU admission after T",
+    "column": "Y_T3_icu_L3",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2368,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "H_bits": 0.1353,
+        "majority_share": 0.981,
+        "distribution": {
+          "0.0": {
+            "n": 934,
+            "of": 952,
+            "pct": 98.1
+          },
+          "1.0": {
+            "n": 18,
+            "of": 952,
+            "pct": 1.9
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 642,
+        "H_bits": 0.4165,
+        "majority_share": 0.916,
+        "distribution": {
+          "0.0": {
+            "n": 588,
+            "of": 642,
+            "pct": 91.6
+          },
+          "1.0": {
+            "n": 54,
+            "of": 642,
+            "pct": 8.4
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 252,
+        "H_bits": 0.5917,
+        "majority_share": 0.857,
+        "distribution": {
+          "0.0": {
+            "n": 216,
+            "of": 252,
+            "pct": 85.7
+          },
+          "1.0": {
+            "n": 36,
+            "of": 252,
+            "pct": 14.3
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 522,
+        "H_bits": 0.509,
+        "majority_share": 0.887,
+        "distribution": {
+          "0.0": {
+            "n": 463,
+            "of": 522,
+            "pct": 88.7
+          },
+          "1.0": {
+            "n": 59,
+            "of": 522,
+            "pct": 11.3
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.3679,
+    "H_Y_given_D_bits": 0.3425,
+    "I_Y_D_bits": 0.0254,
+    "near_deterministic_given_D": false
+  },
+  "T4": {
+    "label": "Remaining length of stay after T (log1p days)",
+    "column": "Y_T4_log_los_days_L3",
+    "type": "continuous",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "mean": 1.0305,
+        "var": 0.2705,
+        "q1": 0.6717,
+        "median": 0.8498,
+        "q3": 1.2577
+      },
+      "cholecystitis": {
+        "n": 648,
+        "mean": 1.5064,
+        "var": 0.3018,
+        "q1": 1.1007,
+        "median": 1.4184,
+        "q3": 1.8213
+      },
+      "diverticulitis": {
+        "n": 256,
+        "mean": 1.7014,
+        "var": 0.4145,
+        "q1": 1.3176,
+        "median": 1.6146,
+        "q3": 2.0404
+      },
+      "pancreatitis": {
+        "n": 536,
+        "mean": 1.6892,
+        "var": 0.3504,
+        "q1": 1.3087,
+        "median": 1.5833,
+        "q3": 1.9989
+      }
+    },
+    "var_total": 0.3977,
+    "var_within_D": 0.3123,
+    "share_variance_explained_by_D": 0.2148
+  },
+  "T5": {
+    "label": "Organ operated (negative-control candidate)",
+    "column": "Y_T5_organ",
+    "type": "categorical",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 1041,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 609,
+        "H_bits": 0.0687,
+        "majority_share": 0.992,
+        "distribution": {
+          "appendix": {
+            "n": 604,
+            "of": 609,
+            "pct": 99.2
+          },
+          "colon": {
+            "n": "<10",
+            "of": 609,
+            "pct": null
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 320,
+        "H_bits": 0.0305,
+        "majority_share": 0.997,
+        "distribution": {
+          "colon": {
+            "n": "<10",
+            "of": 320,
+            "pct": null
+          },
+          "gallbladder": {
+            "n": 319,
+            "of": 320,
+            "pct": 99.7
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 36,
+        "H_bits": -0.0,
+        "majority_share": 1.0,
+        "distribution": {
+          "colon": {
+            "n": 36,
+            "of": 36,
+            "pct": 100.0
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 76,
+        "H_bits": 0.2399,
+        "majority_share": 0.961,
+        "distribution": {
+          "colon": {
+            "n": "<10",
+            "of": 76,
+            "pct": null
+          },
+          "gallbladder": {
+            "n": 73,
+            "of": 76,
+            "pct": 96.1
+          }
+        }
+      }
+    },
+    "H_Y_bits": 1.1822,
+    "H_Y_given_D_bits": 0.0671,
+    "I_Y_D_bits": 1.1151,
+    "near_deterministic_given_D": true
+  },
+  "T6": {
+    "label": "First abdominal imaging modality (examination; D_final as stratifier only)",
+    "column": "Y_T6_first_modality",
+    "type": "categorical",
+    "diagnosis_object": "D_final",
+    "d_role": "stratifier only (examination target)",
+    "n": 2297,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 893,
+        "H_bits": 0.9636,
+        "majority_share": 0.765,
+        "distribution": {
+          "CT": {
+            "n": 683,
+            "of": 893,
+            "pct": 76.5
+          },
+          "CTU": {
+            "n": 10,
+            "of": 893,
+            "pct": 1.1
+          },
+          "MRI": {
+            "n": "<10",
+            "of": 893,
+            "pct": null
+          },
+          "Radiograph": {
+            "n": 17,
+            "of": 893,
+            "pct": 1.9
+          },
+          "Ultrasound": {
+            "n": 181,
+            "of": 893,
+            "pct": 20.3
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 627,
+        "H_bits": 1.3399,
+        "majority_share": 0.681,
+        "distribution": {
+          "CT": {
+            "n": 146,
+            "of": 627,
+            "pct": 23.3
+          },
+          "CTU": {
+            "n": "<10",
+            "of": 627,
+            "pct": null
+          },
+          "Drainage": {
+            "n": "<10",
+            "of": 627,
+            "pct": null
+          },
+          "ERCP": {
+            "n": 10,
+            "of": 627,
+            "pct": 1.6
+          },
+          "MRCP": {
+            "n": 16,
+            "of": 627,
+            "pct": 2.6
+          },
+          "MRI": {
+            "n": "<10",
+            "of": 627,
+            "pct": null
+          },
+          "Radiograph": {
+            "n": 23,
+            "of": 627,
+            "pct": 3.7
+          },
+          "Ultrasound": {
+            "n": 427,
+            "of": 627,
+            "pct": 68.1
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 252,
+        "H_bits": 1.1263,
+        "majority_share": 0.79,
+        "distribution": {
+          "CT": {
+            "n": 199,
+            "of": 252,
+            "pct": 79.0
+          },
+          "CTU": {
+            "n": "<10",
+            "of": 252,
+            "pct": null
+          },
+          "Drainage": {
+            "n": "<10",
+            "of": 252,
+            "pct": null
+          },
+          "MRCP": {
+            "n": "<10",
+            "of": 252,
+            "pct": null
+          },
+          "MRI": {
+            "n": "<10",
+            "of": 252,
+            "pct": null
+          },
+          "Radiograph": {
+            "n": 18,
+            "of": 252,
+            "pct": 7.1
+          },
+          "Ultrasound": {
+            "n": 24,
+            "of": 252,
+            "pct": 9.5
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 525,
+        "H_bits": 1.6584,
+        "majority_share": 0.585,
+        "distribution": {
+          "CT": {
+            "n": 137,
+            "of": 525,
+            "pct": 26.1
+          },
+          "CTU": {
+            "n": "<10",
+            "of": 525,
+            "pct": null
+          },
+          "ERCP": {
+            "n": 17,
+            "of": 525,
+            "pct": 3.2
+          },
+          "MRCP": {
+            "n": 31,
+            "of": 525,
+            "pct": 5.9
+          },
+          "MRI": {
+            "n": "<10",
+            "of": 525,
+            "pct": null
+          },
+          "Radiograph": {
+            "n": 28,
+            "of": 525,
+            "pct": 5.3
+          },
+          "Ultrasound": {
+            "n": 307,
+            "of": 525,
+            "pct": 58.5
+          }
+        }
+      }
+    },
+    "H_Y_bits": 1.4958,
+    "H_Y_given_D_bits": 1.243,
+    "I_Y_D_bits": 0.2528,
+    "near_deterministic_given_D": false
+  },
+  "T7": {
+    "label": "Number of abdominal imaging studies (examination burden; D_final as stratifier only)",
+    "column": "Y_T7_n_abd_imaging",
+    "type": "continuous",
+    "diagnosis_object": "D_final",
+    "d_role": "stratifier only (examination target)",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "mean": 1.3235,
+        "var": 1.0067,
+        "q1": 1.0,
+        "median": 1.0,
+        "q3": 2.0
+      },
+      "cholecystitis": {
+        "n": 648,
+        "mean": 1.625,
+        "var": 1.0801,
+        "q1": 1.0,
+        "median": 1.0,
+        "q3": 2.0
+      },
+      "diverticulitis": {
+        "n": 256,
+        "mean": 1.6289,
+        "var": 1.4912,
+        "q1": 1.0,
+        "median": 1.0,
+        "q3": 2.0
+      },
+      "pancreatitis": {
+        "n": 536,
+        "mean": 1.931,
+        "var": 2.4971,
+        "q1": 1.0,
+        "median": 2.0,
+        "q3": 2.0
+      }
+    },
+    "var_total": 1.4669,
+    "var_within_D": 1.4124,
+    "share_variance_explained_by_D": 0.0372
+  },
+  "T8": {
+    "label": "In-hospital death after T",
+    "column": "Y_T8_death",
+    "type": "binary",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 2392,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 952,
+        "H_bits": -0.0,
+        "majority_share": 1.0,
+        "distribution": {
+          "0.0": {
+            "n": 952,
+            "of": 952,
+            "pct": 100.0
+          }
+        }
+      },
+      "cholecystitis": {
+        "n": 648,
+        "H_bits": -0.0,
+        "majority_share": 1.0,
+        "distribution": {
+          "0.0": {
+            "n": 648,
+            "of": 648,
+            "pct": 100.0
+          }
+        }
+      },
+      "diverticulitis": {
+        "n": 256,
+        "H_bits": 0.0659,
+        "majority_share": 0.992,
+        "distribution": {
+          "0.0": {
+            "n": 254,
+            "of": 256,
+            "pct": 99.2
+          },
+          "1.0": {
+            "n": "<10",
+            "of": 256,
+            "pct": null
+          }
+        }
+      },
+      "pancreatitis": {
+        "n": 536,
+        "H_bits": 0.0355,
+        "majority_share": 0.996,
+        "distribution": {
+          "0.0": {
+            "n": 534,
+            "of": 536,
+            "pct": 99.6
+          },
+          "1.0": {
+            "n": "<10",
+            "of": 536,
+            "pct": null
+          }
+        }
+      }
+    },
+    "H_Y_bits": 0.0178,
+    "H_Y_given_D_bits": 0.015,
+    "I_Y_D_bits": 0.0028,
+    "near_deterministic_given_D": true
+  },
+  "T9": {
+    "label": "Hours from arrival to first PACU, among operated after T (timing)",
+    "column": "Y_T9_hours_to_pacu_L3",
+    "type": "continuous",
+    "diagnosis_object": "D_final",
+    "d_role": "post-diagnostic reference",
+    "n": 274,
+    "by_diagnosis": {
+      "appendicitis": {
+        "n": 145,
+        "mean": 11.029,
+        "var": 32.2951,
+        "q1": 7.3504,
+        "median": 9.7692,
+        "q3": 12.8819
+      },
+      "cholecystitis": {
+        "n": 77,
+        "mean": 45.6749,
+        "var": 1755.4052,
+        "q1": 12.1306,
+        "median": 29.1944,
+        "q3": 65.704
+      },
+      "diverticulitis": {
+        "n": 13,
+        "mean": 39.2286,
+        "var": 8614.4504,
+        "q1": 6.1786,
+        "median": 7.4167,
+        "q3": 16.8072
+      },
+      "pancreatitis": {
+        "n": 39,
+        "mean": 90.7603,
+        "var": 2739.5704,
+        "q1": 60.4875,
+        "median": 70.2106,
+        "q3": 125.5508
+      }
+    },
+    "var_total": 2086.1583,
+    "var_within_D": 1309.0514,
+    "share_variance_explained_by_D": 0.3725
+  }
+}
