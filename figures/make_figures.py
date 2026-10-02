@@ -96,6 +96,17 @@ def is_shown(v):
     return isinstance(v, (int, float)) and v >= 10
 
 
+def hidden_deciles(deciles):
+    """Indices of calibration deciles not displayed: events < 10 (including 0) or no observed
+    value. If exactly one decile would be hidden, the shown decile with the fewest events is
+    hidden too, so the hidden count cannot be recovered from the total events."""
+    hid = {i for i, d in enumerate(deciles) if not (is_shown(d["events"]) and d["observed"] is not None)}
+    if len(hid) == 1:
+        rest = [i for i in range(len(deciles)) if i not in hid]
+        hid.add(min(rest, key=lambda i: deciles[i]["events"]))
+    return hid
+
+
 def num(x, nd):
     """Round half up on the decimal representation (0.2475 -> 0.248); unicode minus."""
     q = (x if isinstance(x, Decimal) else Decimal(repr(float(x)))).quantize(Decimal(1).scaleb(-nd), rounding=ROUND_HALF_UP)
@@ -153,13 +164,13 @@ def fig1():
     name = "fig1_design"
     W, H = DOUBLE_MM, 96
     fig, ax = canvas(W, H)
-    note_src(name, "all", "article Methods (not in this repository)",
+    note_src(name, "all", "manuscript/JBI_main_draft_v1.md",
              ["Sections 3.1, 3.4, 3.8, 3.10 (schematic labels only; no data values)"])
     XT = r"$X_t$"
     DH = r"$\hat{D}$"
 
     # Shared patient-state box
-    box(ax, 38, 80, 56, 11, "Patient state " + XT + " at landmark T\n(only information available by T)",
+    box(ax, 38, 80, 56, 11, "Patient state " + XT + " at landmark T\n(recorded by T; dataset-specific timing rules)",
         fc=FILL_WARM, ec=VERM, lw=0.8)
 
     # Column frames
@@ -414,20 +425,21 @@ def fig3():
     W, H = DOUBLE_MM, 140
     fig, ax = canvas(W, H)
 
-    admitted = att["admitted (Inpatient/Observation/ICU)"]
+    # Complementary suppression: start from adults with valid times, so the <10 exclusions
+    # between "admitted" and this step cannot be recovered by subtraction.
+    admitted = att["age >= 18"]
     ex = {a["step"]: a.get("excluded", {}).get("visits") for a in coh["attrition"]}
     ex_dispo = ex["Dispo_time > T"]
     ex_order = ex["decision_time = min(Dispo_time, first ADT order) > T"]
     ex_consult = ex["no ICU / critical-care consult at or before T"]
     ex_unmapped = ex["primary CCSR mapping available (unmapped excluded)"]
-    ex_other = ex["valid Arrival_time and Dispo_time"] + ex["age >= 18"]
     fin = coh["final"]
 
     # Box 1: cohort
     y1, h1 = 115, 22
     box(ax, 3, y1, 60, h1,
         "1  Cohort and landmark (T = arrival + 3 h)\n"
-        f"{count_txt(admitted['visits'])} admitted adult visits\n"
+        f"{count_txt(admitted['visits'])} admitted adult visits with valid times\n"
         "decision time = earlier of disposition and\nfirst admission or transfer order;\n"
         "consult exclusion; CCSR v2024.1 mapping",
         ha="left", va="top", fc="white")
@@ -436,8 +448,7 @@ def fig3():
         f"disposition documented by T: {count_txt(ex_dispo)}\n"
         f"admission or transfer order by T: {count_txt(ex_order)}\n"
         f"ICU or critical-care consult by T: {count_txt(ex_consult)}\n"
-        f"no CCSR mapping: {count_txt(ex_unmapped)}\n"
-        f"invalid times or age < 18: {count_txt(ex_other)}",
+        f"no CCSR mapping: {count_txt(ex_unmapped)}",
         ha="left", va="top", fc=FILL_GREY, ec=GREY)
     arrow(ax, 63, y1 + h1 / 2, 68, y1 + h1 / 2)
     box(ax, 131, y1 + 1, 56, h1 - 2,
@@ -701,7 +712,7 @@ def fig4():
 # ====================================================================== Figure S1
 def figS1():
     name = "figS1_calibration"
-    analyses = [("primary", "Primary"), ("S1", "SA1 hard top-1"), ("S2", "SA2 ICD-10 chapter"),
+    analyses = [("primary", "Primary"), ("S1", "SA1 hard top-1"), ("S2", "SA2 ICD-10 first character"),
                 ("S3", "SA3 race and\nethnicity added"), ("S4", "SA4 chronological split")]
     W, H = DOUBLE_MM, 125
     fig, axs = plt.subplots(2, 3, figsize=(W * MM, H * MM))
@@ -715,10 +726,9 @@ def figS1():
         ax.plot([0, LIM], [0, LIM], color=GREY, lw=0.6, ls=(0, (3, 2)))
         ax.axhspan(-0.03, -0.004, color="#F0F0F0", lw=0)
         for dk, col, mk, yoff in (("deciles_D", BLUE, "o", -0.012), ("deciles_DX", VERM, "^", -0.022)):
-            shown = [(d["mean_pred"], d["observed"]) for d in sm[dk]
-                     if is_shown(d["events"]) and d["observed"] is not None]
-            hidden = [d["mean_pred"] for d in sm[dk]
-                      if not (is_shown(d["events"]) and d["observed"] is not None)]
+            hid = hidden_deciles(sm[dk])
+            shown = [(d["mean_pred"], d["observed"]) for i, d in enumerate(sm[dk]) if i not in hid]
+            hidden = [d["mean_pred"] for i, d in enumerate(sm[dk]) if i in hid]
             suppressed_total += len(hidden)
             if shown:
                 ax.plot([p for p, _ in shown], [o for _, o in shown], ls="-", lw=0.7, color=col,
@@ -764,7 +774,7 @@ def figS2():
         "all_visits": "All ED visits",
         "admitted (Inpatient/Observation/ICU)": "Admitted (inpatient, observation, or ICU)",
         "valid Arrival_time and Dispo_time": "Valid arrival and disposition times",
-        "age >= 18": "Age 18 years or older",
+        "age >= 18": "Admitted adults with valid arrival and disposition times",
         "Dispo_time > T": "Disposition after T",
         "decision_time = min(Dispo_time, first ADT order) > T": "Decision time after T",
         "no ICU / critical-care consult at or before T": "No ICU or critical-care consult by T",
@@ -784,11 +794,17 @@ def figS2():
             return "ICU <10"
         return f"ICU {count_txt(icu['n'])} ({icu['pct']:.1f}%)"
 
-    steps = coh["attrition"]
-    W, H = DOUBLE_MM, 172
-    fig, ax = canvas(W, H)
+    # Complementary suppression: "admitted", "valid times" and "age >= 18" are shown as one box
+    # (counts after the age step), so exclusions below 10 cannot be recovered by subtraction.
+    merged = ("admitted (Inpatient/Observation/ICU)", "valid Arrival_time and Dispo_time")
+    steps = [dict(s) for s in coh["attrition"] if s["step"] not in merged]
+    for s in steps:
+        if s["step"] == "age >= 18":
+            s.pop("excluded", None)
     bw, bh, x0 = 74, 11, 8
     gap = 18.5
+    W, H = DOUBLE_MM, 4 + bh + (len(steps) - 1) * gap + 22 + 13 + 4
+    fig, ax = canvas(W, H)
     ytop = H - 4 - bh
     for i, st in enumerate(steps):
         y = ytop - i * gap

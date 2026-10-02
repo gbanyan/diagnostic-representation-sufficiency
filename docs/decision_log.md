@@ -265,3 +265,31 @@ Recorded retrospectively from the conversation; commits cited for traceability.
      - the prespecified fractional criterion and both confirmatory verdicts are unchanged;
      - the absolute-scale comparison across targets is labelled as not prespecified.
 - **Not changed:** frozen results, features, taxonomy, solver, thresholds, outcomes, and evidence status.
+
+## 2026-10-01 — Back matter and code release (author decisions)
+
+- **Funding and competing interests:** none declared.
+- **Authors:** Jing-Rung Huang (corresponding) and Wen-Hsiang Lu, NCKU CSIE, taken from the author's other projects (title pages of perspective-AI-mental-model and perspective-diagnosis-evolve). CRediT follows those papers.
+- **Code release on GitHub via gh CLI:**
+  - scope: code, protocols, and aggregates, as a fresh history, with the manuscript and internal reviews excluded;
+  - visibility: private now, public at submission;
+  - license: MIT;
+  - counts below 10, including zeros, suppressed in the release copy only.
+  - Details: `docs/public_release.md`. Repository: https://github.com/gbanyan/diagnostic-representation-sufficiency (private).
+- **NCKU IRB:** the author is asking NCKU; the statement remains AUTHOR TO CONFIRM.
+
+
+
+## 2026-10-02: Local ethics statement (author decision)
+
+- **Decision:** the author chose to state a statutory exemption under the Human Subjects Research Act, Art. 5, and the MOHW announcement 1010265075 (2012-07-05), item 2, giving the legal basis and the data protections.
+- **Inputs:** the NCKU ethics office reply of 2026-10-02 did not classify this study. The full record, including the weaknesses and the practice survey, is in `docs/ethics_determination.md`.
+- **Manuscript:**
+  - new back-matter "Ethics statement" section;
+  - Section 3.14 points to it;
+  - the [AUTHOR TO CONFIRM] placeholder has been removed;
+  - the NCKU reply is not cited.
+
+## 2026-10-02: Lab result availability sensitivity analysis (author approval)
+
+The author approved a descriptive audit of MIMIC lab result times (`storetime`) and a post-confirmatory sensitivity analysis restricted to results available by the landmark (`exploratory/lab_availability/`). The confirmatory analysis stays primary. Results are in Round 9 of `manuscript/JBI_internal_review.md`.

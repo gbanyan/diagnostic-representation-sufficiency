@@ -1,0 +1,83 @@
+{
+ "consistency_mismatched_cells_vs_stored_table": 0,
+ "T1_primary": {
+  "admissions": 4990,
+  "lab_cells_used": 77053,
+  "cells_storetime_after_T": 1646,
+  "pct_cells_late": 2.14,
+  "cells_storetime_missing": "<10",
+  "admissions_with_any_late_cell": 476,
+  "pct_admissions_late": 9.5,
+  "late_lag_hours_median_iqr": [
+   0.8,
+   0.33,
+   2.29
+  ],
+  "variant_cells_lost": 1618,
+  "variant_cells_value_changed": 26,
+  "per_feature_pct_late": {
+   "wbc": 0.5,
+   "neut_pct": 0.5,
+   "hgb": 0.5,
+   "plt": 0.5,
+   "crp": 57.5,
+   "lactate": 0.3,
+   "lipase": 4.3,
+   "tbili": 3.9,
+   "alt": 3.9,
+   "ast": 3.9,
+   "alp": 3.9,
+   "creat": 1.2,
+   "bun": 1.2,
+   "glucose": 1.2,
+   "sodium": 1.2,
+   "potassium": 1.2,
+   "bicarb": 1.1,
+   "albumin": 3.4,
+   "inr": 3.5,
+   "calcium": 15.3
+  },
+  "events": 1833,
+  "events_with_any_late_cell": 128
+ },
+ "T3": {
+  "admissions": 5412,
+  "lab_cells_used": 82331,
+  "cells_storetime_after_T": 1642,
+  "pct_cells_late": 1.99,
+  "cells_storetime_missing": "<10",
+  "admissions_with_any_late_cell": 471,
+  "pct_admissions_late": 8.7,
+  "late_lag_hours_median_iqr": [
+   0.8,
+   0.33,
+   2.32
+  ],
+  "variant_cells_lost": 1614,
+  "variant_cells_value_changed": 26,
+  "per_feature_pct_late": {
+   "wbc": 0.5,
+   "neut_pct": 0.4,
+   "hgb": 0.5,
+   "plt": 0.5,
+   "crp": 54.8,
+   "lactate": 0.3,
+   "lipase": 4.1,
+   "tbili": 3.7,
+   "alt": 3.7,
+   "ast": 3.7,
+   "alp": 3.7,
+   "creat": 1.2,
+   "bun": 1.1,
+   "glucose": 1.1,
+   "sodium": 1.1,
+   "potassium": 1.1,
+   "bicarb": 1.1,
+   "albumin": 3.2,
+   "inr": 3.2,
+   "calcium": 14.8
+  },
+  "events": 276,
+  "events_with_any_late_cell": 47
+ }
+}

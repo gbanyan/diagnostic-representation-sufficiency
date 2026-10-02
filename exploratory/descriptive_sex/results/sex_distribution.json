@@ -1,0 +1,91 @@
+{
+ "mimic_iv": {
+  "cohort": "MIMIC-IV T1 primary (green_only, L6)",
+  "n": 4990,
+  "female": {
+   "n": 2620,
+   "pct": 52.5
+  },
+  "events": 1833,
+  "female_among_events": {
+   "n": 1015,
+   "pct": 55.4
+  },
+  "source_field": "hosp/patients.gender (F/M) -> female"
+ },
+ "mc_med": {
+  "source_field": "visits.csv Gender",
+  "all": {
+   "n": 32404,
+   "levels": {
+    "F": {
+     "n": 17073,
+     "pct": 52.7
+    },
+    "M+U": {
+     "n": 15331,
+     "pct": 47.3
+    }
+   },
+   "icu": 1109,
+   "levels_among_icu": {
+    "F": {
+     "n": 487,
+     "pct": 43.9
+    },
+    "M": {
+     "n": 622,
+     "pct": 56.1
+    }
+   }
+  },
+  "development": {
+   "n": 25834,
+   "levels": {
+    "F": {
+     "n": 13621,
+     "pct": 52.7
+    },
+    "M+U": {
+     "n": 12213,
+     "pct": 47.3
+    }
+   },
+   "icu": 897,
+   "levels_among_icu": {
+    "F": {
+     "n": 404,
+     "pct": 45.0
+    },
+    "M": {
+     "n": 493,
+     "pct": 55.0
+    }
+   }
+  },
+  "test": {
+   "n": 6570,
+   "levels": {
+    "F": {
+     "n": 3452,
+     "pct": 52.5
+    },
+    "M+U": {
+     "n": 3118,
+     "pct": 47.5
+    }
+   },
+   "icu": 212,
+   "levels_among_icu": {
+    "F": {
+     "n": 83,
+     "pct": 39.2
+    },
+    "M": {
+     "n": 129,
+     "pct": 60.8
+    }
+   }
+  }
+ }
+}
