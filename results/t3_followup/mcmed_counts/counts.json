@@ -3,7 +3,7 @@
   "visits": 118385,
   "patients": 70545,
   "adult_visits": 118385,
-  "admitted_adult_visits": 48139,
+  "admitted_adult_visits": "redacted",
   "admitted_patients": 30815,
   "admitted_missing_arrival_or_dispo_time": "<10",
   "hours_arrival_to_dispo_decision": {

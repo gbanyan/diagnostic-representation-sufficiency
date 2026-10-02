@@ -1,5 +1,5 @@
 {
-  "admitted_visits": 48139,
+  "admitted_visits": "redacted",
   "admitted_missing_times": "<10",
   "eligible_visits_dispo_after_3h": 35127,
   "eligible_patients": 23964,
@@ -17,7 +17,7 @@
     },
     "all_admitted": {
       "n": 2766,
-      "of": 48139,
+      "of": "redacted",
       "pct": 5.7
     }
   },

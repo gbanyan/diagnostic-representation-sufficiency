@@ -28,6 +28,8 @@ The AHRQ HCUP CCSR for ICD-10-CM v2024.1 reference file must be obtained from AH
 
 All counts below 10, including zeros, appear as `"<10"`, and observed proportions for such cells are omitted. In a few result files (MC-MED calibration deciles for sensitivity analyses SA1, SA2, SA4; the MC-MED attrition record; some phase-0 inventory counts) this release copy is therefore more suppressed than the authors' frozen working record, so the SHA-256 of those files differs from the hashes in the internal audit trail. No reported estimate is affected.
 
+The total of admitted MC-MED visits before the valid-time and age checks is shown as `redacted` or `[redacted]`. Together with the totals after those checks, it would reveal an exclusion count below 10. The redaction applies to the frozen confirmatory protocol (`docs/mcmed_confirmatory_preregistration.md`), two design documents, the final report, and three result files; no other text in these files was changed. The admitted total after the checks (48,138) is used throughout.
+
 ## Protocol naming
 
 Internal file names and tags use the word "preregistration". These analysis protocols were prespecified and committed to version control before the corresponding confirmatory analyses; they were not registered in an external registry. One pre-test amendment (exact Newton solver) is documented in `docs/amendments/`.

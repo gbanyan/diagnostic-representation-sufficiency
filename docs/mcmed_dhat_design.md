@@ -16,7 +16,7 @@ It is **an experimentally generated disease-label representation**, never the cl
 
 ## Cohort (counts from `results/t3_followup/mcmed_audit/cohort.json`)
 
-- **Adult ED visits admitted to the hospital** (`ED_dispo` ∈ {Inpatient, Observation, ICU}): 48,139.
+- **Adult ED visits admitted to the hospital** (`ED_dispo` ∈ {Inpatient, Observation, ICU}): [redacted].
 - **Landmark T = `Arrival_time` + 3 h. Eligible = disposition decision after T** (`Dispo_time > T`): **35,127 visits / 23,964 patients.**
 - **Excluded: disposition decided at or before 3 h: 13,011.** The outcome is already determined before the prediction landmark, so these visits are not predictable at T. Their ICU share (10.0%) is far above the eligible cohort's (4.2%). The landmark therefore **selects away rapidly escalated patients**, and the estimand is explicitly conditional on "disposition not yet decided at 3 h".
 - **Endpoint prevalence (eligible):** ICU disposition **1,467 / 35,127 = 4.2%**.

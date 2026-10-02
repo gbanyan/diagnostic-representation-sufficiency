@@ -45,7 +45,7 @@ MC-MED v1.0.1 (Stanford ED, PhysioNet; all files SHA-256 verified). Inclusion, i
 | Step | Visits | Patients | ICU |
 |---|---|---|---|
 | All visits | 118,385 | 70,545 | 2,766 |
-| Admitted (`ED_dispo` ∈ Inpatient, Observation, ICU) | 48,139 | 30,815 | 2,766 (5.7%) |
+| Admitted (`ED_dispo` ∈ Inpatient, Observation, ICU) | [redacted] | 30,815 | 2,766 (5.7%) |
 | Valid `Arrival_time` and `Dispo_time` (1 excluded) | 48,138 | 30,815 | |
 | Age ≥ 18 (0 excluded; the dataset is adult-only) | 48,138 | | |
 | `Dispo_time` > T (13,011 excluded; ICU 10.0% among them) | 35,127 | 23,964 | 1,467 (4.2%) |

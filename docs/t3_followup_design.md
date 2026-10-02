@@ -96,7 +96,7 @@ It would **not** show:
 | Quantity | Count |
 |---|---|
 | ED visits / patients (all adults) | 118,385 / 70,545 |
-| Admitted visits (combined) / patients | 48,139 / 30,815 |
+| Admitted visits (combined) / patients | [redacted] / 30,815 |
 | Hours from arrival to disposition decision (admitted) | median 4.2 (IQR 2.9–5.8; p95 9.0) |
 | Admitted with the decision **after 3 h** (landmark-eligible) | **35,127** |
 | Admitted with the decision after 6 h | 11,090 |

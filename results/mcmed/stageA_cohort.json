@@ -20,11 +20,11 @@
     },
     {
       "step": "admitted (Inpatient/Observation/ICU)",
-      "visits": 48139,
+      "visits": "redacted",
       "patients": 30815,
       "icu": {
         "n": 2766,
-        "of": 48139,
+        "of": "redacted",
         "pct": 5.7
       }
     },

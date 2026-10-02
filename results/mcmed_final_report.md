@@ -24,7 +24,7 @@ MC-MED v1.0.1 (Stanford ED 2020–2022, PhysioNet; every file SHA-256 verified).
 | Step | Visits | Patients | ICU | Excluded at this step |
 |---|---|---|---|---|
 | all_visits | 118,385 | 70,545 | 2766 (2.3%) | — |
-| admitted (Inpatient/Observation/ICU) | 48,139 | 30,815 | 2766 (5.7%) | — |
+| admitted (Inpatient/Observation/ICU) | [redacted] | 30,815 | 2766 (5.7%) | — |
 | valid Arrival_time and Dispo_time | 48,138 | 30,815 | 2766 (5.7%) | 1 (ICU 0.0%) |
 | age >= 18 | 48,138 | 30,815 | 2766 (5.7%) | — |
 | Dispo_time > T | 35,127 | 23,964 | 1467 (4.2%) | 13,011 (ICU 10.0%) |
