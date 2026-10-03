@@ -170,7 +170,7 @@ def fig1():
     DH = r"$\hat{D}$"
 
     # Shared patient-state box
-    box(ax, 38, 80, 56, 11, "Patient state " + XT + " at landmark T\n(recorded by T; dataset-specific timing rules)",
+    box(ax, 38, 80, 56, 11, "Patient state " + XT + " at landmark T\n(dataset-specific timing rules)",
         fc=FILL_WARM, ec=VERM, lw=0.8)
 
     # Column frames
@@ -189,7 +189,7 @@ def fig1():
     arrow(ax, 94, 80, 119.5, 65.3, color=VERM)
 
     # Models
-    box(ax, 13, 38, 40, 10, "Model D\nlogistic; D, C unpenalized", weight="normal")
+    box(ax, 13, 38, 40, 10, "Model D\nlogistic; fixed ridge on D and C", weight="normal")
     box(ax, 79, 38, 43, 10, "Model D+X\nadds L2-penalized " + XT + " (additive)")
     for x in (20, 47):
         arrow(ax, x, 54, x if x < 30 else x - 4, 48.2)
@@ -275,8 +275,8 @@ def fig2():
                          rel=ar["rel_delta"]["mean"], rel_lo=ci["rel_delta"][0], rel_hi=ci["rel_delta"][1],
                          db=ar["delta"]["mean"], db_lo=ci["delta"][0], db_hi=ci["delta"][1]))
 
-    mimic("T1", "primary_T1.json", "Index procedural intervention", "confirmatory",
-          "index procedure after the 6 h landmark")
+    mimic("T1", "primary_T1.json", "Index procedural intervention", "primary",
+          "protocol-fixed; procedure after the 6 h landmark")
     mimic("T3", "secondary_T3.json", "Later ICU transfer", "exploratory",
           "first ICU entry after the 6 h landmark")
     mimic("M5", "control_M5.json", "Anaerobic coverage", "negative control",
@@ -292,14 +292,14 @@ def fig2():
     note_src(name, "row MC-MED", rel,
              ["summary.relative_gain", "summary.delta_bits", "bootstrap_95ci.relative_gain",
               "bootstrap_95ci.delta_bits", "summary.n", "summary.events"])
-    rows.append(dict(title="ED-to-ICU disposition", status="confirmatory",
-                     endpoint="admitted visits undecided at 3 h; locked test",
+    rows.append(dict(title="ED-to-ICU disposition", status="primary",
+                     endpoint="admitted visits, no disposition by 3 h; locked test",
                      ntxt=f"n = {count_txt(s['n'])}; {count_txt(s['events'])} events",
                      rel=s["relative_gain"], rel_lo=b["relative_gain"]["lo"], rel_hi=b["relative_gain"]["hi"],
                      db=s["delta_bits"], db_lo=b["delta_bits"]["lo"], db_hi=b["delta_bits"]["hi"]))
 
     style = {
-        "confirmatory": dict(marker="o", mfc=BLUE, mec=BLUE, color=BLUE, ms=5),
+        "primary": dict(marker="o", mfc=BLUE, mec=BLUE, color=BLUE, ms=5),
         "exploratory": dict(marker="D", mfc=VERM, mec=VERM, color=VERM, ms=4.2),
         "negative control": dict(marker="s", mfc="white", mec=GREY, color=GREY, ms=4.2),
     }
@@ -359,9 +359,9 @@ def fig2():
     axF.set_xlabel(r"Fractional log-loss reduction, $\Delta L/L_D$ (%)")
     # Margin drawn only through the confirmatory rows: it was prespecified for those analyses alone.
     for (hdr, r), yy in zip(layout, ys):
-        if not hdr and r["status"] == "confirmatory":
+        if not hdr and r["status"] == "primary":
             axF.plot([10, 10], [yy - 0.45, yy + 0.45], color=INK, lw=0.8, ls=(0, (3, 1.5)))
-    axF.text(10.4, 0.55, "prespecified 10% margin\n(confirmatory analyses only)", fontsize=7, va="bottom", ha="left")
+    axF.text(10.4, 0.55, "prespecified 10% margin\n(primary analyses only)", fontsize=7, va="bottom", ha="left")
     axB.set_xlim(-0.01, 0.06)
     axB.set_xticks([0, 0.02, 0.04, 0.06])
     axB.set_xticklabels(["0", "0.02", "0.04", "0.06"])
@@ -636,7 +636,7 @@ def fig4():
     axA.annotate("confirmatory", xy=(xs[0], 100 * s["relative_gain"]), xytext=(xs[0] * 0.98, 6.5),
                  fontsize=7, color=BLUE, ha="left",
                  arrowprops=dict(arrowstyle="-", color=BLUE, lw=0.5))
-    axA.text(30, 29.5, "hollow: actual visit diagnosis\n(post-decision)", fontsize=7, va="top", ha="left")
+    axA.text(30, 29.5, "hollow: actual visit diagnosis\n(untimestamped)", fontsize=7, va="top", ha="left")
     axA.set_ylabel(r"$\Delta L/L_D$ (%)")
     axA.set_ylim(0, 30)
     axA.set_yticks([0, 10, 20, 30])
@@ -685,7 +685,7 @@ def fig4():
     h = cap["R7_icd10_3char_min50"]["hindsight_label_reference"]
     ci_pt(axC, xi[-1] * 1.10, 100 * h["relative_gain"], 100 * h["ci95"]["relative_gain"]["lo"],
           100 * h["ci95"]["relative_gain"]["hi"], INK, "o", "white")
-    axC.text(xi[-1] * 0.95, 100 * h["relative_gain"] + 5.5, "actual visit diagnosis\n(post-decision)",
+    axC.text(xi[-1] * 0.95, 100 * h["relative_gain"] + 5.5, "actual visit diagnosis\n(untimestamped)",
              fontsize=7, va="bottom", ha="right")
     axC.set_xlim(16, 200)
     axC.set_xticks(xi)
@@ -700,7 +700,7 @@ def fig4():
         Line2D([], [], ls="-", lw=1, color=BLUE, marker="o", ms=5, mfc=BLUE, label=r"20-class $\hat{D}$, confirmatory"),
         Line2D([], [], ls="-", lw=1, color=VERM, marker="D", ms=4.5, mfc=VERM, label=r"CCSR $\hat{D}$, post-confirmatory exploratory"),
         Line2D([], [], ls="-", lw=1, color=VERM, marker="s", ms=4.5, mfc=VERM, label=r"ICD-10 $\hat{D}$, post-confirmatory exploratory"),
-        Line2D([], [], ls="-", lw=1, color=INK, marker="o", ms=4.5, mfc="white", label="actual visit diagnosis (post-decision)"),
+        Line2D([], [], ls="-", lw=1, color=INK, marker="o", ms=4.5, mfc="white", label="actual visit diagnosis (untimestamped)"),
         Line2D([], [], ls="none", marker="o", ms=4.5, mfc=INK, mec=INK, label="Model D log loss"),
         Line2D([], [], ls="none", marker="^", ms=5, mfc=GREEN, mec=GREEN, label="Model D+X log loss"),
     ]

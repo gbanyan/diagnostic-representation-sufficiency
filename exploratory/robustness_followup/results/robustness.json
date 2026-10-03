@@ -1,0 +1,203 @@
+{
+  "label": "EXPLORATORY post-confirmatory robustness follow-up; opened test set reused descriptively; no margin applied",
+  "plan": "exploratory/robustness_followup/plan.md",
+  "reps": 1000,
+  "seed": 20261006,
+  "reproduction_gate": {
+    "max_abs_dev_bits": 0.0,
+    "passed": true
+  },
+  "notes": {
+    "1a_mixed_classes": {
+      "OTHER": {
+        "dev_members": 68,
+        "share_not_majority": 0.4412
+      }
+    },
+    "1b_explained_variance": 0.7158,
+    "1c_encoder": {
+      "C_star": 0.01,
+      "relative_reduction": 0.2953,
+      "top1_accuracy": 0.4488,
+      "nonconverged_fits": 0
+    },
+    "2b_C_D": 3.0,
+    "5_matched_columns": {
+      "n": 33,
+      "missing_from_X": []
+    }
+  },
+  "variants": {
+    "REF_primary20": {
+      "C_selected": 0.003,
+      "converged": true,
+      "L_D_bits": 0.1817,
+      "L_DX_bits": 0.1498,
+      "delta_bits": 0.0319,
+      "relative_gain": 0.1758,
+      "auroc_D": 0.7873,
+      "auroc_DX": 0.8699,
+      "ci95": {
+        "relative_gain": [
+          0.1371,
+          0.2125
+        ],
+        "delta_bits": [
+          0.0243,
+          0.0393
+        ]
+      }
+    },
+    "1a_agg127to20": {
+      "C_selected": 0.003,
+      "converged": true,
+      "L_D_bits": 0.1839,
+      "L_DX_bits": 0.1494,
+      "delta_bits": 0.0345,
+      "relative_gain": 0.1875,
+      "auroc_D": 0.7781,
+      "auroc_DX": 0.8693,
+      "ci95": {
+        "relative_gain": [
+          0.149,
+          0.2245
+        ],
+        "delta_bits": [
+          0.0265,
+          0.0418
+        ]
+      },
+      "paired_diff_relative_gain_vs_REF": {
+        "point": 0.0117,
+        "lo": 0.0035,
+        "hi": 0.0199
+      }
+    },
+    "1b_pca127_19": {
+      "C_selected": 0.003,
+      "converged": true,
+      "L_D_bits": 0.1869,
+      "L_DX_bits": 0.1499,
+      "delta_bits": 0.037,
+      "relative_gain": 0.198,
+      "auroc_D": 0.7591,
+      "auroc_DX": 0.8733,
+      "ci95": {
+        "relative_gain": [
+          0.1598,
+          0.2352
+        ],
+        "delta_bits": [
+          0.0286,
+          0.0452
+        ]
+      },
+      "paired_diff_relative_gain_vs_REF": {
+        "point": 0.0222,
+        "lo": 0.0059,
+        "hi": 0.0375
+      }
+    },
+    "1c_enc20_C001": {
+      "C_selected": 0.003,
+      "converged": true,
+      "L_D_bits": 0.1837,
+      "L_DX_bits": 0.1503,
+      "delta_bits": 0.0334,
+      "relative_gain": 0.182,
+      "auroc_D": 0.7748,
+      "auroc_DX": 0.8687,
+      "ci95": {
+        "relative_gain": [
+          0.1425,
+          0.218
+        ],
+        "delta_bits": [
+          0.0255,
+          0.0409
+        ]
+      },
+      "paired_diff_relative_gain_vs_REF": {
+        "point": 0.0062,
+        "lo": 0.0015,
+        "hi": 0.0111
+      }
+    },
+    "2a_alr20": {
+      "C_selected": 0.003,
+      "converged": true,
+      "L_D_bits": 0.1712,
+      "L_DX_bits": 0.1498,
+      "delta_bits": 0.0214,
+      "relative_gain": 0.125,
+      "auroc_D": 0.8183,
+      "auroc_DX": 0.8714,
+      "ci95": {
+        "relative_gain": [
+          0.0903,
+          0.1568
+        ],
+        "delta_bits": [
+          0.0154,
+          0.0275
+        ]
+      },
+      "paired_diff_relative_gain_vs_REF": {
+        "point": -0.0508,
+        "lo": -0.0685,
+        "hi": -0.0321
+      }
+    },
+    "2b_spline_alr20": {
+      "C_selected": 0.003,
+      "converged": true,
+      "L_D_bits": 0.168,
+      "L_DX_bits": 0.1492,
+      "delta_bits": 0.0188,
+      "relative_gain": 0.1119,
+      "auroc_D": 0.8327,
+      "auroc_DX": 0.8728,
+      "ci95": {
+        "relative_gain": [
+          0.0785,
+          0.144
+        ],
+        "delta_bits": [
+          0.013,
+          0.0248
+        ]
+      },
+      "paired_diff_relative_gain_vs_REF": {
+        "point": -0.0638,
+        "lo": -0.083,
+        "hi": -0.0443
+      }
+    },
+    "5_xmatch_mimic": {
+      "C_selected": 0.01,
+      "converged": true,
+      "L_D_bits": 0.1817,
+      "L_DX_bits": 0.1628,
+      "delta_bits": 0.0189,
+      "relative_gain": 0.1041,
+      "auroc_D": 0.7873,
+      "auroc_DX": 0.8444,
+      "ci95": {
+        "relative_gain": [
+          0.0751,
+          0.1327
+        ],
+        "delta_bits": [
+          0.0133,
+          0.0245
+        ]
+      },
+      "paired_diff_relative_gain_vs_REF": {
+        "point": -0.0716,
+        "lo": -0.0942,
+        "hi": -0.0474
+      }
+    }
+  },
+  "reference_127_class": 0.0812
+}

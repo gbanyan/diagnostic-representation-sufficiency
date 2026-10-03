@@ -293,3 +293,18 @@ Recorded retrospectively from the conversation; commits cited for traceability.
 ## 2026-10-02: Lab result availability sensitivity analysis (author approval)
 
 The author approved a descriptive audit of MIMIC lab result times (`storetime`) and a post-confirmatory sensitivity analysis restricted to results available by the landmark (`exploratory/lab_availability/`). The confirmatory analysis stays primary. Results are in Round 9 of `manuscript/JBI_internal_review.md`.
+
+## 2026-10-02: Release-copy redaction (author decision B)
+
+The author chose to redact the pre-check admitted total ([redacted]) in the public release copy, including the release copy of the frozen MC-MED protocol, with a README note. See `docs/public_release.md`.
+
+## 2026-10-03: Robustness follow-up analyses 1, 2 and 5 (author approval)
+
+The author approved three exploratory, post-confirmatory MC-MED analyses (`exploratory/robustness_followup/`; plan `68ed39d`, committed before the run): dimension-matched granularity, Model D flexibility with D̂ fixed, and a MIMIC-matched comparator.
+
+**Results.**
+- The granularity decline was not reproduced at matched dimension: 18.8% (summed) and 19.8% (PCA), and 18.2% for the 20-class encoder at C = 0.01, against the frozen 17.6%. The compressions also discard finer label information, so added columns are not distinguished from finer diagnostic detail; this was corrected in round 17.
+- A more flexible Model D gave 12.5% and 11.2%.
+- A MIMIC-like comparator gave 10.4%.
+
+The confirmatory result is unchanged. The manuscript reports the follow-up as exploratory in §3.12, §4.7, §5.1, §5.3, §5.4, §5.5, §5.9, the Abstract, Table 1 and the Conclusion, with full results in Supplementary Note S11.

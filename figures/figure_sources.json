@@ -2,7 +2,7 @@
   "fig1_design": {
     "all": [
       {
-        "path": "article Methods (not in this repository)",
+        "path": "manuscript/JBI_main_draft_v1.md",
         "keys": [
           "Sections 3.1, 3.4, 3.8, 3.10 (schematic labels only; no data values)"
         ]
@@ -248,7 +248,7 @@
         ]
       }
     ],
-    "SA2 ICD-10 chapter": [
+    "SA2 ICD-10 first character": [
       {
         "path": "results/mcmed/stageG_test_S2.json",
         "keys": [
@@ -304,7 +304,7 @@
     ]
   },
   "_meta": {
-    "generated_by": "figures/make_figures.py",
+    "generated_by": "manuscript/figures/make_figures.py",
     "disclosure_rule": "counts < 10 (including 0) shown as '<10' or not displayed",
     "figS1_suppressed_decile_points": 56
   }
